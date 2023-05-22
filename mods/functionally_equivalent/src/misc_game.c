@@ -35,4 +35,3 @@ int SinScaled(uint param_1)
   return (int)_sinArray[uVar1];
 }
 
-add MOD.BAT
