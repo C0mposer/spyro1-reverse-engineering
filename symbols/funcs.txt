@@ -22,7 +22,7 @@ CopyHudToShaded = 0x80018880;
 DrawShadedMobys = 0x80022a2c;
 
 
-Vec3Subtract = 0x8001778c;
+Vec3Subtract_ = 0x8001778c;
 Vec3Scale = 0x800177c0;
 Vec3ScaleDownByPowerOfTwo = 0x800176c8;
 Vec3ScaleDownBy4 = 0x80017bfc;
