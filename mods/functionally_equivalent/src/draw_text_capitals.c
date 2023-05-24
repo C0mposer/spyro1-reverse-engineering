@@ -8,7 +8,7 @@
 // ** Prototype: n/a
 //**********************************
 /*
- * Draws capital text to the screen (technically fills out the moby structs from arguments)
+ * Draws capital text string to the screen (technically fills out the moby structs from arguments)
  * @param char* text - text to be drawn.
  * @param int* textInfo - pointer to the desired location and size of the text.
  * @param int spacing - how much space between characters.
