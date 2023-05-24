@@ -7,7 +7,7 @@ srand = 0x8006275c;
 ArrayCopy = 0x80016958;
 
 DrawTextCapitals_ = 0x80017FE4;
-DrawTextAll = 0x800181AC;
+DrawTextAll_ = 0x800181AC;
 DrawTextBox = 0x8001860c;
 DrawArrow = 0x80018534;
 DrawLine = 0x8001844c;

@@ -14,7 +14,6 @@
  * @param char color - color.
 */
 
-//extern struct MobyStruct ptr_mobys;
 #define MOBY_SIZE 0x58
 
 int* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
