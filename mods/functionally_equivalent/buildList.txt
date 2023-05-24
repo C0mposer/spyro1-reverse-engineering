@@ -7,6 +7,7 @@ NTSC, exe, 0x80063a8c, 0x0, asm/cd_status.s
 NTSC, exe, 0x80016c58, 0x0, asm/sin_scaled.s
 NTSC, exe, 0x8002bb20, 0x0, asm/calculate_completion_percentage.s
 NTSC, exe, 0x80017fe4, 0x0, asm/draw_text_capitals_hook.s
+NTSC, exe, 0x800181ac, 0x0, asm/draw_text_all_hook.s
 
 
 NTSC, exe, 0x8008013c, 0x0, asm/gem_home_in_hook.s
