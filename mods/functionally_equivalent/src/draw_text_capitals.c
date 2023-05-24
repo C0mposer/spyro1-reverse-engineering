@@ -1,4 +1,5 @@
 #include <common.h>
+#include <moby.h>
 
 //**********************************
 // ** Function: DrawTextCaoutals
@@ -13,8 +14,6 @@
  * @param int spacing - how much space between characters.
  * @param char color - color.
 */
-
-#define MOBY_SIZE 0x58
 
 char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
 
