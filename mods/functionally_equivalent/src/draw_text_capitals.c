@@ -17,53 +17,56 @@
 //extern struct MobyStruct ptr_mobys;
 #define MOBY_SIZE 0x58
 
-char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
+int* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
 
 {
   char currentCharacter;
   short uVar2;
+  unsigned int currentCharacterInt;
   
   currentCharacter = *text;
-  while (currentCharacter != 0) {                                       //Not an end character
-    if (currentCharacter != 0x20) {                                     //Not a space
-      _ptr_HudMobyData = _ptr_HudMobyData - MOBY_SIZE;                                //Shifts the moby pointer to a new empty slot
+  while (currentCharacter != 0) {                                              //Not an end character
+    if (currentCharacter != 0x20) {                                            //Not a space
+      _ptr_HudMobyData = _ptr_HudMobyData - MOBY_SIZE;                         //Shifts the moby pointer to a new empty slot
       memset(_ptr_HudMobyData, 0, MOBY_SIZE);                                  //Clears the new slot
       Vec3Copy((int *)(_ptr_HudMobyData + 0xc),textInfo);                      //Copy text x pos, y pos, and size to the new moby
       currentCharacter = *text;                                         //Puts the first character into a new variable
-      if (currentCharacter - '0' < 10) {                                //If the character is 0-9
-        *(short *)(_ptr_HudMobyData + 0x36) = currentCharacter + 0xd4;         //
+      currentCharacterInt = (unsigned int)currentCharacter;
+      if (currentCharacterInt - '0' < 10) {                                //If the character is 0-9
+        *(unsigned short *)(_ptr_HudMobyData + 0x36) = currentCharacter + 0xd4;         //
       }
-      else if (currentCharacter - 'A' < 26) {                           //If the character is A-Z
-        *(short *)(_ptr_HudMobyData + 0x36) = currentCharacter + 0x169;        //
+      else if (currentCharacterInt - 'A' < 26) {                           //If the character is A-Z
+        *(unsigned short *)(_ptr_HudMobyData + 0x36) = currentCharacter + 0x169;        //
       }
       else {
-        if (currentCharacter == '/') {
+        if (currentCharacterInt == '/') {
           uVar2 = 0x115;
         }
-        else if (currentCharacter == '?') {
+        else if (currentCharacterInt == '?') {
           uVar2 = 0x116;
         }
-        else if (currentCharacter == '%') {
+        else if (currentCharacterInt == '%') {
           uVar2 = 0x110;
         }
-        else if (currentCharacter == '^') {
+        else if (currentCharacterInt == '^') {
           uVar2 = 0x141;
         }
         else {
           uVar2 = 0x147;
-          if (currentCharacter == '+') {
+          if (currentCharacterInt == '+') {
             uVar2 = 0x13d;
           }
         }
         *(short *)(_ptr_HudMobyData + 0x36) = uVar2;
       }
-      _ptr_HudMobyData[0x47] = '\x7f';
+      _ptr_HudMobyData[0x47] = 0x7f;
       _ptr_HudMobyData[0x4f] = color;
       _ptr_HudMobyData[0x50] = 0xff;
     }
-    text = (char *)((char *)text + 1);                                  //textBuf pointer is moved to the next character
+    text = ((char *)text + 1);                                  //text string pointer is moved to the next character
     *textInfo = *textInfo + spacing;                                    //The x position in the textInfo struct is increased by the spacing amount
     currentCharacter = *text;                                           //currentCharacter is updated to the next character
   }
+  //printf("my print: %X\n", _ptr_HudMobyData);
   return _ptr_HudMobyData;
 }

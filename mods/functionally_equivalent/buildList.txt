@@ -9,5 +9,5 @@ NTSC, exe, 0x8002bb20, 0x0, asm/calculate_completion_percentage.s
 NTSC, exe, 0x80017fe4, 0x0, asm/draw_text_capitals_hook.s
 
 
-NTSC, exe, 0x8008013c, 0x0, asm/gem_home_in.s
+NTSC, exe, 0x8008013c, 0x0, asm/gem_home_in_hook.s
 

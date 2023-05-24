@@ -233,7 +233,7 @@ void srand(int seed);
 void ArrayCopy(int *outputArray,int *inputArray,int arrayLength);                                       //? This function copies one array to another
 
 //Drawing Functions
-int DrawTextCapitals(char* text, void* TextInfo, int spacing, char color);                              //? This function draws text with all capitcal letters.
+int DrawTextCapitals_(char* text, void* TextInfo, int spacing, char color);                              //? This function draws text with all capitcal letters.
 int DrawTextAll(char *text, int *CapitalTextInfo, int *LowercaseTextInfo, int spacing, char colour);    //? This function draws text with 1 capital letter at the beginning of each word.
 int DrawTextBox(int leftBoundaryDistanceFromLeft, int RightBoundaryDistanceFromLeft, int TopBoundaryDistanceFromTop, int BottomBoundaryDistanceFromTop); //? This function draws a textbox with gold lines around it.
 void DrawArrow(int *MobyInfo, unsigned int timer, int arrowDirection);                                  //? This function draws an arrow either to the left or rigt.
@@ -341,7 +341,7 @@ extern int* _ptr_levelMobyData; //0x80075930                 //? This is a point
 
 extern int* _ptr_graphicsRelated; //0x800757b0                //? Not too sure.
 extern int _ptrTextUnk; //0x800720f4                         //? Not too sure.
-extern int* _ptr_HudMobyData; //0x80075930                    //? Not too sure. Think this is where the hud moby data lives?
+extern int* _ptr_HudMobyData; //0x80075710                   //? Not too sure. Think this is where the hud moby data lives?
 
 extern char* _ptr_particleLinkedList; //0x80075738           //? This is a pointer to the next available particle slot.
 
