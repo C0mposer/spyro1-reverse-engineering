@@ -12,7 +12,7 @@
 // ** Scope Replacing: If-Else for Gem Home In
 // ** Address of Scope Replacing: 0x8008013c
 // ** Need to redirect after return?: Yes - 80080218
-// ** Hook File: gem_home_in.s 
+// ** Hook File: gem_home_in_hook.s 
 //*********************************************
 /*
  * Part of function that handles the gem home in
