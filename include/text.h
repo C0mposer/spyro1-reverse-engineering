@@ -4,20 +4,20 @@
 //~~~~~~~
 //Structs
 //~~~~~~~
-struct CapitalTextInfo
+typedef struct CapitalTextInfo
 {
     int x;                                  
     int y;                                  
     int size;                                        //Higher number, smaller size
 
-};
+}CapitalTextInfo;
 
 
-struct LowercaseTextInfo
+typedef struct LowercaseTextInfo
 {
     int spacing;
     int yOffset;
     int size;                                        //Higher number, smaller size
-};
+}LowercaseTextInfo;
 
 #endif /* TEXT_H */
