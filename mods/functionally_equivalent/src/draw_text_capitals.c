@@ -20,8 +20,8 @@ char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
 {
   unsigned int currentCharacter;                                                //? Needs to be unsigned lmao?
 
-  currentCharacter = *text;     
-                                                                                //Puts first character of string in currentcCharacter
+  currentCharacter = *text;                                                     //Puts first character of string in currentcCharacter
+
   while (currentCharacter != 0) {                                               //Not a NULL terminator
     if (currentCharacter != 0x20) {                                             //Not a space character
       _ptr_HudMobyData = _ptr_HudMobyData - MOBY_SIZE;                          //Shifts the moby pointer to a new empty slot
