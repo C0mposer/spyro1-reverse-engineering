@@ -24,7 +24,7 @@ DrawShadedMobys = 0x80022a2c;
 
 Vec3Subtract_ = 0x8001778c;
 Vec3Scale_ = 0x800177c0;
-Vec3ScaleDownByPowerOfTwo = 0x800176c8;
+Vec3ScaleDownByPowerOfTwo_ = 0x800176c8;
 Vec3ScaleDownBy4 = 0x80017bfc;
 Vec3ScaleByFractionPowerOfTwo = 0x80017614;
 Vec3ScaleByFraction = 0x800175b8;
