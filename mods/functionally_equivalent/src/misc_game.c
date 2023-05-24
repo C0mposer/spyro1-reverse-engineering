@@ -23,7 +23,6 @@ int CalculateCompletionPercentage(void)
 }
 
 int SinScaled(uint param_1)
-
 {
   uint uVar1;
   
