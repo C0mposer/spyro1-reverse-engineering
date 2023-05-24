@@ -1,4 +1,4 @@
-NTSC, header, 0x80200000, 0x0, src/misc_game.c src/vector.c src/cd.c src/gem_home_in.c src/draw_text_capitals.c, mod_code.bin
+NTSC, header, 0x80200000, 0x0, src/misc_game.c src/vector.c src/cd.c src/gem_home_in.c src/draw_text.c, mod_code.bin
 
 
 NTSC, exe, 0x80017758, 0x0, asm/vec3_add.s
