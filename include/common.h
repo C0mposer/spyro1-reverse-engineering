@@ -341,7 +341,7 @@ extern int* _ptr_levelMobyData; //0x80075930                 //? This is a point
 
 extern int* _ptr_graphicsRelated; //0x800757b0                //? Not too sure.
 extern int _ptrTextUnk; //0x800720f4                         //? Not too sure.
-extern char* _ptr_HudMobyData; //0x80075710                   //? Not too sure. Think this is where the hud moby data lives?
+extern char* _ptr_hudMobyData; //0x80075710                   //? Not too sure. Think this is where the hud moby data lives?
 
 extern char* _ptr_particleLinkedList; //0x80075738           //? This is a pointer to the next available particle slot.
 
