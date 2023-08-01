@@ -31,7 +31,7 @@ Vec3ScaleByFraction = 0x800175b8;
 Vec3CalculateLengthE = 0x800171fc;
 Vec3ApplyRotationMatrix = 0x80017048;
 
-MatrixTranspose = 0x80016fd0;
+MatrixTranspose_ = 0x80016fd0;
 
 GetNextParticleSlot = 0x80053570;
 CreateParticle = 0x800873e0;

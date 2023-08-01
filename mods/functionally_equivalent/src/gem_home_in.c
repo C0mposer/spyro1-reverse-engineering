@@ -27,27 +27,27 @@ void GemHomeIn()
     unsigned int gemOriginToSpyroLength = 0;
 
     //* Since we are replacing a branch (if), this is that equivalent branch
-    if (*((char*)s1 + 0xf) < 0x20)                                                                          //! if gem is homing but not finished
+    if (*((char*)s1 + 0xf) < 0x20)                                                                          //! If gem is homing but not finished
     {
-        Vec3Subtract(&gemToSpyroDistanceVec, &_spyro.position, (Vec3*)s1);                                  //subtract spyro's position from gem origin to get distance vec
-        Vec3ScaleDownByPowerOfTwo(&gemToSpyroDistanceVec, 5);                                               //scale down result by 32
+        Vec3Subtract(&gemToSpyroDistanceVec, &_spyro.position, (Vec3*)s1);                                  // Subtract spyro's position from gem origin to get distance vec
+        Vec3ScaleDownByPowerOfTwo(&gemToSpyroDistanceVec, 5);                                               // Scale down result by 32
         #define FLAG_3D 1
-        gemOriginToSpyroLength = Vec3CalculateLengthE(&gemToSpyroDistanceVec, FLAG_3D);                     //calculate length of distance vector
+        gemOriginToSpyroLength = Vec3CalculateLengthE(&gemToSpyroDistanceVec, FLAG_3D);                     // Calculate length of distance vector
         
         #define MINIMUM_DISTANCE_FROM_GEM 0x1e1
 
         if (gemOriginToSpyroLength < MINIMUM_DISTANCE_FROM_GEM) 
         {                                                             
         Vec3Scale(&gemToSpyroDistanceVec,&gemToSpyroDistanceVec, *((char*)s1 + 0xf));
-        Vec3Add(&((Moby*)s3)->position, s1, &gemToSpyroDistanceVec);                                        //add origin to distance vec to get new location from 0,0,0
-        #define SINE_WAVE_SPEED 4                                                                           //4 is the speed required to get 1 half circle (128 steps through the 256 array)
+        Vec3Add(&((Moby*)s3)->position, s1, &gemToSpyroDistanceVec);                                        // Add origin to distance vec to get new location from 0,0,0
+        #define SINE_WAVE_SPEED 4                                                                           // 4 is the speed required to get 1 half circle (128 steps through the 256 array)
         ((Moby*)s3)->position.z = ((Moby*)s3)->position.z + (_sinArray[*((char*)s1 + 0xf) * SINE_WAVE_SPEED] / 12);
         }
 
         else 
         {
-        Vec3Copy(&((Moby*)s3)->position, &_spyro.position);                                                 //set gem position to spyro's position
-        *((char*)s1 + 0xf) = 0x20;                                                                          //set gem hoam timer to near end
+        Vec3Copy(&((Moby*)s3)->position, &_spyro.position);                                                 // Set gem position to spyro's position
+        *((char*)s1 + 0xf) = 0x20;                                                                          // Set gem hoam timer to near end
         }
     }
 

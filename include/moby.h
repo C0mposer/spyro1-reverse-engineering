@@ -221,13 +221,5 @@ typedef struct Moby
 
 //* ~~~ Functions ~~~
 
-void CustomDrawMoby(short type, struct HudMoby* info, char color);
-
-void MobyRender();
-
-void HudMobyEasyInitilize(HudMoby* hudMoby);
-
-HudMoby HudMobyEasyCreate(void);
-
 
 #endif /* MOBY_H */

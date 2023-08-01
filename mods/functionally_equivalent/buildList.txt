@@ -3,6 +3,7 @@ NTSC, header, 0x80200000, 0x0, src/misc_game.c src/vector.c src/cd.c src/gem_hom
 
 NTSC, exe, 0x80017758, 0x0, asm/vec3_add.s
 NTSC, exe, 0x80017700, 0x0, asm/vec3_copy.s
+NTSC, exe, 0x80016fd0, 0x0, asm/matrix_transpose_hook.s
 NTSC, exe, 0x80063a8c, 0x0, asm/cd_status.s
 NTSC, exe, 0x80016c58, 0x0, asm/sin_scaled.s
 NTSC, exe, 0x8002bb20, 0x0, asm/calculate_completion_percentage.s
