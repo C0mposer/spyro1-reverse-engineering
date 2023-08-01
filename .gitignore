@@ -96,3 +96,8 @@ mods/Multi/hook.s
 mods/functionally_equivalent/debug/dep/draw_text_all_hook.dep
 mods/functionally_equivalent/debug/obj/draw_text_all_hook.o
 mods/functionally_equivalent/output/asmdraw_text_all_hooks.bin
+mods/functionally_equivalent/debug/dep/draw_text.dep
+mods/functionally_equivalent/debug/dep/matrix_transpose_hook.dep
+mods/functionally_equivalent/debug/obj/draw_text.o
+mods/functionally_equivalent/debug/obj/matrix_transpose_hook.o
+mods/functionally_equivalent/output/asmmatrix_transpose_hooks.bin
