@@ -37,3 +37,48 @@ void DrawArrow(int *hudMobyInfo, uint timer, int leftOrRightArrow)
   }
   return;
 }
+
+//**********************************
+// ** Function: DrawTextbox
+// ** Original Address: 0x8001860C
+// ** Hook File: draw_textbox.s
+// ** Prototype: n/a
+// ** Amount of instructions: SAME (https://decomp.me/scratch/MrfVL)
+//**********************************
+/*
+ * Draws a default textbox that is filled in
+ * @param int xBound1 - the first x boundry of the box
+ * @param int xBound2 - the second x boundry of the box
+ * @param int yBound1 - the first y boundry of the box
+ * @param int yBound2 - the second y boundry of the box
+*/
+
+void DrawTextbox(int xBound1,int xBound2,int yBound1,int yBound2)
+
+{
+  int iVar1;
+  
+  iVar1 = _ptr_graphicsRelated;                         //trasparent background vv
+  DrawShapePreReq(_ptr_graphicsRelated,1,0,0x40,0);      
+  DrawPrimitive(iVar1);
+  *(int *)(iVar1 + 0xc) = 0x5000000;
+  *(char *)(iVar1 + 0x13) = 0x2a;
+  *(short *)(iVar1 + 0x14) = (short)xBound1;
+  *(short *)(iVar1 + 0x18) = (short)xBound2;
+  *(short *)(iVar1 + 0x1c) = (short)xBound1;
+  *(short *)(iVar1 + 0x20) = (short)xBound2;
+  *(short *)(iVar1 + 0x16) = (short)yBound1;
+  *(short *)(iVar1 + 0x1a) = (short)yBound1;
+  *(short *)(iVar1 + 0x1e) = (short)yBound2;
+  *(short *)(iVar1 + 0x22) = (short)yBound2;
+  *(char *)(iVar1 + 0x10) = 0x70;
+  *(char *)(iVar1 + 0x11) = 0x70;
+  *(char *)(iVar1 + 0x12) = 0x70;
+  DrawPrimitive(iVar1 + 0xc);
+  _ptr_graphicsRelated = iVar1 + 0x24;
+  DrawLine(xBound1,yBound1,xBound2,yBound1);          //box outline vv
+  DrawLine(xBound2,yBound1,xBound2,yBound2);
+  DrawLine(xBound2,yBound2,xBound1,yBound2);
+  DrawLine(xBound1,yBound2,xBound1,yBound1);
+  return;
+}

@@ -10,6 +10,7 @@ NTSC, exe, 0x8002bb20, 0x0, asm/calculate_completion_percentage.s
 NTSC, exe, 0x80017fe4, 0x0, asm/draw_text_capitals_hook.s
 NTSC, exe, 0x800181ac, 0x0, asm/draw_text_all_hook.s
 NTSC, exe, 0x80018534, 0x0, asm/draw_arrow.s
+NTSC, exe, 0x8001860C, 0x0, asm/draw_textbox.s
 
 
 NTSC, exe, 0x8008013c, 0x0, asm/gem_home_in_hook.s

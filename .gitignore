@@ -106,3 +106,6 @@ mods/functionally_equivalent/debug/dep/draw_stuff.dep
 mods/functionally_equivalent/debug/obj/draw_arrow.o
 mods/functionally_equivalent/debug/obj/draw_stuff.o
 mods/functionally_equivalent/output/asmdraw_arrows.bin
+mods/functionally_equivalent/debug/dep/draw_textbox.dep
+mods/functionally_equivalent/debug/obj/draw_textbox.o
+mods/functionally_equivalent/output/asmdraw_textboxs.bin
