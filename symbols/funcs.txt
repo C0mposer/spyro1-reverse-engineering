@@ -9,7 +9,6 @@ ArrayCopy = 0x80016958;
 DrawTextCapitals_ = 0x80017FE4;
 DrawTextAll_ = 0x800181AC;
 DrawTextBox = 0x8001860c;
-DrawArrow = 0x80018534;
 DrawLine = 0x8001844c;
 DrawPrimitive = 0x800168dc;
 FillScreenColor = 0x800190d4;

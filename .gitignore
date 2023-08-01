@@ -101,3 +101,8 @@ mods/functionally_equivalent/debug/dep/matrix_transpose_hook.dep
 mods/functionally_equivalent/debug/obj/draw_text.o
 mods/functionally_equivalent/debug/obj/matrix_transpose_hook.o
 mods/functionally_equivalent/output/asmmatrix_transpose_hooks.bin
+mods/functionally_equivalent/debug/dep/draw_arrow.dep
+mods/functionally_equivalent/debug/dep/draw_stuff.dep
+mods/functionally_equivalent/debug/obj/draw_arrow.o
+mods/functionally_equivalent/debug/obj/draw_stuff.o
+mods/functionally_equivalent/output/asmdraw_arrows.bin

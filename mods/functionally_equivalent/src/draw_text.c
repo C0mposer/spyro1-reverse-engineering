@@ -24,15 +24,15 @@ char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
 
   while (currentCharacter != 0) {                                               // Not a NULL terminator
     if (currentCharacter != 0x20) {                                             // Not a space character
-      _ptr_hudMobyData -= MOBY_SIZE;                                            // Shifts the moby pointer to a new empty slot
-      memset(_ptr_hudMobyData, 0, MOBY_SIZE);                                   // Clears the new slot
-      Vec3Copy((int *)(_ptr_hudMobyData + 0xc),textInfo);                       // Copy text x pos, y pos, and size(z pos) to the new moby
+      _ptr_hudMobys -= MOBY_SIZE;                                            // Shifts the moby pointer to a new empty slot
+      memset(_ptr_hudMobys, 0, MOBY_SIZE);                                   // Clears the new slot
+      Vec3Copy((int *)(_ptr_hudMobys + 0xc),textInfo);                       // Copy text x pos, y pos, and size(z pos) to the new moby
       currentCharacter = *text;                                                 // Puts each character of the string in currentCharacter each iteration of the loop
       if(currentCharacter - '0' < 10) {                                         // If currentCharacter 0-9
-        *(unsigned short *)(_ptr_hudMobyData + 0x36) = currentCharacter + 0xd4;         
+        *(unsigned short *)(_ptr_hudMobys + 0x36) = currentCharacter + 0xd4;         
       }
       else if(currentCharacter - 'A' < 26) {                                    // If currentCharacter is A-Z
-        *(unsigned short *)(_ptr_hudMobyData + 0x36) = currentCharacter + 0x169;        
+        *(unsigned short *)(_ptr_hudMobys + 0x36) = currentCharacter + 0x169;        
       }
       else {          
         short mobyType;                                                          // Special Characters
@@ -54,18 +54,18 @@ char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
         else {                                                                  // Default Character (_)
           mobyType = 0x147;
         }
-        *(short *)(_ptr_hudMobyData + 0x36) = mobyType;
+        *(short *)(_ptr_hudMobys + 0x36) = mobyType;
       }
-      _ptr_hudMobyData[0x47] = 0x7f;
-      _ptr_hudMobyData[0x4f] = color;
-      _ptr_hudMobyData[0x50] = 0xff;
+      _ptr_hudMobys[0x47] = 0x7f;
+      _ptr_hudMobys[0x4f] = color;
+      _ptr_hudMobys[0x50] = 0xff;
     }
     text++;                                                                     // Move to next char in String
     textInfo[0] += spacing;                                                     // The x position in the textInfo struct is increased by the spacing amount
     currentCharacter = *text;                                                   // currentCharacter is updated to the next character
   }
   //printf("my print: %X\n", _ptr_hudMobyData);
-  return _ptr_hudMobyData;
+  return _ptr_hudMobys;
 }
 
 
@@ -88,42 +88,42 @@ int DrawTextAll(char *text,int *CapitalTextInfo,int *LowercaseTextInfo,int spaci
       CapitalTextInfo[0] += (spaceSize / 4);                                    // Updates X position using spaceSize
     }
     else {
-      _ptr_hudMobyData -= MOBY_SIZE;                                            // Shifts the moby pointer to a new empty slot
-      memset(_ptr_hudMobyData, '\0', MOBY_SIZE);
-      Vec3Copy((int *)(_ptr_hudMobyData + 0xc),CapitalTextInfo);
+      _ptr_hudMobys -= MOBY_SIZE;                                            // Shifts the moby pointer to a new empty slot
+      memset(_ptr_hudMobys, '\0', MOBY_SIZE);
+      Vec3Copy((int *)(_ptr_hudMobys + 0xc),CapitalTextInfo);
       if ((*text == '!') || (*text == '?')) {                                   // If ! or ? then make capital
         isCapital = TRUE;
       }
       if (!isCapital) {
-        *(int *)(_ptr_hudMobyData + 0x10) += LowercaseTextInfo[1];              // Increases the Y position by the "y offset" for lowercase letters
-        *(int *)(_ptr_hudMobyData + 0x14) = LowercaseTextInfo[2];               // sets the size to be the lowercase size
+        *(int *)(_ptr_hudMobys + 0x10) += LowercaseTextInfo[1];              // Increases the Y position by the "y offset" for lowercase letters
+        *(int *)(_ptr_hudMobys + 0x14) = LowercaseTextInfo[2];               // sets the size to be the lowercase size
       }
       currentCharacter = *text;
       if (currentCharacter - '0' < 10) {                                        // If character is 0-9
-        *(short *)(_ptr_hudMobyData + 0x36) = currentCharacter + 0xd4;
+        *(short *)(_ptr_hudMobys + 0x36) = currentCharacter + 0xd4;
       }
       else if (currentCharacter - 'A' < 26) {                                   // If character is A-Z
-        *(short *)(_ptr_hudMobyData + 0x36) = currentCharacter + 0x169;
+        *(short *)(_ptr_hudMobys + 0x36) = currentCharacter + 0x169;
       }
       else if (currentCharacter == '!') {
-        *(short *)(_ptr_hudMobyData + 0x36) = 0x4b;                             // Special Characters
+        *(short *)(_ptr_hudMobys + 0x36) = 0x4b;                             // Special Characters
       }
       else if (currentCharacter == ',') {
-        *(short *)(_ptr_hudMobyData + 0x36) = 0x4c;
+        *(short *)(_ptr_hudMobys + 0x36) = 0x4c;
       }
       else if (currentCharacter == '?') {
-        *(short *)(_ptr_hudMobyData + 0x36) = 0x116;
+        *(short *)(_ptr_hudMobys + 0x36) = 0x116;
       }
       else if (currentCharacter == '.') {
-        *(short *)(_ptr_hudMobyData + 0x36) = 0x147;
+        *(short *)(_ptr_hudMobys + 0x36) = 0x147;
       }
       else {                                                                    // Default Case (apostrophe but it's really a comma up in the air lol)
-        *(short *)(_ptr_hudMobyData + 0x36) = 0x4c;
-        *(int *)(_ptr_hudMobyData + 0x10) -= (*LowercaseTextInfo * 2) / 3;      // Decreases y position (makes it go up) so the comma looks like an apostrophe
+        *(short *)(_ptr_hudMobys + 0x36) = 0x4c;
+        *(int *)(_ptr_hudMobys + 0x10) -= (*LowercaseTextInfo * 2) / 3;      // Decreases y position (makes it go up) so the comma looks like an apostrophe
       }
-      _ptr_hudMobyData[0x47] = '\x7f';
-      _ptr_hudMobyData[0x4f] = color;
-      _ptr_hudMobyData[0x50] = 0xff;
+      _ptr_hudMobys[0x47] = '\x7f';
+      _ptr_hudMobys[0x4f] = color;
+      _ptr_hudMobys[0x50] = 0xff;
       if (isCapital) {
         *CapitalTextInfo += spacing;                                            // If capital increase X position using default spacing
       }
@@ -135,5 +135,5 @@ int DrawTextAll(char *text,int *CapitalTextInfo,int *LowercaseTextInfo,int spaci
     text++;
     currentCharacter = *text;
   }
-  return _ptr_hudMobyData;
+  return _ptr_hudMobys;
 }

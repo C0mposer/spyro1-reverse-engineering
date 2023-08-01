@@ -1,7 +1,7 @@
 At a high level the way this reverse engineering project is set up for right now, is we are attempting to recompile functions from Spyro to be the same amount, or less,
 assembly opcodes using a modern mips compiler. We are not aiming for byte for byte matches; instead functionally equivalent matches with an emphasis on readability, 
 and ensuring the same, or less amount of assembly opcodes from our compiled functions. We are currently placing our recompiled functions in extra 8mb developer ram 
-that most ps1's do not have, and replacing the original functions with simple jumps to our functions in the extra ram area. This current approach does not rebuild 
+that most ps1's do not have, then replacing the original functions with simple jumps to our functions in the extra ram area. This current approach does not rebuild 
 the game, but allows us to test our recompiled code very easily, and so long we aim for the same/less opcodes, we can theoretically place these recompiled functions 
 into their correct spots eventually.
 
@@ -31,7 +31,7 @@ NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
 // ** Original Address: 0x80xxxxxx
 // ** Hook File: xxx.asm 
 // ** Prototype: xxx.h
-// ** Amount of instructions: Same/Less/More (decomp.me link) 
+// ** Amount of instructions: Same/Less/More/Untested (decomp.me link) 
 //**********************************
 /*
  * Description of the Function.

@@ -79,7 +79,7 @@ _ptr_levelMobyData = 0x80075930;
 
 _ptr_particleLinkedList = 0x80075738;
 
-_ptr_hudMobyData = 0x80075710;
+_ptr_hudMobys = 0x80075710;
 _ptr_graphicsRelated = 0x800757b0;
 _ptrTextUnk = 0x800720f4;
 
