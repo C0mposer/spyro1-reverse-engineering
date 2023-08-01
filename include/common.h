@@ -235,8 +235,6 @@ void ArrayCopy(int *outputArray,int *inputArray,int arrayLength);               
 //Drawing Functions
 int DrawTextCapitals_(char* text, void* TextInfo, int spacing, char color);                              //? This function draws text with all capitcal letters.
 int DrawTextAll(char *text, int *CapitalTextInfo, int *LowercaseTextInfo, int spacing, char colour);    //? This function draws text with 1 capital letter at the beginning of each word.
-int DrawTextBox(int leftBoundaryDistanceFromLeft, int RightBoundaryDistanceFromLeft, int TopBoundaryDistanceFromTop, int BottomBoundaryDistanceFromTop); //? This function draws a textbox with gold lines around it.
-void DrawArrow(int *MobyInfo, unsigned int timer, int arrowDirection);                                  //? This function draws an arrow either to the left or rigt.
 void DrawLine(int point1X, int point1Y, int point2X, int point2Y);                                      //? This function draws a yellow line.
 void FillScreenColor(int colorSpace, char r, char g, char b);                                           //? Fills the screen with a specific color.
 
@@ -346,7 +344,7 @@ extern char* _ptr_hudMobys; //0x80075710                      //? A pointer to a
 extern char* _ptr_particleLinkedList; //0x80075738           //? This is a pointer to the next available particle slot.
 
 extern int _headAndChestSpinTimer; //0x80077fe4
-extern int _unk_spinRelated; //0x8006cc78
+extern int _unk_spinRelated;    //0x8006cc78
 extern char* _localSoundEffects; //0x800761D4
 
 extern char _freeSpace[0xE5F]; //0x80073990                 //? This is almost 1kb of free space in the game

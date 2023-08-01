@@ -1,5 +1,6 @@
 #ifndef DRAW_STUFF_H
 #define DRAW_STUFF_H
+#include <moby.h>
 #include <custom_types.h>
 
 //**********************************
@@ -15,7 +16,7 @@
  * @param unsigned int timer - frame interval for each blink
  * @param int leftOrRightArrow - 0 for left, 1 for right
 */
-void DrawArrow(int *hudMobyInfo, uint timer,int leftOrRightArrow);
+void DrawArrow(HudMobyInfo* hudMobyInfo,  uint timer, int leftOrRightArrow);
 
 //**********************************
 // ** Function: DrawTextbox

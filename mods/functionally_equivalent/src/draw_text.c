@@ -88,15 +88,15 @@ int DrawTextAll(char *text,int *CapitalTextInfo,int *LowercaseTextInfo,int spaci
       CapitalTextInfo[0] += (spaceSize / 4);                                    // Updates X position using spaceSize
     }
     else {
-      _ptr_hudMobys -= MOBY_SIZE;                                            // Shifts the moby pointer to a new empty slot
+      _ptr_hudMobys -= MOBY_SIZE;                                               // Shifts the moby pointer to a new empty slot
       memset(_ptr_hudMobys, '\0', MOBY_SIZE);
       Vec3Copy((int *)(_ptr_hudMobys + 0xc),CapitalTextInfo);
       if ((*text == '!') || (*text == '?')) {                                   // If ! or ? then make capital
         isCapital = TRUE;
       }
       if (!isCapital) {
-        *(int *)(_ptr_hudMobys + 0x10) += LowercaseTextInfo[1];              // Increases the Y position by the "y offset" for lowercase letters
-        *(int *)(_ptr_hudMobys + 0x14) = LowercaseTextInfo[2];               // sets the size to be the lowercase size
+        *(int *)(_ptr_hudMobys + 0x10) += LowercaseTextInfo[1];                 // Increases the Y position by the "y offset" for lowercase letters
+        *(int *)(_ptr_hudMobys + 0x14) = LowercaseTextInfo[2];                  // sets the size to be the lowercase size
       }
       currentCharacter = *text;
       if (currentCharacter - '0' < 10) {                                        // If character is 0-9
@@ -106,7 +106,7 @@ int DrawTextAll(char *text,int *CapitalTextInfo,int *LowercaseTextInfo,int spaci
         *(short *)(_ptr_hudMobys + 0x36) = currentCharacter + 0x169;
       }
       else if (currentCharacter == '!') {
-        *(short *)(_ptr_hudMobys + 0x36) = 0x4b;                             // Special Characters
+        *(short *)(_ptr_hudMobys + 0x36) = 0x4b;                                // Special Characters
       }
       else if (currentCharacter == ',') {
         *(short *)(_ptr_hudMobys + 0x36) = 0x4c;
