@@ -5,21 +5,22 @@ that most ps1's do not have, and replacing the original functions with simple ju
 the game, but allows us to test our recompiled code very easily, and so long we aim for the same/less opcodes, we can theoretically place these recompiled functions 
 into their correct spots eventually.
 
-Here is an outline of our current workflow:
-
 RECOMMENDED TOOLS:
-1. PCSX-Redux: Debugging emulator for easy testing of compiled code
-2. spimdisasm: Command line utility for disassembling mips opcodes into a format decomp.me can understand
+A. PCSX-Redux: Debugging emulator for easy testing of compiled code
+B. spimdisasm: Command line utility for disassembling mips opcodes into a format decomp.me can understand
+C. Ghidra: Very useful general reverse engineering/decompilation tool.
+
+Here is an outline of our current workflow:
 
 1. Copy Function from Ghidra into .c file
 
-2. Compare against assembly on decomp.me until same amount of instructions (Can use spimdisasm, and "copy special" from ghidra to get asm instructions for decomp.me)
+2. Compare C code against assembly on decomp.me until same amount of instructions (Can use spimdisasm, and "copy special" from ghidra to get asm instructions for decomp.me)
 3. Refactor to look more readable
 4. Repeat 2 & 3 until as readable as possible, while maintaining same amount of instructions.
 
-5. Create .asm file for replacing the original function with a jump to our code
+5. Create .s file for replacing the original function with a jump to our code
 
-6. Associate address of function with .s file for hooking in buildlist.txt using this format:
+6. Associate address of original function with our .s file in buildlist.txt using this format:
 NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
 
 7. Create function prototype in relavent .h file
@@ -40,5 +41,4 @@ NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
 */
 
 9. Test insertion of function & hook for any obvious issues in redux
-
 10. Ensure function has actually been replaced by setting execution breakpoint on original function's address in redux. 
