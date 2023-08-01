@@ -6,6 +6,7 @@
 // ** Original Address: 0x80018534
 // ** Hook File: draw_arrow.s 
 // ** Prototype: n/a
+// ** Amount of instructions: Same Amount (https://decomp.me/scratch/IvMFp) 
 //**********************************
 /*
  * Draws a blinking arrow facing left or right. Blink timer is customizable. (Fills out full moby struct into the pointer to the hud moby buffer)

@@ -6,7 +6,6 @@
 // ** Original Address: 0x80017fe4
 // ** Hook File: draw_text_capitals_hook.s 
 // ** Prototype: n/a
-// ** Amount of instructions: Same
 //**********************************
 /*
  * Draws capital text string to the screen (technically fills out the moby structs from arguments)
