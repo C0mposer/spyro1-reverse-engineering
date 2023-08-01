@@ -1,8 +1,8 @@
-1. Copy Function from Ghidra
+1. Copy Function from Ghidra into .c file
 
-2. Refactor to look more readable
-3. Compare against assembly on Decomp.me until same amount of instructions
-4. Repeat 2 & 3
+2. Compare against assembly on decomp.me until same amount of instructions (Can use spimdisasm, and "copy special" from ghidra to get asm instructions for decomp.me)
+3. Refactor to look more readable
+4. Repeat 2 & 3 until as readable as possible, while maintaining same amount of instructions.
 
 5. Create .asm file for replacing the original function
 
