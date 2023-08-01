@@ -135,13 +135,10 @@ enum GemColors
 //~~~~~~~
 //Structs
 //~~~~~~~
-typedef struct HudMoby
+typedef struct HudMobyInfo
 {
-    Vec3 position;                  //Effective size in HUD.
-
-    Angle_u8 angle;                             
-
-}HudMoby;
+    Vec3 position;                  // Coords in hud act different than in world space. X and Y act like 2D plane. Z is effective size in HUD.
+}HudMobyInfo;
 
 
 // ~~~ FULL MOBY STRUCT ~~~
@@ -149,7 +146,7 @@ typedef struct HudMoby
 //Struct for all Moby's
 typedef struct Moby
 {
-    void* ptr_mobyData;
+    void* ptr_mobySpecificData;
 
     int empty1;
     int* ptr_colision;
@@ -158,7 +155,7 @@ typedef struct Moby
 
     short UNK21;                              
     
-    short interactState;                         //0 for alive, 1 for flamed, 2 for charged. 
+    short interactState;                            //0 for alive, 1 for flamed, 2 for charged. 
 
     int UNK2;
     int UNK3;
@@ -205,7 +202,7 @@ typedef struct Moby
 
     struct BGR_u8 RGB;
 
-    char color;                                      // Determines the color of the moby. (01 red, 02 green, etc.) This can be poked outside of its normal range to get some awesome colors.
+    char color;                                     // Determines the color of the moby. (01 red, 02 green, etc.) This can be poked outside of its normal range to get some awesome colors.
 
     short requiredHUD2;
 

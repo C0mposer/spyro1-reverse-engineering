@@ -15,17 +15,17 @@
  * @param unsigned int timer - timer that counts every frame to be used for the pre-determined interval.
  * @param int leftOrRightArrow - 0 for right, 1 for left
 */
-void DrawArrow(int* hudMobyInfo, uint timer, int leftOrRightArrow)
+void DrawArrow(HudMobyInfo* hudMobyInfo, uint timer, int leftOrRightArrow)
 
 {
-  if ((timer % 32) < 16)                                                // Alternate from being visible, and not every 16 frames
+  if ((timer % 32) < 16)                                                    // Alternate from being visible, and not every 16 frames
   {  
-    _ptr_hudMobys = _ptr_hudMobys - MOBY_SIZE;                          // Make space in the array of moby structs to be drawn to the hud
-    memset(_ptr_hudMobys,'\0', MOBY_SIZE);                              // 0 out the area
+    _ptr_hudMobys = _ptr_hudMobys - sizeof(Moby);                           // Make space in the array of moby structs to be drawn to the hud
+    memset(_ptr_hudMobys,'\0', sizeof(Moby));                               // 0 out the area
 
-    ((Moby*) _ptr_hudMobys)->type = 0x105;                              // Set Moby Type to the ascii number 1 for an arrow
+    ((Moby*) _ptr_hudMobys)->type = 0x105;                                  // Set Moby Type to the ascii number 1 for an arrow
 
-    Vec3Copy(&((Moby*) _ptr_hudMobys)->position, hudMobyInfo);          // Set Moby Position from info struct (Z represents size/depth in 2D)
+    Vec3Copy(&((Moby*) _ptr_hudMobys)->position, hudMobyInfo);              // Set Moby Position from info struct (Z represents size/depth in 2D)
 
     if (leftOrRightArrow < 2) {
         ((Moby*) _ptr_hudMobys)->rotation.x = 64;                               // Setting default roll rotation for a right arrow

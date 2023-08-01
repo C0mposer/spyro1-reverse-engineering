@@ -1,5 +1,6 @@
 #ifndef DRAW_STUFF_H
 #define DRAW_STUFF_H
+#include <moby.h>
 
 //**********************************
 // ** Function: DrawArrow
@@ -14,6 +15,6 @@
  * @param unsigned int timer - frame interval for each blink
  * @param int leftOrRightArrow - 0 for left, 1 for right
 */
-void DrawArrow(int *hudMobyInfo,uint timer,int leftOrRightArrow);
+void DrawArrow(HudMobyInfo* hudMobyInfo, uint timer, int leftOrRightArrow);
 
 #endif /* DRAW_STUFF_H */
