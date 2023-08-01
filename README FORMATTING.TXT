@@ -1,12 +1,20 @@
+At a high level the way this reverse engineering project is set up for right now, is we are attempting to recompile functions from Spyro to be the same amount, or less,
+assembly opcodes using a modern mips compiler. We are not aiming for byte for byte matches, but functionally equivalent matches, with a emphasis on the same, or less
+amount of assembly opcodes. We are currently placing our recompiled functions in extra 8mb developer ram that most ps1's do not have, and replacing the original functions
+with simple jumps to our functions in the extra ram area. This current approach does not rebuild the game, but allows us to test our recompiled code very easily, and
+so long we aim for the same/less opcodes, we can theoretically place these recompiled functions into their correct spots eventually.
+
+Here is an outline of our current workflow:
+
 1. Copy Function from Ghidra into .c file
 
 2. Compare against assembly on decomp.me until same amount of instructions (Can use spimdisasm, and "copy special" from ghidra to get asm instructions for decomp.me)
 3. Refactor to look more readable
 4. Repeat 2 & 3 until as readable as possible, while maintaining same amount of instructions.
 
-5. Create .asm file for replacing the original function
+5. Create .asm file for replacing the original function with a jump to our code
 
-6. Associate address of function with .asm file for hooking in buildlist.txt using this format:
+6. Associate address of function with .s file for hooking in buildlist.txt using this format:
 NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
 
 7. Create function prototype in relavent .h file
@@ -17,6 +25,7 @@ NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
 // ** Original Address: 0x80xxxxxx
 // ** Hook File: xxx.asm 
 // ** Prototype: xxx.h
+// ** Amount of instructions: Same/Less/More (decomp.me link) 
 //**********************************
 /*
  * Description of the Function.
