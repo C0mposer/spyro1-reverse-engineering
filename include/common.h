@@ -175,6 +175,11 @@ enum StartMenuSelections
 //Structs
 //~~~~~~~
 
+typedef struct RECT 
+{
+    short x, y, w, h;
+}RECT;
+
 typedef struct RGBA_u8
 {
     unsigned char R;
@@ -234,7 +239,7 @@ void ArrayCopy(int *outputArray,int *inputArray,int arrayLength);               
 
 //Drawing Functions
 int DrawTextCapitals_(char* text, void* TextInfo, int spacing, char color);                              //? This function draws text with all capitcal letters.
-int DrawTextAll(char *text, int *CapitalTextInfo, int *LowercaseTextInfo, int spacing, char colour);    //? This function draws text with 1 capital letter at the beginning of each word.
+int DrawTextAll_(char *text, int *CapitalTextInfo, int *LowercaseTextInfo, int spacing, char colour);    //? This function draws text with 1 capital letter at the beginning of each word.
 void DrawLine(int point1X, int point1Y, int point2X, int point2Y);                                      //? This function draws a yellow line.
 void FillScreenColor(int colorSpace, char r, char g, char b);                                           //? Fills the screen with a specific color.
 
@@ -255,7 +260,6 @@ void TheAdventureContinues();
 
 void LockCameraToSpyro(void);
 
-//Particle Related Reversing
 void Vec3IntToShortDiv4(short *Vec3ShortPTR,int *Vec3PTR);                                              //? This function takes an int vector, divides it by 4, then stores it as a short. Some things in spyro need to refer to position as a short rather than an int, like particles, this is where you'd convert them.
 
 char* GetNextParticleSlot(char param_1);                                                                //param_1 Might be storing its subtype. It affects the way the particle looks ratio wise? It also stores the param value you pass into param_1 into the 1st element of the particle struct. NOT THE 0th.
@@ -263,6 +267,12 @@ char* GetNextParticleSlot(char param_1);                                        
 void CreateParticle(int param_1, int param_2, int **ptrToMoby, int *param_4);                           //? This function creates a particle. param_1 amount of particles, param_2 Is the Particle ID, param_3 is a Vec3 to its Initial Spawn Position, param_4 Vec3 of Amount of Units to Travel from Inital POS
 
 void UpdateMobyCollision(int param_1, unsigned int param_2);                                            //? Research this more.
+
+int LoadImageOrTexture(RECT *rect, int *p);
+
+int DrawSync(int mode);
+
+void Maybe_ResetHudTimers(void);
 
 //*~~~~~~~~~~~~~~~~~
 //*In Game Variables
@@ -282,8 +292,6 @@ extern int _levelTimerWhenActive; //0x8007572C               //? This is a level
 extern int _levelTimer_60fps; //0x800758C8                   //? This is a level specific timer that runs at 60fps. This timer is running at all times, and doesn't reset until you enter a new level.
 extern int _vSyncTimer_60fps; //0x800749E0                   //? This is a global timer at 60fps. It is running at all times, and controls the vSync. If frozen, video freezes. Can be unfrozen.
 extern int _wobbleAndOpacityTimer; //0x800770f4              //? This is a timer that is often used for changing the opacity of things like lines, the shimmer of text, etc.
-extern char _hudChestState;
-extern char _hudChestKeyframe;
 
 //Important Stuff
 extern char _gameState; //0x800757D8                         //? Main gamestate. Gamestate values are stored in the GameState enums.
@@ -344,9 +352,19 @@ extern char* _ptr_hudMobys; //0x80075710                      //? A pointer to a
 
 extern char* _ptr_particleLinkedList; //0x80075738           //? This is a pointer to the next available particle slot.
 
+extern char _hudChestState;  //0x80077FAC
+extern char _hudDragonState; //0x80077fa9
+extern char _hudLivesState;  //0x80077faa
+extern char _hudEggsState;   //0x80077fab
+extern char _hudAnimationState;  //0x80077fac
+
 extern int _headAndChestSpinTimer; //0x80077fe4
 extern int _unk_spinRelated;    //0x8006cc78
 extern char* _localSoundEffects; //0x800761D4
+
+extern int _musicCurrentTrack;  //0x0x800774b0
+
+extern int* _maybe_ptr_levelTextureRelated; //0x800785f0
 
 extern char _freeSpace[0xE5F]; //0x80073990                 //? This is almost 1kb of free space in the game
 

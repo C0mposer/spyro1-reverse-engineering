@@ -4,6 +4,19 @@
 #include <custom_types.h>
 
 //**********************************
+// ** Function: DrawPrimitve
+// ** Original Address: 0x800168dc
+// ** Hook File: draw_primitive.s 
+// ** Prototype: draw_stuff.h
+// ** Amount of instructions: Same Amount (https://decomp.me/scratch/wd3wE) 
+//**********************************
+/*
+ * Draws a ps1 primitive to the screen. (Puts a primitive struct ptr into the array of primitives to be drawn every frame?)
+ * @param void* hudMobyInfo - pointer to basic info about the arrow you want to draw (x, y, size)
+*/
+void DrawPrimitive(void* primitive);
+
+//**********************************
 // ** Function: DrawArrow
 // ** Original Address: 0x80018534
 // ** Hook File: draw_arrow.s 
