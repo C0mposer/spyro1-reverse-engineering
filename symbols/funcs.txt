@@ -51,7 +51,7 @@ maybe_Calculate8BitDifference = 0x80017908;
 maybe_CalculateAngle = 0x800169ac;
 
 Maybe_ResetHudTimers = 0x80058c7c;
-Maybe_PlayMusic = 0x800567f4;
+PlayMusicTrack = 0x800567f4;
 
 
 

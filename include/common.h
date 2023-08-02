@@ -262,11 +262,13 @@ void LockCameraToSpyro(void);
 
 void Vec3IntToShortDiv4(short *Vec3ShortPTR,int *Vec3PTR);                                              //? This function takes an int vector, divides it by 4, then stores it as a short. Some things in spyro need to refer to position as a short rather than an int, like particles, this is where you'd convert them.
 
-char* GetNextParticleSlot(char param_1);                                                                //param_1 Might be storing its subtype. It affects the way the particle looks ratio wise? It also stores the param value you pass into param_1 into the 1st element of the particle struct. NOT THE 0th.
+char* GetNextParticleSlot(char param_1);                                                                //? param_1 Might be storing its subtype. It affects the way the particle looks ratio wise? It also stores the param value you pass into param_1 into the 1st element of the particle struct. NOT THE 0th.
 
 void CreateParticle(int param_1, int param_2, int **ptrToMoby, int *param_4);                           //? This function creates a particle. param_1 amount of particles, param_2 Is the Particle ID, param_3 is a Vec3 to its Initial Spawn Position, param_4 Vec3 of Amount of Units to Travel from Inital POS
 
 void UpdateMobyCollision(int param_1, unsigned int param_2);                                            //? Research this more.
+
+void PlayMusicTrack(int track_number, int flags);                                                       //? param_1 is the track to play. param_2 is the flags/mode. for param_2, 1 is to start at the beginning of the track, 8 is continue where it left off assuming it was saved.
 
 int LoadImageOrTexture(RECT *rect, int *p);
 
@@ -362,7 +364,7 @@ extern int _headAndChestSpinTimer; //0x80077fe4
 extern int _unk_spinRelated;    //0x8006cc78
 extern char* _localSoundEffects; //0x800761D4
 
-extern int _musicCurrentTrack;  //0x0x800774b0
+extern int _musicLevelTrack;  //0x0x800774b0
 
 extern int* _maybe_ptr_levelTextureRelated; //0x800785f0
 
