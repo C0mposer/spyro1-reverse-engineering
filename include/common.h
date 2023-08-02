@@ -294,7 +294,7 @@ extern int _vSyncTimer_60fps; //0x800749E0                   //? This is a globa
 extern int _wobbleAndOpacityTimer; //0x800770f4              //? This is a timer that is often used for changing the opacity of things like lines, the shimmer of text, etc.
 
 //Important Stuff
-extern char _gameState; //0x800757D8                         //? Main gamestate. Gamestate values are stored in the GameState enums.
+extern int _gameState; //0x800757D8                         //? Main gamestate. Gamestate values are stored in the GameState enums.
 extern unsigned short _currentButton; //0x80077380           //? Value coorsponding the the current button being pressed.
 extern unsigned short _currentButtonOneFrame; //0x80077378   //? Value coorsponding the the current button being pressed, then goes back to 0 after 1 frame.
 extern int _secondController; //0x80078E50                   //! STILL RESEARCHING
@@ -309,7 +309,7 @@ extern short _globalGemCount; //0x80075860;                 //? Total amount of 
 extern int _globalDragonCount; // 0x80075750
 extern int _globalEggCount; // 0x80075810
 
-extern char _levelID; //0x800758B4                           //? Level ID according to the LevelIDs enum. This LevelID is used to determine which level will be loaded when in a loading screen, amung other things.
+extern int _levelID; //0x800758B4                           //? Level ID according to the LevelIDs enum. This LevelID is used to determine which level will be loaded when in a loading screen, amung other things.
 extern char _portalToExitFromInHW; //0x800758AC              //? Same as the Level Id for the level.
 
 extern short _flyInAnimation; //0x80076EA8                   //? This is what determines the fly in animation for the level, determined by the LevelFlyInAnimations enum's.
