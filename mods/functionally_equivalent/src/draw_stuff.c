@@ -2,6 +2,37 @@
 #include <custom_types.h>
 #include <moby.h>
 
+
+//**********************************
+// ** Function: DrawPrimitve
+// ** Original Address: 0x800168dc
+// ** Hook File: draw_primitive.s 
+// ** Prototype: draw_stuff.h
+// ** Amount of instructions: Same Amount (https://decomp.me/scratch/wd3wE) 
+//**********************************
+/*
+ * Draws a ps1 primitive to the screen. (Puts a primitive struct into the array of primitives to be drawn every frame)
+ * @param void* hudMobyInfo - pointer to basic info about the arrow you want to draw (x, y, size)
+*/
+void DrawPrimitive(void* primitive)
+
+{
+  int* local_gfx_ptrs;
+  short* unk_first_gfx_ptr;
+  
+  local_gfx_ptrs = _ptr_arrayGraphicsRelatedPointers;
+  unk_first_gfx_ptr = (short *)*_ptr_arrayGraphicsRelatedPointers;
+  *_ptr_arrayGraphicsRelatedPointers = primitive;
+  if (unk_first_gfx_ptr != 0x0) {
+    *unk_first_gfx_ptr = (short)primitive;
+    *(char *)(unk_first_gfx_ptr + 1) = (char)((uint)primitive >> 0x10);
+    return;
+  }
+  local_gfx_ptrs[1] = primitive;
+  return;
+}
+
+
 //**********************************
 // ** Function: DrawArrow
 // ** Original Address: 0x80018534
@@ -16,7 +47,6 @@
  * @param int leftOrRightArrow - 0 for right, 1 for left
 */
 void DrawArrow(HudMobyInfo* hudMobyInfo, uint timer, int leftOrRightArrow)
-
 {
   if ((timer % 32) < 16)                                                        // Alternate from being visible, and not every 16 frames
   {  
@@ -39,12 +69,13 @@ void DrawArrow(HudMobyInfo* hudMobyInfo, uint timer, int leftOrRightArrow)
   return;
 }
 
+
 //**********************************
 // ** Function: DrawTextbox
 // ** Original Address: 0x8001860C
 // ** Hook File: draw_textbox.s
 // ** Prototype: n/a
-// ** Amount of instructions: SAME (https://decomp.me/scratch/MrfVL)
+// ** Amount of instructions: MORE IN MODDERN GCC (https://decomp.me/scratch/MrfVL)
 //**********************************
 /*
  * Draws a default textbox that is filled in
@@ -53,13 +84,10 @@ void DrawArrow(HudMobyInfo* hudMobyInfo, uint timer, int leftOrRightArrow)
  * @param int yBound1 - the first y boundry of the box
  * @param int yBound2 - the second y boundry of the box
 */
-
 void DrawTextbox(int xBound1,int xBound2,int yBound1,int yBound2)
-
 {
-  
-  void* ptr_prim = (void*)_ptr_graphicsRelated;                         
-  DrawShapePreReq(_ptr_graphicsRelated,1,0,0x40,0);               // Trasparent black background hack
+  void* ptr_prim = (void*)_ptr_primitivesArray;                         
+  DrawShapePreReq(_ptr_primitivesArray,1,0,0x40,0);               // Trasparent black background hack
   DrawPrimitive(ptr_prim);
   *(int *)(ptr_prim + 0xc) = 0x5000000;
   *(char *)(ptr_prim + 0x13) = 0x2a;
@@ -75,7 +103,7 @@ void DrawTextbox(int xBound1,int xBound2,int yBound1,int yBound2)
   *(char *)(ptr_prim + 0x11) = 0x70;
   *(char *)(ptr_prim + 0x12) = 0x70;
   DrawPrimitive(ptr_prim + 0xc);
-  _ptr_graphicsRelated = (byte*)ptr_prim + 0x24;                  // Make space in the array of primitives for the next call
+  _ptr_primitivesArray = (byte*)ptr_prim + 0x24;                  // Make space in the array of primitives for the next call
   DrawLine(xBound1,yBound1,xBound2,yBound1);                      // Box outline 
   DrawLine(xBound2,yBound1,xBound2,yBound2);
   DrawLine(xBound2,yBound2,xBound1,yBound2);

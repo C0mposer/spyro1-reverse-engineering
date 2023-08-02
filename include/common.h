@@ -337,7 +337,8 @@ extern int* _ptr_dynamicLevelMobys; //0x8007573C             //? This is a point
 extern int* _ptr_levelMobyData; //0x80075930                 //? This is a pointer to the start of the level moby's data array.
 #define _ptr_levelMobyData _ptr_endDynamicMobys //0x80075930 //? Just giving it another name, since it also could be used to indicate the end of dynamic mobys, instead of just being used to indicate the start of levelMobyData.
 
-extern int* _ptr_graphicsRelated; //0x800757b0                //? Not too sure.
+extern int* _ptr_primitivesArray; //0x800757b0                //? Not too sure.
+extern int* _ptr_arrayGraphicsRelatedPointers; //0x8007581c                //? Ptr the the array of primitives structs to be drawn every frame
 extern int _ptrTextUnk; //0x800720f4                          //? Not too sure.
 extern char* _ptr_hudMobys; //0x80075710                      //? A pointer to a dynamic downwards growing array of moby structs to render that gets rendered to the hud every frame.
 
