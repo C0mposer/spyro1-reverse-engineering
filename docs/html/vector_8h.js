@@ -1,0 +1,26 @@
+var vector_8h =
+[
+    [ "Vec3", "struct_vec3.html", "struct_vec3" ],
+    [ "Vec2", "struct_vec2.html", "struct_vec2" ],
+    [ "Vec3Padding", "struct_vec3_padding.html", "struct_vec3_padding" ],
+    [ "Vec3_u16", "struct_vec3__u16.html", "struct_vec3__u16" ],
+    [ "Vec3_u8", "struct_vec3__u8.html", "struct_vec3__u8" ],
+    [ "Vec2_u16", "struct_vec2__u16.html", "struct_vec2__u16" ],
+    [ "Vec2_u8", "struct_vec2__u8.html", "struct_vec2__u8" ],
+    [ "Angle", "struct_angle.html", "struct_angle" ],
+    [ "Angle_u16", "struct_angle__u16.html", "struct_angle__u16" ],
+    [ "SpyroHeadAngle", "struct_spyro_head_angle.html", "struct_spyro_head_angle" ],
+    [ "CameraAngle", "struct_camera_angle.html", "struct_camera_angle" ],
+    [ "Angle_u8", "struct_angle__u8.html", "struct_angle__u8" ],
+    [ "MATRIX3BY3", "struct_m_a_t_r_i_x3_b_y3.html", "struct_m_a_t_r_i_x3_b_y3" ],
+    [ "MatrixTranspose", "vector_8h.html#aeceaa0bb95241d00bdb77a2898e85b0a", null ],
+    [ "Vec3ApplyRotationMatrix", "vector_8h.html#ae95d236cfbf64b096d9eedb1613abaa0", null ],
+    [ "Vec3CalculateLengthE", "vector_8h.html#af87833eda9af3ef0b919edff4817def7", null ],
+    [ "Vec3Scale", "vector_8h.html#a882790ddb6c850f588712fd827956741", null ],
+    [ "Vec3ScaleByFraction", "vector_8h.html#a9b1a0b35f082a95d23452c0011f4105e", null ],
+    [ "Vec3ScaleByFractionPowerOfTwo", "vector_8h.html#a4cd160d8c785f77dcbd61f948857699c", null ],
+    [ "Vec3ScaleDownBy4", "vector_8h.html#a2a5497b32b4ab9975003a2c621bdf856", null ],
+    [ "Vec3ScaleDownByPowerOfTwo", "vector_8h.html#a77e2924479b22736555faad43a10a2d1", null ],
+    [ "Vec3Subtract", "vector_8h.html#a7ddfc8a42f2ef32a621d3302a8d1d6e8", null ],
+    [ "Vec3Swap", "vector_8h.html#adc2a77b4b059ec20349b05ef7c4a5c68", null ]
+];

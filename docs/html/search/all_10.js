@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['r_0',['R',['../struct_r_g_b_a__u8.html#aa6a68467d7c4508817fa499c9925129c',1,'RGBA_u8::R'],['../struct_r_g_b__u8.html#a26ae3844f300978e7b20f311d51a618a',1,'RGB_u8::R'],['../struct_b_g_r__u8.html#ac7d9bc4cdad96e29c1a3754474dfdba6',1,'BGR_u8::R']]],
+  ['r1_5fbutton_1',['R1_BUTTON',['../common_8h.html#a2200c9a3564da59c1160338587ecb034aee021c360bfd9690e97707bd90c6df4f',1,'common.h']]],
+  ['r2_5fbutton_2',['R2_BUTTON',['../common_8h.html#a2200c9a3564da59c1160338587ecb034a9194587abd347fd3a31e34f76f704ff7',1,'common.h']]],
+  ['r3_5fbutton_3',['R3_BUTTON',['../common_8h.html#a2200c9a3564da59c1160338587ecb034a6951b637a680aecf4544cb947314cef3',1,'common.h']]],
+  ['rand_4',['rand',['../common_8h.html#a20e50ab9d6b10af0e2940d9419448f42',1,'common.h']]],
+  ['read_5fcb_5',['read_cb',['../_p_s_y_q__cd_8h.html#a75afe0018a3a5980d76fdd666f147836',1,'PSYQ_cd.h']]],
+  ['rect_6',['RECT',['../struct_r_e_c_t.html',1,'']]],
+  ['red_7',['red',['../struct_opaque_shape.html#a1c68d56964794b9f33de7a27aece08fe',1,'OpaqueShape']]],
+  ['relativesparxangle_8',['RelativeSparxAngle',['../struct_spyro.html#ad219ef709afe0a94947264e75fcee47a',1,'Spyro']]],
+  ['renderobjs_9',['RenderObjs',['../common_8h.html#af955d496cec4a9b8bb6927facf79378c',1,'common.h']]],
+  ['renderthing_10',['RenderThing',['../common_8h.html#a3f07789e755a87fca5ee96faed79b7ec',1,'common.h']]],
+  ['requiredhud1_11',['requiredHUD1',['../struct_moby.html#a0ee1c23e1693dd0be01dafffc66c4b30',1,'Moby']]],
+  ['requiredhud2_12',['requiredHUD2',['../struct_moby.html#a44090dcbf27f7338fc44a44c4af502f8',1,'Moby']]],
+  ['returning_5fhome_13',['RETURNING_HOME',['../common_8h.html#a3132a853619bbcacb2f9809f68150690af6b07af45c919c139811ab061423edad',1,'common.h']]],
+  ['rgb_14',['RGB',['../struct_moby.html#aefc7e2404bae080462a85935ab48acdd',1,'Moby']]],
+  ['rgb_5fu8_15',['RGB_u8',['../struct_r_g_b__u8.html',1,'']]],
+  ['rgba_5fu8_16',['RGBA_u8',['../struct_r_g_b_a__u8.html',1,'']]],
+  ['right_17',['RIGHT',['../common_8h.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38',1,'common.h']]],
+  ['right_5fbutton_18',['RIGHT_BUTTON',['../common_8h.html#a2200c9a3564da59c1160338587ecb034a2f7db56ce29bb4a148cae5ab0198709a',1,'common.h']]],
+  ['roll_19',['roll',['../struct_angle.html#a032f94614de4f73fe9c31a16270353d8',1,'Angle::roll'],['../struct_angle__u16.html#a7370e9487027a4db619385722260ffc9',1,'Angle_u16::roll'],['../struct_spyro_head_angle.html#a045088e40eb6ba856b1d20e724845627',1,'SpyroHeadAngle::roll'],['../struct_camera_angle.html#a090b220bd09dc6804f5cc1979c2fbc03',1,'CameraAngle::roll'],['../struct_angle__u8.html#a67388570621e616a54fae1c3ee20f0cb',1,'Angle_u8::roll']]],
+  ['roll_5fdown_5fslope_20',['ROLL_DOWN_SLOPE',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579a53268ad824e73059553cac9439c4d385',1,'spyro.h']]],
+  ['roll_5fleft_21',['ROLL_LEFT',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579a4e040a4702a93f7949334e2522f7dcaa',1,'spyro.h']]],
+  ['roll_5fright_22',['ROLL_RIGHT',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579aff9d64b28ae0b78768baea86b3ee1a89',1,'spyro.h']]],
+  ['rollmomentum_23',['rollMomentum',['../struct_spyro.html#a3d80838356fcbf2bb2d1914c00836753',1,'Spyro']]],
+  ['rotation_24',['rotation',['../struct_moby.html#a0a447f9a77c62404f860681950b06c5a',1,'Moby']]]
+];
