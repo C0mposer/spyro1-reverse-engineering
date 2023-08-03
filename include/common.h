@@ -202,11 +202,6 @@ typedef struct BGR_u8
     unsigned char R;
 }BGR_u8;
 
-typedef struct NOPHexCode
-{
-    int hexCode1;
-    int hexCode2;
-}NOPHexCode;
 
 
 
