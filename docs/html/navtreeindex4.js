@@ -61,6 +61,7 @@ var NAVTREEINDEX4 =
 "struct_vec3_padding.html#a5ab7254e80bea656c8ad2e93ddfdf8b2":[2,0,35,3],
 "struct_vec3_padding.html#ad481f359b7129a6a69a92f1fbcc7332a":[2,0,35,2],
 "symbol_map.html":[1],
+"symbol_map.html#ghidra_project":[1,2],
 "symbol_map.html#in_game_functions":[1,1],
 "symbol_map.html#in_game_variables":[1,0],
 "text_8h.html":[3,0,1,9],

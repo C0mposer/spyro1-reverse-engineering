@@ -28,7 +28,8 @@ var NAVTREE =
     [ "Overview", "index.html", null ],
     [ "Symbol Map", "symbol_map.html", [
       [ "In Game Global Variables", "symbol_map.html#in_game_variables", null ],
-      [ "In Game Functions", "symbol_map.html#in_game_functions", null ]
+      [ "In Game Functions", "symbol_map.html#in_game_functions", null ],
+      [ "Ghidra Project Download", "symbol_map.html#ghidra_project", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
