@@ -2,6 +2,7 @@ var searchData=
 [
   ['rand_0',['rand',['../common_8h.html#a20e50ab9d6b10af0e2940d9419448f42',1,'common.h']]],
   ['read_5fcb_1',['read_cb',['../_p_s_y_q__cd_8h.html#a75afe0018a3a5980d76fdd666f147836',1,'PSYQ_cd.h']]],
-  ['renderobjs_2',['RenderObjs',['../common_8h.html#af955d496cec4a9b8bb6927facf79378c',1,'common.h']]],
-  ['renderthing_3',['RenderThing',['../common_8h.html#a3f07789e755a87fca5ee96faed79b7ec',1,'common.h']]]
+  ['renderallobjects_2',['RenderAllObjects',['../common_8h.html#a8c78decebf308550e3814c3fc409ced4',1,'common.h']]],
+  ['rendernormalmobys_3',['RenderNormalMobys',['../common_8h.html#a09d24ed23cad144dab20a5114bb3e7a0',1,'common.h']]],
+  ['rendershadedmobys_4',['RenderShadedMobys',['../common_8h.html#a9193eede6cc8642072b3cf19aff3d31c',1,'common.h']]]
 ];

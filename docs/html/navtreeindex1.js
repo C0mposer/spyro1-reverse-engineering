@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"custom__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e":[4,0,1,1,21],
 "custom__types_8h.html#a151f780fb455885061d3b77ec1c90c03":[4,0,1,1,15],
 "custom__types_8h.html#a1b956fe1df85f3c132b21edb4e116458":[4,0,1,1,12],
 "custom__types_8h.html#a259fa4834387bd68627ddf37bb3ebdb9":[4,0,1,1,10],
@@ -51,8 +50,8 @@ var NAVTREEINDEX1 =
 "functions_t.html":[3,2,0,16],
 "functions_u.html":[3,2,0,17],
 "functions_v.html":[3,2,0,18],
-"functions_vars.html":[3,2,1],
 "functions_vars.html":[3,2,1,0],
+"functions_vars.html":[3,2,1],
 "functions_vars_b.html":[3,2,1,1],
 "functions_vars_c.html":[3,2,1,2],
 "functions_vars_d.html":[3,2,1,3],
@@ -85,8 +84,8 @@ var NAVTREEINDEX1 =
 "ghidra_project.html#ghidra_download":[1,0],
 "ghidra_project.html#ghidra_plugin_download":[1,1],
 "ghidra_project.html#ghidra_project_download":[1,2],
-"globals.html":[4,1,0],
 "globals.html":[4,1,0,0],
+"globals.html":[4,1,0],
 "globals_a.html":[4,1,0,1],
 "globals_b.html":[4,1,0,2],
 "globals_c.html":[4,1,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "moby_8h.html#acf1793ba9c40f4c01bb39d5ac62df5d8":[4,0,1,2,4],
 "moby_8h_source.html":[4,0,1,2],
 "options_8h.html":[4,0,1,3],
-"options_8h.html#aa4e772a7349027e646a609759807f8c3":[4,0,1,3,1]
+"options_8h.html#aa4e772a7349027e646a609759807f8c3":[4,0,1,3,1],
+"options_8h.html#aa4e772a7349027e646a609759807f8c3a0274aa19ad66fcef2c22994d3b892fbd":[4,0,1,3,1,0]
 };

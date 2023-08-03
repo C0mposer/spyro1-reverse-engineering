@@ -1,14 +1,14 @@
 var searchData=
 [
   ['pad_0',['pad',['../struct_cdl_f_i_l_t_e_r.html#a8192d8a66f65f88a995664c89e382a78',1,'CdlFILTER']]],
-  ['pad1_1',['pad1',['../struct_spyro_head_angle.html#a698cad7fd31611ef8cef067119a4006c',1,'SpyroHeadAngle::pad1'],['../struct_spyro.html#a64ed748faa4a6af52acd6b281fdd5dc6',1,'Spyro::pad1']]],
-  ['pad2_2',['pad2',['../struct_spyro.html#aacf94a6a909dab20774c3dad430ca6a8',1,'Spyro::pad2'],['../struct_spyro_head_angle.html#aa5a5347b24fca0fd6edb8d52428c41a1',1,'SpyroHeadAngle::pad2']]],
+  ['pad1_1',['pad1',['../struct_spyro.html#a64ed748faa4a6af52acd6b281fdd5dc6',1,'Spyro::pad1'],['../struct_spyro_head_angle.html#a698cad7fd31611ef8cef067119a4006c',1,'SpyroHeadAngle::pad1']]],
+  ['pad2_2',['pad2',['../struct_spyro_head_angle.html#aa5a5347b24fca0fd6edb8d52428c41a1',1,'SpyroHeadAngle::pad2'],['../struct_spyro.html#aacf94a6a909dab20774c3dad430ca6a8',1,'Spyro::pad2']]],
   ['pad3_3',['pad3',['../struct_spyro.html#afeb5f9219d430faf1eeea75b41c53f16',1,'Spyro::pad3'],['../struct_spyro_head_angle.html#aad297ad6b03fc54b001c39f06af6c953',1,'SpyroHeadAngle::pad3']]],
   ['pad4_4',['pad4',['../struct_spyro.html#aaa6aa6b4cb6e47d6fe43162eedf91bbf',1,'Spyro']]],
   ['pad5_5',['pad5',['../struct_spyro.html#ad96214b425920a88cad735462160f1ab',1,'Spyro']]],
   ['padding_6',['padding',['../struct_vec3_padding.html#a38feda4975c82e4f02ea60fe45456e5e',1,'Vec3Padding']]],
-  ['padding1_7',['PADDING1',['../struct_poly4_f_textured.html#a7927a250d4128450abdf5c177f2037e0',1,'Poly4FTextured::PADDING1'],['../struct_poly4_f_shaded_textured.html#a86674b58f8b2a3b51d85e322ba55cc30',1,'Poly4FShadedTextured::PADDING1'],['../struct_opaque_shape.html#a173602220c0b8305765459af989cb80b',1,'OpaqueShape::PADDING1']]],
-  ['padding2_8',['PADDING2',['../struct_poly4_f_shaded_textured.html#ab72f0bdde5a282d617ccc70e293fea94',1,'Poly4FShadedTextured::PADDING2'],['../struct_poly4_f_textured.html#aed2da0e68c42d657ddbf65ebd3118b7d',1,'Poly4FTextured::PADDING2'],['../struct_opaque_shape.html#aa5d63b0ef3d51f0fe705b6fd7e3bbbae',1,'OpaqueShape::PADDING2']]],
+  ['padding1_7',['PADDING1',['../struct_opaque_shape.html#a173602220c0b8305765459af989cb80b',1,'OpaqueShape::PADDING1'],['../struct_poly4_f_textured.html#a7927a250d4128450abdf5c177f2037e0',1,'Poly4FTextured::PADDING1'],['../struct_poly4_f_shaded_textured.html#a86674b58f8b2a3b51d85e322ba55cc30',1,'Poly4FShadedTextured::PADDING1']]],
+  ['padding2_8',['PADDING2',['../struct_opaque_shape.html#aa5d63b0ef3d51f0fe705b6fd7e3bbbae',1,'OpaqueShape::PADDING2'],['../struct_poly4_f_textured.html#aed2da0e68c42d657ddbf65ebd3118b7d',1,'Poly4FTextured::PADDING2'],['../struct_poly4_f_shaded_textured.html#ab72f0bdde5a282d617ccc70e293fea94',1,'Poly4FShadedTextured::PADDING2']]],
   ['padding3_9',['PADDING3',['../struct_opaque_shape.html#a29945f0dca736993311f884e26fb1c99',1,'OpaqueShape']]],
   ['padding5_10',['PADDING5',['../struct_shaded_line.html#a8150e476584a253dc596be82f4ec6b3a',1,'ShadedLine']]],
   ['particle_11',['Particle',['../struct_particle.html',1,'']]],
@@ -52,11 +52,12 @@ var searchData=
   ['poly4fshaded_49',['Poly4FShaded',['../struct_poly4_f_shaded.html',1,'']]],
   ['poly4fshadedtextured_50',['Poly4FShadedTextured',['../struct_poly4_f_shaded_textured.html',1,'']]],
   ['poly4ftextured_51',['Poly4FTextured',['../struct_poly4_f_textured.html',1,'']]],
-  ['position_52',['position',['../struct_spyro.html#a11d08eec11a340a0551d090c6e5e6c98',1,'Spyro::position'],['../struct_particle.html#ae7478d81bfd2eb360ab096d8f6cc08b0',1,'Particle::position'],['../struct_moby.html#a44874a4fd40fec87f0a94ba76dbdf689',1,'Moby::position'],['../struct_hud_moby_info.html#a6f47d92ba90f4d9c331c59bf24c7526b',1,'HudMobyInfo::position']]],
-  ['primitivecode_53',['PrimitiveCode',['../shapes_8h.html#a6d5073e7702f114eadb50c4acd178635',1,'shapes.h']]],
-  ['printf_54',['printf',['../common_8h.html#a98631211a4a8aee62f572375d5b637be',1,'common.h']]],
-  ['psyq_5fcd_2eh_55',['PSYQ_cd.h',['../_p_s_y_q__cd_8h.html',1,'']]],
-  ['ptr_5fcolision_56',['ptr_colision',['../struct_moby.html#a19cf64a10d01077026a0a3171b6e3ca2',1,'Moby']]],
-  ['ptr_5fmobyspecificdata_57',['ptr_mobySpecificData',['../struct_moby.html#a7cfb7228aa428f540755e57844c150c4',1,'Moby']]],
-  ['pull_5fback_5fglide_58',['PULL_BACK_GLIDE',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579afe4b4c908e80742c1cf9ca098a14c5d4',1,'spyro.h']]]
+  ['position_52',['position',['../struct_hud_moby_info.html#a6f47d92ba90f4d9c331c59bf24c7526b',1,'HudMobyInfo::position'],['../struct_spyro.html#a11d08eec11a340a0551d090c6e5e6c98',1,'Spyro::position'],['../struct_particle.html#ae7478d81bfd2eb360ab096d8f6cc08b0',1,'Particle::position'],['../struct_moby.html#a44874a4fd40fec87f0a94ba76dbdf689',1,'Moby::position']]],
+  ['primitivealphahack_53',['PrimitiveAlphaHack',['../common_8h.html#a35d76263f45bd1784ef73c34fb0bde75',1,'common.h']]],
+  ['primitivecode_54',['PrimitiveCode',['../shapes_8h.html#a6d5073e7702f114eadb50c4acd178635',1,'shapes.h']]],
+  ['printf_55',['printf',['../common_8h.html#a98631211a4a8aee62f572375d5b637be',1,'common.h']]],
+  ['psyq_5fcd_2eh_56',['PSYQ_cd.h',['../_p_s_y_q__cd_8h.html',1,'']]],
+  ['ptr_5fcolision_57',['ptr_colision',['../struct_moby.html#a19cf64a10d01077026a0a3171b6e3ca2',1,'Moby']]],
+  ['ptr_5fmobyspecificdata_58',['ptr_mobySpecificData',['../struct_moby.html#a7cfb7228aa428f540755e57844c150c4',1,'Moby']]],
+  ['pull_5fback_5fglide_59',['PULL_BACK_GLIDE',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579afe4b4c908e80742c1cf9ca098a14c5d4',1,'spyro.h']]]
 ];

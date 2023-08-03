@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"struct_spyro.html#acdfd5384b358529693c6623469dc8535":[3,0,26,26],
 "struct_spyro.html#ace57f1a0c46d50fb2883e338200f0ffa":[3,0,26,38],
 "struct_spyro.html#acfbcefae37349f43f95009749a51eb8c":[3,0,26,43],
 "struct_spyro.html#ad219ef709afe0a94947264e75fcee47a":[3,0,26,70],
