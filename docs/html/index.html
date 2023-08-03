@@ -139,7 +139,8 @@ Outline of our current workflow</h2>
 <li>Refactor to look more readable</li>
 <li>Repeat 2 &amp; 3 until as readable as possible, while maintaining same amount of instructions or less.</li>
 <li>Create .s file for replacing the original functions first instruction with a jump to our function</li>
-<li>Associate address of original functions first instruction with our .s file in buildlist.txt using this format: NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s</li>
+<li>Associate address of original functions first instruction with our .s file in buildlist.txt using this format: <div class="fragment"><div class="line">NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s</div>
+</div><!-- fragment --></li>
 <li>Create function prototype in relavent .h file</li>
 <li>Document Function in .c file using this syntax: <div class="fragment"><div class="line">/**</div>
 <div class="line"> * @brief Brief explaination of function</div>
