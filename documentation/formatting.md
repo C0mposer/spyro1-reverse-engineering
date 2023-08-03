@@ -2,7 +2,7 @@
 <span style="font-size:18px;">
 
 ## Symbol Map
-[Click here to see the in-game varialbes & functions we have labeled](symbol_map.html)
+[Click here to see the in-game variables & functions we have labeled](symbol_map.html)
 
 ## Ghidra Project
 [Click here to download our Ghidra project](ghidra_project.html)
