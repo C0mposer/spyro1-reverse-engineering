@@ -1,6 +1,3 @@
-@mainpage Overview
-<span style="font-size:18px;">
-
 ##Symbol Map
 [Click here to see the in-game varialbes & functions we have labeled](symbol_map.html)
 
