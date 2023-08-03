@@ -18,12 +18,12 @@ the game, but allows us to test our compiled code very easily. This is because e
 So long we aim for the same/less assembly opcodes, we should theoretically be able to place these recompiled functions into their correct spots eventually.
 
 ##Recommended Tools:
-(Here is a guide for setting up some of these tools)[https://docs.google.com/document/d/1hX7SrIHD35QESLQdDki3KHT-sHRcJ61hrNL_sEI3oww/edit#heading=h.6rhd60yzzk7r]
-
 1. Ghidra: Very useful general reverse engineering/decompilation tool.
 2. PCSX-Redux: Debugging emulator for easy testing of compiled code
 3. Bizhawk: General purpose emulator with great memory search/memory view
 4. spimdisasm: Command line utility for disassembling mips opcodes into a format decomp.me can understand
+
+[Here is a guide for setting up some of these tools](https://docs.google.com/document/d/1hX7SrIHD35QESLQdDki3KHT-sHRcJ61hrNL_sEI3oww/edit#heading=h.6rhd60yzzk7r)
 
 ##Outline of our current workflow
 1. Copy decompiled function from Ghidra into new, or relavent .c file
