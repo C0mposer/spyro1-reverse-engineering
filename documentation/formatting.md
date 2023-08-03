@@ -36,8 +36,9 @@ So long we aim for the same/less assembly opcodes, we should theoretically be ab
 5. Create .s file for replacing the original functions first instruction with a jump to our function
 
 6. Associate address of original functions first instruction with our .s file in buildlist.txt using this format:
+```
 NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
-
+```
 7. Create function prototype in relavent .h file
 
 8. Document Function in .c file using this syntax:
