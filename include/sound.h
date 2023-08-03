@@ -1,8 +1,11 @@
 #ifndef SOUND_H
 #define SOUND_H
 
-
-int PlaySoundEffect(int soundEffectID, int ptrToMoby, int playbackMode, char *param_4);
+enum SoundPlaybackModes
+{
+    SOUND_PLAYBACK_MODE_NORMAL = 0x10,
+    SOUND_PLAYBACK_MODE_CONNECTED_TO_MOBY = 0x8
+};
 
 enum SoundEffectIDS
 {
@@ -89,12 +92,6 @@ SOUND_EFFECT_SPARX_EAT = 0x49,
 SOUND_EFFECT_SPARX_FULL_EAT = 0x4A,
 SOUND_EFFECT_LIFE_CHEST_BLINK = 0x4B,
 SOUND_EFFECT_DRAGON_IDLE_SHAKE = 0x4C
-};
-
-enum SoundPlaybackModes
-{
-    SOUND_PLAYBACK_MODE_NORMAL = 0x10,
-    SOUND_PLAYBACK_MODE_CONNECTED_TO_MOBY = 0x8
 };
 
 #endif //SOUND_H

@@ -103,14 +103,8 @@ typedef struct MATRIX3BY3
 
 
 //~~~~~~~~~
-//Functions
+//In Game Functions
 //~~~~~~~~~
-
-void Vec3Add(int* result, int* a, int* b);
-
-void Vec3Copy(int* dest, int* src);
-
-//
 
 void Vec3Subtract(Vec3* destVector, Vec3* a, Vec3* b);
 

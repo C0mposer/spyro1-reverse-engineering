@@ -27,7 +27,6 @@ typedef enum PrimitiveCode
     POLY4F_OPAQUE_SHADEDANDTEXTURED_RAW = 0x3C,
     POLY4F_TRANSPARENT_SHADEDANDTEXTURED_RAW = 0x3E,
 
-
     LINE_OPAQUE = 0x40,
     LINE_TRANSPARENT = 0x42,
     LINE_OPAQUE_SHADED = 0x50,
@@ -41,12 +40,12 @@ enum ColorModes
     COLORMODE_16BIT
 };
 
-enum DrawOpaqueShapeColorSpaces
-{
-    RGB_DARK = 0x00,
-    RGB = 0x20,
-    CMY = 0x40
-};
+// enum DrawOpaqueShapeColorSpaces
+// {
+//     RGB_DARK = 0x00,
+//     RGB = 0x20,
+//     CMY = 0x40
+// };
 
 //~~~~~~~
 //Structs
@@ -242,27 +241,3 @@ typedef struct OpaqueShape      //! LEGACY
 
 } OpaqueShape;
 
-
-//~~~~~~~~~
-//Functions
-//~~~~~~~~~
-void DrawPrimitive(void* shapeInfo);                                                //? This function draws a primitive shape using specific parameters needed by the GPU http://problemkaputt.de/psx-spx.htm#graphicsprocessingunitgpu use my wrapper CustomDrawPrimitive if you want to easily do that
-
-void CustomDrawPolygon(Poly4F customInfo, PrimitiveCode code);                                  //? This is my custom function. Does all the pre-req's needed for DrawPrimitive
-
-void CustomDrawPolygonShaded(Poly4FShaded customInfo, PrimitiveCode shapeCode);
-
-void CustomDrawPolygonTextured(Poly4FTextured customInfo, PrimitiveCode shapeCode);
-
-void CustomDrawPolygonShadedTextured(Poly4FShadedTextured customInfo, PrimitiveCode shapeCode);
-
-void CustomDrawShapeInverted(Poly4F customInfo);
-
-void CustomDrawLine(Line customLineData, PrimitiveCode shapeCode);                                 //? This is my custom draw line function, that takes my custom Line data type. I made this so I can change the color of the line.
-
-void CustomDrawLineShaded(ShadedLine customLineData, PrimitiveCode shapeCode);                     //? This is my custom draw line w/ a gradient function, that takes my custom LineGradient data type. I made this so I can change the color of the line, and gradient between p1 and p2.
-
-void DrawRGBRectangle(OpaqueShape info, char speed);
-
-
-#endif //FILTERS_H

@@ -210,11 +210,6 @@ typedef struct NOPHexCode
 
 
 
-//*~~~~~~~~~~~~~~~~
-//*Custom Functions 
-//*~~~~~~~~~~~~~~~~
-
-
 //*~~~~~~~~~~~~~~~~~~~~~~~~
 //*        SYMBOLS
 //*~~~~~~~~~~~~~~~~~~~~~~~~
@@ -233,10 +228,8 @@ void memset(void *str, int c, int n);
 int rand();
 void srand(int seed);
 
-void ArrayCopy(int *outputArray,int *inputArray,int arrayLength);                                       //? This function copies one array to another
 
-void DrawLine(int point1X, int point1Y, int point2X, int point2Y);                                      //? This function draws a yellow line.
-void FillScreenColor(int colorSpace, char r, char g, char b);                                           //? Fills the screen with a specific color.
+void ArrayCopy(int *outputArray,int *inputArray,int arrayLength);                                       //? This function copies one array to another
 
 //Pre-Reqs for other functions
 void CopyHudToShaded();
@@ -247,6 +240,9 @@ void DrawMobys();
 void RenderObjs();
 void DrawShapePreReq(void* param_1, int param_2, int param_3, short colorSpace, int param_5);
 
+
+void DrawLine(int point1X, int point1Y, int point2X, int point2Y);                                      //? This function draws a yellow line.
+void FillScreenColor(int colorSpace, char r, char g, char b);                                           //? Fills the screen with a specific color.
 
 void PlayIntroCutscenes();                                                                              //? This function is related to the intro cutscenes.
 
@@ -262,6 +258,8 @@ char* GetNextParticleSlot(char param_1);                                        
 void CreateParticle(int param_1, int param_2, int **ptrToMoby, int *param_4);                           //? This function creates a particle. param_1 amount of particles, param_2 Is the Particle ID, param_3 is a Vec3 to its Initial Spawn Position, param_4 Vec3 of Amount of Units to Travel from Inital POS
 
 void UpdateMobyCollision(int param_1, unsigned int param_2);                                            //? Research this more.
+
+int PlaySoundEffect(int soundEffectID, int ptrToMoby, int playbackMode, char *param_4);
 
 void PlayMusicTrack(int track_number, int flags);                                                       //? param_1 is the track to play. param_2 is the flags/mode. for param_2, 1 is to start at the beginning of the track, 8 is continue where it left off assuming it was saved.
 
@@ -295,7 +293,7 @@ extern bool _isLoading;
 extern bool _isInsideOptionsMenu;
 
 /**
- * @brief true/1 If can fly in to level. If set to 0, will just fade in instead of flying in. I assume this is a leftover from prototypes?
+ * @brief true/1 If can fly in to level. This is always 1. If set to 0, will just fade in instead of flying in. I assume this is a leftover from prototypes?
  * @note Address: 0x800756D0  
  */         
 extern bool _canFlyIn; 
@@ -539,13 +537,12 @@ extern char* _ptr_hudMobys; //0x80075710                      //? A pointer to a
 
 extern char* _ptr_particleLinkedList; //0x80075738           //? This is a pointer to the next available particle slot.
 
-extern char _hudChestState;  //0x80077FAC
 extern char _hudDragonState; //0x80077fa9
 extern char _hudLivesState;  //0x80077faa
 extern char _hudEggsState;   //0x80077fab
-extern char _hudAnimationState;  //0x80077fac
+extern char _hudChestState;  //0x80077fac
 
-extern int _headAndChestSpinTimer; //0x80077fe4
+extern int _hudElementsSpinTimer; //0x80077fe4
 extern int _unk_spinRelated;    //0x8006cc78
 extern char* _localSoundEffects; //0x800761D4
 
@@ -554,7 +551,5 @@ extern int _musicLevelTrack;  //0x0x800774b0
 extern int* _maybe_ptr_levelTextureRelated; //0x800785f0
 
 extern byte _cdStatus; //0x80074e44
-
-extern char _freeSpace[0xE5F]; //0x80073990                 //? This is almost 1kb of free space in the game
 
 #endif /* COMMON_H */

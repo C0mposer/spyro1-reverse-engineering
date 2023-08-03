@@ -96,7 +96,7 @@ _musicLevelTrack = 0x800774b0;
 
 _cdStatus = 0x80074e44;
 
-_headAndChestSpinTimer = 0x80077fe4;
+_hudElementsSpinTimer = 0x80077fe4;
 
 _hudChestState = 0x80077FAC;
 _hudDragonState = 0x80077fa9;

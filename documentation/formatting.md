@@ -1,22 +1,26 @@
-@mainpage
-#Overview
+@mainpage Overview
+
+##Symbol Map
+[Click here to see the symbols we have found](symbol_map.html)
+
+##Overview
 At a high level, this is the way this reverse engineering project is set up for right now: 
 
-We are attempting to recompile assembely functions from Spyro the Dragon using C to be **functionally equivalent** and the **same amount or less** assembly opcodes using a modern mips compiler. We are **not** aiming for byte for byte matches; instead **functionally equivalent matches** with an emphasis on *readability*, and ensuring the same or less amount of assembly opcodes from our compiled functions. 
+We are attempting to recompile assembly functions from spyro the dragon using C. The recompiled functions should be **functionally equivalent** and the **same amount or less** assembly opcodes. We are using a modern mips compiler. We are **not** aiming for byte for byte matches; instead **functionally equivalent matches** with an emphasis on *readability*, and ensuring the same or less amount of assembly opcodes from our compiled functions. 
 
-We are currently placing our re-created functions in extra 8mb developer ram that *most ps1's do not have*, then replacing the first assembly instruction of original function with a simple jump to our re-created function in the extra ram area. This current approach does not rebuild 
-the game, but allows us to test our recompiled code very easily, as everytime the game tries to run the original function, it simply jumps to our re-created version that is in the extra ram area instead. 
+We are currently placing our re-created functions in extra 8mb developer ram that *most ps1's do not have*, then replacing the first assembly instruction of the original function with a simple jump to our re-created function in the extra ram area. This current approach does not rebuild 
+the game, but allows us to test our compiled code very easily. This is because everytime the game tries to run the original function, it simply jumps to our re-created version that is in the extra ram area instead. 
 
 So long we aim for the same/less assembly opcodes, we should theoretically be able to place these recompiled functions into their correct spots eventually.
 
 ##Recommended Tools:
 
-A. PCSX-Redux: Debugging emulator for easy testing of compiled code
-B. spimdisasm: Command line utility for disassembling mips opcodes into a format decomp.me can understand
-C. Ghidra: Very useful general reverse engineering/decompilation tool.
+1. Ghidra: Very useful general reverse engineering/decompilation tool.
+2. PCSX-Redux: Debugging emulator for easy testing of compiled code
+3. spimdisasm: Command line utility for disassembling mips opcodes into a format decomp.me can understand
 
 ##Outline of our current workflow
-1. Copy decompiled function from Ghidra into new, or relavent.c file
+1. Copy decompiled function from Ghidra into new, or relavent .c file
 
 2. Compare C code against assembly on decomp.me until same amount of instructions or less 
     - Can use "Copy Special... Byte String (No Spaces)" from Ghidra to get the asm opcodes, and then paste them into spimdisasm to disassemble the opcodes into the correct format for decomp.me
@@ -31,7 +35,7 @@ NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
 7. Create function prototype in relavent .h file
 
 8. Document Function in .c file using this syntax:
-```c
+```
 /**
  * @brief Brief explaination of function
  * @details More detailed explaination of function.
