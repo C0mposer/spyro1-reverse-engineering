@@ -273,6 +273,7 @@ int pitchMomentum;                                          //? Spyro's pitch mo
 /**
  * @brief  This is where spyro is in ram. This is the 1 instance of the spyro struct
  * @note Address: 0x80078A58
+ * @see Spyro
  */ 
 extern Spyro _spyro;
 

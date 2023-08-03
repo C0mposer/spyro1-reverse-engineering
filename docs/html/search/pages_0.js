@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['overview_0',['Overview',['../index.html',1,'']]]
+  ['ghidra_20project_0',['Ghidra Project',['../ghidra_project.html',1,'']]]
 ];

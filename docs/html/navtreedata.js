@@ -26,10 +26,14 @@ var NAVTREE =
 [
   [ "Spyro 1 Reverse Engineering", "index.html", [
     [ "Overview", "index.html", null ],
+    [ "Ghidra Project", "ghidra_project.html", [
+      [ "Ghidra", "ghidra_project.html#ghidra_download", null ],
+      [ "Ghidra PSX Plugin", "ghidra_project.html#ghidra_plugin_download", null ],
+      [ "Ghidra Project", "ghidra_project.html#ghidra_project_download", null ]
+    ] ],
     [ "Symbol Map", "symbol_map.html", [
       [ "In Game Global Variables", "symbol_map.html#in_game_variables", null ],
-      [ "In Game Functions", "symbol_map.html#in_game_functions", null ],
-      [ "Ghidra Project Download", "symbol_map.html#ghidra_project", null ]
+      [ "In Game Functions", "symbol_map.html#in_game_functions", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -58,9 +62,9 @@ var NAVTREEINDEX =
 [
 "_p_s_y_q__cd_8h.html",
 "custom__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e",
-"options_8h.html#ac6e73fe6ce68e10b0acd6d2312bdbb35a0f1f08c6c494c5c1466137f6bc68c549",
-"struct_moby.html#af0da6072e88282bf51c9e2f6fada7634",
-"struct_spyro.html#ace57f1a0c46d50fb2883e338200f0ffa"
+"options_8h.html#aa4e772a7349027e646a609759807f8c3a0274aa19ad66fcef2c22994d3b892fbd",
+"struct_moby.html#ade64c324d239df5fcb130fd1ffd1b1c8",
+"struct_spyro.html#aca291e55b7403b2fb4e21c8d359a3ca7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
