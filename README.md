@@ -1,8 +1,8 @@
 ## Symbol Map
-[Click here to see the in-game varialbes & functions we have labeled](symbol_map.html)
+[Click here to see the in-game varialbes & functions we have labeled](https://c0mposer.github.io/spyro1-reverse-engineering/html/symbol_map.html)
 
 ## Ghidra Project
-[Click here to download our Ghidra project](ghidra_project.html)
+[Click here to download our Ghidra project](https://c0mposer.github.io/spyro1-reverse-engineering/html/ghidra_project.html)
 
 ## Overview
 At a high level, this is the way this reverse engineering project is set up currently: 
