@@ -188,9 +188,18 @@ Variables</h2></td></tr>
 <tr class="memitem:a6b05b5b802ea334237727f007f02bd16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#a6b05b5b802ea334237727f007f02bd16">_spyroAngleRoll</a></td></tr>
 <tr class="memdesc:a6b05b5b802ea334237727f007f02bd16"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a>'s Roll Rotation <a class="el" href="struct_angle.html">Angle</a>.  <br /></td></tr>
 <tr class="separator:a6b05b5b802ea334237727f007f02bd16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a219a924481deb45cd1987147b907a8ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_g_b_a__u8.html">RGBA_u8</a> _spyroColorFilter int _spyroState int _spyroSubState int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#a219a924481deb45cd1987147b907a8ef">_spyroFramesInCurrentState</a></td></tr>
-<tr class="memdesc:a219a924481deb45cd1987147b907a8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the color filter applied on top of spyro in RGBA format.  <br /></td></tr>
-<tr class="separator:a219a924481deb45cd1987147b907a8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860d5177e9bce8777b5ec3895d650f9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_g_b_a__u8.html">RGBA_u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#a860d5177e9bce8777b5ec3895d650f9d">_spyroColorFilter</a></td></tr>
+<tr class="memdesc:a860d5177e9bce8777b5ec3895d650f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the color filter applied on top of spyro in RGBA format.  <br /></td></tr>
+<tr class="separator:a860d5177e9bce8777b5ec3895d650f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf183cf38515519c4a81e759295ec125"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#acf183cf38515519c4a81e759295ec125">_spyroState</a></td></tr>
+<tr class="memdesc:acf183cf38515519c4a81e759295ec125"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is spyro's current active state.  <br /></td></tr>
+<tr class="separator:acf183cf38515519c4a81e759295ec125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb70d5e955b2f5e2b9a8f796ba5532bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#abb70d5e955b2f5e2b9a8f796ba5532bd">_spyroSubState</a></td></tr>
+<tr class="memdesc:abb70d5e955b2f5e2b9a8f796ba5532bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is spyro's current active sub-state.  <br /></td></tr>
+<tr class="separator:abb70d5e955b2f5e2b9a8f796ba5532bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c1550e0054772fcfe8f58c931f31b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#a35c1550e0054772fcfe8f58c931f31b1">_spyroFramesInCurrentState</a></td></tr>
+<tr class="memdesc:a35c1550e0054772fcfe8f58c931f31b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time in frames spent in the current state. Used for calculations for jumping, boking, damage, time sensitive states, etc.  <br /></td></tr>
+<tr class="separator:a35c1550e0054772fcfe8f58c931f31b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e5bdc36b1797327f404af7083280af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vec3.html">Vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#a1e5bdc36b1797327f404af7083280af8">_spyroGroundedChargeMomentum</a></td></tr>
 <tr class="memdesc:a1e5bdc36b1797327f404af7083280af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spyros grouded charging momentum vector.  <br /></td></tr>
 <tr class="separator:a1e5bdc36b1797327f404af7083280af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,6 +233,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a9312beda2f60c67bb2ea288f59357033"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#a9312beda2f60c67bb2ea288f59357033">_spyroCanSuperFly</a></td></tr>
 <tr class="memdesc:a9312beda2f60c67bb2ea288f59357033"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bool for if spyro can superfly currently.  <br /></td></tr>
 <tr class="separator:a9312beda2f60c67bb2ea288f59357033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad107a4268a3c313a50bd8775a70cc6e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spyro_8h.html#ad107a4268a3c313a50bd8775a70cc6e2">_spyroIsOnSuperchargeGround</a></td></tr>
+<tr class="memdesc:ad107a4268a3c313a50bd8775a70cc6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bool for if spyro is currently on supercharge ground.  <br /></td></tr>
+<tr class="separator:ad107a4268a3c313a50bd8775a70cc6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="aa2de79fdccfb5675aaecead602c22579" name="aa2de79fdccfb5675aaecead602c22579"></a>
@@ -456,16 +468,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A bool for if spyro can superfly currently. </p>
-<p>A bool for if spyro is currently on supercharge ground.</p>
 <p>This can be set to true in any level </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ca4 </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a></dd></dl>
-<p>This doesn't give spyro supercharge state, but gives him the weird properties of being on a supercharge ground, like the extra charge in air height. </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ca8 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> </dd></dl>
 
 </div>
 </div>
-<a id="a219a924481deb45cd1987147b907a8ef" name="a219a924481deb45cd1987147b907a8ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a219a924481deb45cd1987147b907a8ef">&#9670;&#160;</a></span>_spyroFramesInCurrentState</h2>
+<a id="a860d5177e9bce8777b5ec3895d650f9d" name="a860d5177e9bce8777b5ec3895d650f9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860d5177e9bce8777b5ec3895d650f9d">&#9670;&#160;</a></span>_spyroColorFilter</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -474,7 +483,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_r_g_b_a__u8.html">RGBA_u8</a> _spyroColorFilter int _spyroState int _spyroSubState int _spyroFramesInCurrentState</td>
+          <td class="memname"><a class="el" href="struct_r_g_b_a__u8.html">RGBA_u8</a> _spyroColorFilter</td>
         </tr>
       </table>
   </td>
@@ -486,14 +495,31 @@ Variables</h2></td></tr>
 
 <p>This is the color filter applied on top of spyro in RGBA format. </p>
 <p>This is what gets applied to spyro during superflame. </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078a80 </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> <a class="el" href="struct_r_g_b_a__u8.html">RGBA_u8</a></dd></dl>
-<p>This is spyro's current active state.</p>
-<p>Full list of states in the SpyroStates enum. (Walking, Gliding, Charging, etc.) </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ad0 </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> <a class="el" href="spyro_8h.html#aa2de79fdccfb5675aaecead602c22579">SpyroStates</a></dd></dl>
-<p>This is spyro's current active sub-state.</p>
-<p>Need to research sub-state more. </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ad4 </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> <a class="el" href="spyro_8h.html#aa2de79fdccfb5675aaecead602c22579">SpyroStates</a></dd></dl>
-<p>The amount of time in frames spent in the current state. Used for calculations for jumping, boking, damage, time sensitive states, etc</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> <a class="el" href="struct_r_g_b_a__u8.html">RGBA_u8</a> </dd></dl>
+
+</div>
+</div>
+<a id="a35c1550e0054772fcfe8f58c931f31b1" name="a35c1550e0054772fcfe8f58c931f31b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c1550e0054772fcfe8f58c931f31b1">&#9670;&#160;</a></span>_spyroFramesInCurrentState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _spyroFramesInCurrentState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The amount of time in frames spent in the current state. Used for calculations for jumping, boking, damage, time sensitive states, etc. </p>
 <p>Need to research sub-state more. </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ad8 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> </dd></dl>
 
@@ -678,6 +704,84 @@ Variables</h2></td></tr>
 <p>A timer that stops the player from being able to move spyro. </p>
 <p>This timer decrements by 1 every frame until it reaches 0. Once it reaches 0 the player can input again. </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078c48 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad107a4268a3c313a50bd8775a70cc6e2" name="ad107a4268a3c313a50bd8775a70cc6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad107a4268a3c313a50bd8775a70cc6e2">&#9670;&#160;</a></span>_spyroIsOnSuperchargeGround</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _spyroIsOnSuperchargeGround</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A bool for if spyro is currently on supercharge ground. </p>
+<p>This doesn't give spyro supercharge state, but gives him the weird properties of being on a supercharge ground, like the extra charge in air height. </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ca8 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> </dd></dl>
+
+</div>
+</div>
+<a id="acf183cf38515519c4a81e759295ec125" name="acf183cf38515519c4a81e759295ec125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf183cf38515519c4a81e759295ec125">&#9670;&#160;</a></span>_spyroState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _spyroState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is spyro's current active state. </p>
+<p>Full list of states in the SpyroStates enum. (Walking, Gliding, Charging, etc.) </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ad0 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> <a class="el" href="spyro_8h.html#aa2de79fdccfb5675aaecead602c22579">SpyroStates</a> </dd></dl>
+
+</div>
+</div>
+<a id="abb70d5e955b2f5e2b9a8f796ba5532bd" name="abb70d5e955b2f5e2b9a8f796ba5532bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb70d5e955b2f5e2b9a8f796ba5532bd">&#9670;&#160;</a></span>_spyroSubState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _spyroSubState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is spyro's current active sub-state. </p>
+<p>Need to research sub-state more. </p><dl class="section note"><dt>Note</dt><dd>Address: 0x80078ad4 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_spyro.html" title="This is the main Spyro struct.">Spyro</a> <a class="el" href="spyro_8h.html#aa2de79fdccfb5675aaecead602c22579">SpyroStates</a> </dd></dl>
 
 </div>
 </div>

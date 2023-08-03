@@ -442,7 +442,7 @@ extern int _spyroCanSuperFly;
  * @note Address: 0x80078ca8
  * @see Spyro
  */ 
-extern int _spyroCanSuperFly;
+extern int _spyroIsOnSuperchargeGround;
 
 
 #endif //SPYRO_H
