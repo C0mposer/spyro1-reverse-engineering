@@ -4,7 +4,7 @@
 [Click here to see the symbols we have found](symbol_map.html)
 
 ##Overview
-At a high level, this is the way this reverse engineering project is set up for right now: 
+At a high level, this is the way this reverse engineering project is set up currently: 
 
 We are attempting to recompile assembly functions from spyro the dragon using C. The recompiled functions should be **functionally equivalent** and the **same amount or less** assembly opcodes. We are using a modern mips compiler. We are **not** aiming for byte for byte matches; instead **functionally equivalent matches** with an emphasis on *readability*, and ensuring the same or less amount of assembly opcodes from our compiled functions. 
 
