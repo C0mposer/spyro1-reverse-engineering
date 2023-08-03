@@ -227,14 +227,12 @@ void srand(int seed);
 void ArrayCopy(int *outputArray,int *inputArray,int arrayLength);                                       //? This function copies one array to another
 
 //Pre-Reqs for other functions
-void CopyHudToShaded();
-void DrawShadedMobys();
-void unk2();
-void RenderThing(int a, int b, int c);
-void DrawMobys();
-void RenderObjs();
-void DrawShapePreReq(void* param_1, int param_2, int param_3, short colorSpace, int param_5);
+void RenderShadedMobys();
+void RenderNormalMobys();
+void RenderAllObjects();
+void PrimitiveAlphaHack(void* param_1, int param_2, int param_3, short colorSpace, int param_5);
 
+void CopyHudToShaded();
 
 void DrawLine(int point1X, int point1Y, int point2X, int point2Y);                                      //? This function draws a yellow line.
 void FillScreenColor(int colorSpace, char r, char g, char b);                                           //? Fills the screen with a specific color.
@@ -532,10 +530,11 @@ extern char* _ptr_hudMobys; //0x80075710                      //? A pointer to a
 
 extern char* _ptr_particleLinkedList; //0x80075738           //? This is a pointer to the next available particle slot.
 
-extern char _hudDragonState; //0x80077fa9
-extern char _hudLivesState;  //0x80077faa
-extern char _hudEggsState;   //0x80077fab
-extern char _hudChestState;  //0x80077fac
+extern char _hudChestState;  //0x80077FA8
+extern char _hudDragonState; //0x80077FA9
+extern char _hudLivesState;  //0x80077FAA
+extern char _hudEggsState;   //0x80077FAB
+extern char _hudAnimationState;   //0x80077FAC
 
 extern int _hudElementsSpinTimer; //0x80077fe4
 extern int _unk_spinRelated;    //0x8006cc78

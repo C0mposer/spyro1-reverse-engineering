@@ -22,14 +22,14 @@ void DrawPrimitive(void* primitive)
   short* unk_first_gfx_ptr;
   
   local_gfx_ptrs = _ptr_arrayGraphicsRelatedPointers;
-  unk_first_gfx_ptr = (short *)*_ptr_arrayGraphicsRelatedPointers;
-  *_ptr_arrayGraphicsRelatedPointers = primitive;
+  unk_first_gfx_ptr = (short*) *_ptr_arrayGraphicsRelatedPointers;
+  *_ptr_arrayGraphicsRelatedPointers = (int*)primitive;
   if (unk_first_gfx_ptr != 0x0) {
     *unk_first_gfx_ptr = (short)primitive;
     *(char *)(unk_first_gfx_ptr + 1) = (char)((uint)primitive >> 0x10);
     return;
   }
-  local_gfx_ptrs[1] = primitive;
+  local_gfx_ptrs[1] = (int*)primitive;
   return;
 }
 
@@ -90,7 +90,7 @@ void DrawArrow(HudMobyInfo* hudMobyInfo, uint timer, int leftOrRightArrow)
 void DrawTextbox(int xBound1,int xBound2,int yBound1,int yBound2)
 {
   void* ptr_prim = (void*)_ptr_primitivesArray;                         
-  DrawShapePreReq(_ptr_primitivesArray,1,0,0x40,0);               // Trasparent black background hack
+  PrimitiveAlphaHack(_ptr_primitivesArray,1,0,0x40,0);               // Trasparent black background hack
   DrawPrimitive(ptr_prim);
   *(int *)(ptr_prim + 0xc) = 0x5000000;
   *(char *)(ptr_prim + 0x13) = 0x2a;

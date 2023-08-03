@@ -241,3 +241,4 @@ typedef struct OpaqueShape      //! LEGACY
 
 } OpaqueShape;
 
+#endif //FILTERS_H

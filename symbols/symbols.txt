@@ -98,11 +98,11 @@ _cdStatus = 0x80074e44;
 
 _hudElementsSpinTimer = 0x80077fe4;
 
-_hudChestState = 0x80077FAC;
-_hudDragonState = 0x80077fa9;
-_hudLivesState = 0x80077faa;
-_hudEggsState = 0x80077fab;
-_hudAnimationState = 0x80077fac;
+_hudChestState = 0x80077FA8;
+_hudDragonState = 0x80077FA9;
+_hudLivesState = 0x80077FAA;
+_hudEggsState = 0x80077FAB;
+_hudAnimationState = 0x80077FAC;
 
 _hudChestKeyframe = 0x80077FAD;
 _localSoundEffects = 0x800761D4;
