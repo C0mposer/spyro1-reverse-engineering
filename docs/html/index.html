@@ -100,25 +100,32 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Overview </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md0"></a>
+<div class="textblock"><p><span style="font-size:18px;"></span></p>
+<p><span style="font-size:18px;"></span></p>
+<h2><a class="anchor" id="autotoc_md0"></a>
 Symbol Map</h2>
-<p><a href="symbol_map.html">Click here to see the symbols we have found</a></p>
+<p><span style="font-size:18px;"> <a href="symbol_map.html">Click here to see the symbols we have found</a></span></p>
+<p><span style="font-size:18px;"></span></p>
 <h2><a class="anchor" id="autotoc_md1"></a>
 Overview</h2>
-<p>At a high level, this is the way this reverse engineering project is set up currently:</p>
-<p>We are attempting to recompile assembly functions from spyro the dragon using C. The recompiled functions should be <b>functionally equivalent</b> and the <b>same amount or less</b> assembly opcodes. We are using a modern mips compiler. We are <b>not</b> aiming for byte for byte matches; instead <b>functionally equivalent matches</b> with an emphasis on <em>readability</em>, and ensuring the same or less amount of assembly opcodes from our compiled functions.</p>
-<p>We are currently placing our re-created functions in extra 8mb developer ram that <em>most ps1's do not have</em>, then replacing the first assembly instruction of the original function with a simple jump to our re-created function in the extra ram area. This current approach does not rebuild the game, but allows us to test our compiled code very easily. This is because everytime the game tries to run the original function, it simply jumps to our re-created version that is in the extra ram area instead.</p>
-<p>So long we aim for the same/less assembly opcodes, we should theoretically be able to place these recompiled functions into their correct spots eventually.</p>
+<p><span style="font-size:18px;"> At a high level, this is the way this reverse engineering project is set up currently:</span></p>
+<p><span style="font-size:18px;">We are attempting to recompile assembly functions from spyro the dragon using C. The recompiled functions should be <b>functionally equivalent</b> and the <b>same amount or less</b> assembly opcodes. We are using a modern mips compiler. We are <b>not</b> aiming for byte for byte matches; instead <b>functionally equivalent matches</b> with an emphasis on <em>readability</em>, and ensuring the same or less amount of assembly opcodes from our compiled functions.</span></p>
+<p><span style="font-size:18px;">We are currently placing our re-created functions in extra 8mb developer ram that <em>most ps1's do not have</em>, then replacing the first assembly instruction of the original function with a simple jump to our re-created function in the extra ram area. This current approach does not rebuild the game, but allows us to test our compiled code very easily. This is because everytime the game tries to run the original function, it simply jumps to our re-created version that is in the extra ram area instead.</span></p>
+<p><span style="font-size:18px;">So long we aim for the same/less assembly opcodes, we should theoretically be able to place these recompiled functions into their correct spots eventually.</span></p>
+<p><span style="font-size:18px;"></span></p>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Recommended Tools:</h2>
-<ol type="1">
+<p><span style="font-size:18px;"></span></p>
+<p><span style="font-size:18px;"></p><ol type="1">
 <li>Ghidra: Very useful general reverse engineering/decompilation tool.</li>
 <li>PCSX-Redux: Debugging emulator for easy testing of compiled code</li>
 <li>spimdisasm: Command line utility for disassembling mips opcodes into a format decomp.me can understand</li>
 </ol>
+<p></span></p>
+<p><span style="font-size:18px;"></span></p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Outline of our current workflow</h2>
-<ol type="1">
+<p><span style="font-size:18px;"></p><ol type="1">
 <li>Copy decompiled function from Ghidra into new, or relavent .c file</li>
 <li>Compare C code against assembly on decomp.me until same amount of instructions or less<ul>
 <li>Can use "Copy Special... Byte String (No Spaces)" from Ghidra to get the asm opcodes, and then paste them into spimdisasm to disassemble the opcodes into the correct format for decomp.me</li>
@@ -149,6 +156,7 @@ Outline of our current workflow</h2>
 <li>Ensure function &amp; hook have been placed successfully by setting execution breakpoint on original function's address in redux.</li>
 <li>Test your recreated function obvious issues in redux. </li>
 </ol>
+<p></span></p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,4 +1,5 @@
 @mainpage Overview
+<span style="font-size:18px;">
 
 ##Symbol Map
 [Click here to see the symbols we have found](symbol_map.html)
