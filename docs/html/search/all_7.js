@@ -55,14 +55,13 @@ var searchData=
   ['ghidra_20project_52',['Ghidra Project',['../ghidra_project.html',1,'']]],
   ['ghidra_5fproject_2emd_53',['ghidra_project.md',['../ghidra__project_8md.html',1,'']]],
   ['glide_54',['GLIDE',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579ade5fd61bc0876829b38c24d7b4c7b8d3',1,'spyro.h']]],
-  ['glideused_55',['glideUsed',['../struct_spyro.html#ae4de961d9239c681023f78d7ed6839ac',1,'Spyro']]],
-  ['gnasty_5fgnorc_5fid_56',['GNASTY_GNORC_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba0ed057ba480a931dc3c01d93190c21fb',1,'common.h']]],
-  ['gnastys_5floot_5fid_57',['GNASTYS_LOOT_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba5e1ae0b0abccd18286ef99205c4e6917',1,'common.h']]],
-  ['gnastys_5fworld_5fid_58',['GNASTYS_WORLD_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba02d2de2f9fd343597612bf21fb9c5e84',1,'common.h']]],
-  ['gnastys_5fworld_5fmenu_59',['GNASTYS_WORLD_MENU',['../common_8h.html#a64037f20140e0a8540063b3359333637aefb2227eef95ec2846a8a02bb404f7b4',1,'common.h']]],
-  ['gnorc_5fcove_5fid_60',['GNORC_COVE_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2baea9ad98948d7adcd67de2af255a79dec',1,'common.h']]],
-  ['green_61',['green',['../struct_opaque_shape.html#a74512b623b2de45921e3baf06aef0373',1,'OpaqueShape']]],
-  ['green_5fsparx_62',['GREEN_SPARX',['../common_8h.html#aee1db6cb51324eb1827db0dd3ecebda1aa07943d15a95ecd34649afe021a700c5',1,'common.h']]],
-  ['groundedchargemomentum_63',['groundedChargeMomentum',['../struct_spyro.html#a370a2b0725884ae4ebebf355d9e27a14',1,'Spyro']]],
-  ['groundedchargemomentum2_64',['groundedChargeMomentum2',['../struct_spyro.html#a2816659e9a2cdd8213b5429d9e86192a',1,'Spyro']]]
+  ['gnasty_5fgnorc_5fid_55',['GNASTY_GNORC_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba0ed057ba480a931dc3c01d93190c21fb',1,'common.h']]],
+  ['gnastys_5floot_5fid_56',['GNASTYS_LOOT_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba5e1ae0b0abccd18286ef99205c4e6917',1,'common.h']]],
+  ['gnastys_5fworld_5fid_57',['GNASTYS_WORLD_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba02d2de2f9fd343597612bf21fb9c5e84',1,'common.h']]],
+  ['gnastys_5fworld_5fmenu_58',['GNASTYS_WORLD_MENU',['../common_8h.html#a64037f20140e0a8540063b3359333637aefb2227eef95ec2846a8a02bb404f7b4',1,'common.h']]],
+  ['gnorc_5fcove_5fid_59',['GNORC_COVE_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2baea9ad98948d7adcd67de2af255a79dec',1,'common.h']]],
+  ['green_60',['green',['../struct_opaque_shape.html#a74512b623b2de45921e3baf06aef0373',1,'OpaqueShape']]],
+  ['green_5fsparx_61',['GREEN_SPARX',['../common_8h.html#aee1db6cb51324eb1827db0dd3ecebda1aa07943d15a95ecd34649afe021a700c5',1,'common.h']]],
+  ['groundedchargemomentum_62',['groundedChargeMomentum',['../struct_spyro.html#a370a2b0725884ae4ebebf355d9e27a14',1,'Spyro']]],
+  ['groundedchargemomentum2_63',['groundedChargeMomentum2',['../struct_spyro.html#a2816659e9a2cdd8213b5429d9e86192a',1,'Spyro']]]
 ];

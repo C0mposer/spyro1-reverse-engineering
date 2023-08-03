@@ -457,7 +457,7 @@ extern char _mainMenuState;
  * @brief The State for the balloonist. Should make an enum for this.
  * @note Address: 0x800777e8
  */ 
-extern int _ballonistState;
+extern int _balloonistState;
 
 /**
  * @brief This is the current option selected in the main start menu, according to the StartMenuSelections enum.

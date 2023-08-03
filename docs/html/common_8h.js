@@ -160,7 +160,7 @@ var common_8h =
     [ "TheAdventureContinues", "common_8h.html#a2b9c0c9e764abab7b1f4b8748b44e514", null ],
     [ "UpdateMobyCollision", "common_8h.html#a1b6ca019d3cea5051dffd367e81a1eb0", null ],
     [ "Vec3IntToShortDiv4", "common_8h.html#adac660813e10f54e0eb00721f40f519c", null ],
-    [ "_ballonistState", "common_8h.html#ab540bf6daaa35ab1fe4077a1471e07ed", null ],
+    [ "_balloonistState", "common_8h.html#a2ce5156bd4a0a037eb7d88397126d596", null ],
     [ "_cameraAngle", "common_8h.html#a389a2878617ae8ca2aede13f6b3cb760", null ],
     [ "_cameraPosition", "common_8h.html#abc05e66004126917a1fee2d38c2956e9", null ],
     [ "_cameraPureRotationMatrix", "common_8h.html#ae6d2ea477f9bfdf9331dc111bbbf4528", null ],

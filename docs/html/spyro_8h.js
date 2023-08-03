@@ -39,5 +39,23 @@ var spyro_8h =
       [ "IDLE_SIT", "spyro_8h.html#aa2de79fdccfb5675aaecead602c22579a6cf1dd555e3320c242b1ae4d2bfa985e", null ],
       [ "SUPERCHARGE", "spyro_8h.html#aa2de79fdccfb5675aaecead602c22579a16070b5ba3e10490a4147047ce1ba6d8", null ]
     ] ],
-    [ "_spyro", "spyro_8h.html#af9f5140285729f4ce156b0135e1977a1", null ]
+    [ "_spyro", "spyro_8h.html#af9f5140285729f4ce156b0135e1977a1", null ],
+    [ "_spyroAbsoluteMomentum", "spyro_8h.html#a0caf6cdc0382778cc99b147cbd75d903", null ],
+    [ "_spyroAirMomentum", "spyro_8h.html#aff41d0d53449c16319a9e02f4a3267d5", null ],
+    [ "_spyroAnglePitch", "spyro_8h.html#a1a3563f4b360c4cf08bc249568d9fd34", null ],
+    [ "_spyroAngleRoll", "spyro_8h.html#a6b05b5b802ea334237727f007f02bd16", null ],
+    [ "_spyroAngleYaw", "spyro_8h.html#a9d75209b7ab4be53ac59a750b44d05cd", null ],
+    [ "_spyroCanSuperFly", "spyro_8h.html#a9312beda2f60c67bb2ea288f59357033", null ],
+    [ "_spyroFramesInCurrentState", "spyro_8h.html#a219a924481deb45cd1987147b907a8ef", null ],
+    [ "_spyroGroundedChargeMomentum", "spyro_8h.html#a1e5bdc36b1797327f404af7083280af8", null ],
+    [ "_spyroHasUsedGlide", "spyro_8h.html#a7503dea33b0a9265b59e375c3bd389f6", null ],
+    [ "_spyroHealth", "spyro_8h.html#a3ee172695e3531da6c8ace1ca0823858", null ],
+    [ "_spyroIFramesTimer", "spyro_8h.html#abe0f81a31ad1ed8e5e7af03bc7038e4a", null ],
+    [ "_spyroIsGliding", "spyro_8h.html#a7ad274e6f923542094e6b59296c117a4", null ],
+    [ "_spyroIsGrounded", "spyro_8h.html#afa7ea77d93e562c0577e732796fa9880", null ],
+    [ "_spyroIsMovementLocked", "spyro_8h.html#a2f3b435b1939c75da87f45ad384979b7", null ],
+    [ "_spyroWalkingChargeMomentum", "spyro_8h.html#a936bf853385572d00d1338b9c88a3f51", null ],
+    [ "_spyroXPosition", "spyro_8h.html#ad468419f6cdee02dba4836c87ca42e97", null ],
+    [ "_spyroYPosition", "spyro_8h.html#a2e1088e558dd99be299adc354eba4845", null ],
+    [ "_spyroZPosition", "spyro_8h.html#a6f9bc9a38eeae3ebd87d02f8d213dfe2", null ]
 ];

@@ -54,7 +54,7 @@ _canOpenFairyText = 0x80078D00;
 _fairyMenuSelection = 0x80078D08;
 _fairyMenusArray = 0x80078D0C;
 
-_ballonistState = 0x800777e8;
+_balloonistState = 0x800777e8;
 _movementSubState = 0x80078AD4;
 _flyInAnimation = 0x80076EA8;
 

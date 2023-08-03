@@ -7,7 +7,7 @@
 //*Constants
 //*~~~~~~~~~
 
-enum SpyroStates
+typedef enum SpyroStates
 {
     IDLE_STANDING = 0x0,
     BEGIN_WALK = 0x1,
@@ -45,7 +45,7 @@ enum SpyroStates
     SUPERFLY_DESCENDING = 0x22,
     IDLE_SIT = 0x27,
     SUPERCHARGE = 0x2C
-};
+}SpyroStates;
 
 /**
  * @brief  This is the main Spyro struct.
@@ -174,13 +174,13 @@ int walkingAcceleration;                            //? Spyro's walking accelera
 int turnAcceleration;
 int z_Acceleration;
 
-int glideUsed;                                      //? intean for if Spyro has used glide or not yet, since can only use once in this game.     
+int hasUsedGlide;                                   //? bool for if Spyro has used glide or not yet, since can only use once in this game.     
 
-int isGliding;                                      //? intean for if Spyro is currently gliding.
+int isGliding;                                      //? bool for if Spyro is currently gliding.
 
 int neutralJumpZPos;
 
-int isGrounded;                                     //? intean for if Spyro is currently grounded.
+int isGrounded;                                     //? bool for if Spyro is currently grounded.
 
 int iFramesTimer;                                   //? Timer for the amount of invincibility frames Spyro should have. Counts down to 0 every frame unless set every frame to a value.
 
@@ -190,7 +190,7 @@ int drownTimer;                                     //? Timer for the amount of 
 
 int maybe_superchargeRelated;
 
-int isOverGoop;                                     //? intean for if Spyro is currently over goop.
+int isOverGoop;                                     //? bool for if Spyro is currently over goop.
 
 int maybe_drowningRelated;
 
@@ -255,8 +255,8 @@ int unkown57;
 int unkown58;
 int unkown59;
 
-int canSuperfly;                                           //? intean for if Spyro can superfly or not.
-int isOnSuperchargeGround;                                 //? intean for if Spyro is on supercharge ground or not.
+int canSuperfly;                                           //? bool for if Spyro can superfly or not.
+int isOnSuperchargeGround;                                 //? bool for if Spyro is on supercharge ground or not.
 
 int maybe_pitchRelatedFlag;
 
@@ -276,5 +276,173 @@ int pitchMomentum;                                          //? Spyro's pitch mo
  * @see Spyro
  */ 
 extern Spyro _spyro;
+
+
+//! All of these below can be accessed through the spyro struct above, but I figuerd it be helpful to have all these addresses labled for the documentation
+/**
+ * @brief  Spyro's X Position Coordinate
+ * @note Address: 0x80078A58
+ * @see Spyro
+ */ 
+extern int _spyroXPosition;
+
+/**
+ * @brief  Spyro's Y Position Coordinate
+ * @note Address: 0x80078A5C
+ * @see Spyro
+ */ 
+extern int _spyroYPosition;
+
+/**
+ * @brief  Spyro's Z Position Coordinate
+ * @note Address: 0x80078A60
+ * @see Spyro
+ */ 
+extern int _spyroZPosition;
+
+/**
+ * @brief  Spyro's Yaw Rotation Angle
+ * @note Address: 0x80078b74
+ * @see Spyro
+ */ 
+extern int _spyroAngleYaw;
+
+/**
+ * @brief  Spyro's Pitch Rotation Angle
+ * @note Address: 0x80078b78
+ * @see Spyro
+ */ 
+extern int _spyroAnglePitch;
+
+/**
+ * @brief  Spyro's Roll Rotation Angle
+ * @note Address: 0x80078b7C
+ * @see Spyro
+ */ 
+extern int _spyroAngleRoll;
+
+/**
+ * @brief  This is the color filter applied on top of spyro in RGBA format
+ * @details  This is what gets applied to spyro during superflame.
+ * @note Address: 0x80078a80
+ * @see Spyro RGBA_u8
+ */ 
+extern RGBA_u8 _spyroColorFilter;
+
+/**
+ * @brief  This is spyro's current active state.
+ * @details  Full list of states in the SpyroStates enum. (Walking, Gliding, Charging, etc.)
+ * @note Address: 0x80078ad0
+ * @see Spyro SpyroStates
+ */ 
+extern int _spyroState;
+
+/**
+ * @brief  This is spyro's current active sub-state.
+ * @details  Need to research sub-state more.
+ * @note Address: 0x80078ad4
+ * @see Spyro SpyroStates
+ */ 
+extern int _spyroSubState;
+
+/**
+ * @brief  The amount of time in frames spent in the current state. Used for calculations for jumping, boking, damage, time sensitive states, etc
+ * @details  Need to research sub-state more.
+ * @note Address: 0x80078ad8
+ * @see Spyro
+ */ 
+extern int _spyroFramesInCurrentState;
+
+/**
+ * @brief  Spyros grouded charging momentum vector.
+ * @note Address: 0x80078b28
+ * @see Spyro
+ */ 
+extern Vec3 _spyroGroundedChargeMomentum;
+
+/**
+ * @brief  Spyros walking momentum vector.
+ * @note Address: 0x80078b34
+ * @see Spyro
+ */ 
+extern Vec3 _spyroWalkingChargeMomentum;
+
+/**
+ * @brief  Spyros air momentum vector.
+ * @note Address: 0x80078b4c
+ * @see Spyro
+ */ 
+extern Vec3 _spyroAirMomentum;
+
+/**
+ * @brief  Spyros absolute momentum as a scalar.
+ * @note Address: 0x80078b70
+ * @see Spyro
+ */ 
+extern int _spyroAbsoluteMomentum;
+
+/**
+ * @brief bool for if Spyro has used his glide or not yet.
+ * @note Address: 0x80078ba8
+ * @see Spyro
+ */ 
+extern int _spyroHasUsedGlide;
+
+/**
+ * @brief bool for if Spyro is currently gliding or not.
+ * @note Address: 0x80078bac
+ * @see Spyro
+ */ 
+extern int _spyroIsGliding;
+
+/**
+ * @brief bool for if Spyro is currently grounded or not.
+ * @note Address: 0x80078bb4
+ * @see Spyro
+ */ 
+extern int _spyroIsGrounded;
+
+/**
+ * @brief Timer for how many more frames spyro should have invulnerability. 
+ * @details Automatically decrements by 1 every frame until 0. Spyro will have invulnerability if it is any number above 0.
+ * @note Address: 0x80078bb8
+ * @see Spyro
+ */ 
+extern int _spyroIFramesTimer;
+
+/**
+ * @brief Spyros current health 
+ * @details This value is tied to sparx's color also. If spyro health reaches 0, sparx will disapear.
+ * @note Address: 0x80078bbc
+ * @see Spyro
+ */ 
+extern int _spyroHealth;
+
+/**
+ * @brief A timer that stops the player from being able to move spyro.
+ * @details This timer decrements by 1 every frame until it reaches 0. Once it reaches 0 the player can input again.
+ * @note Address: 0x80078c48
+ * @see Spyro
+ */ 
+extern int _spyroIsMovementLocked;
+
+/**
+ * 
+ * @brief A bool for if spyro can superfly currently.
+ * @details This can be set to true in any level
+ * @note Address: 0x80078ca4
+ * @see Spyro
+ */ 
+extern int _spyroCanSuperFly;
+
+/**
+ * 
+ * @brief A bool for if spyro is currently on supercharge ground.
+ * @details This doesn't give spyro supercharge state, but gives him the weird properties of being on a supercharge ground, like the extra charge in air height.
+ * @note Address: 0x80078ca8
+ * @see Spyro
+ */ 
+extern int _spyroCanSuperFly;
+
 
 #endif //SPYRO_H
