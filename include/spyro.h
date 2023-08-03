@@ -383,6 +383,7 @@ extern int _spyroAbsoluteMomentum;
 
 /**
  * @brief bool for if Spyro has used his glide or not yet.
+ * @details This is used to only let you glide out of a charge once. 
  * @note Address: 0x80078ba8
  * @see Spyro
  */ 
