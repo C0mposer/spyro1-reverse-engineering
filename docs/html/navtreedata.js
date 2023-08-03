@@ -64,7 +64,7 @@ var NAVTREEINDEX =
 "custom__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e",
 "options_8h.html#aa4e772a7349027e646a609759807f8c3a0274aa19ad66fcef2c22994d3b892fbd",
 "struct_moby.html#ade64c324d239df5fcb130fd1ffd1b1c8",
-"struct_spyro.html#aca291e55b7403b2fb4e21c8d359a3ca7"
+"struct_spyro.html#acdfd5384b358529693c6623469dc8535"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

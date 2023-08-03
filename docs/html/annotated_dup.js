@@ -13,7 +13,6 @@ var annotated_dup =
     [ "LowercaseTextInfo", "struct_lowercase_text_info.html", "struct_lowercase_text_info" ],
     [ "MATRIX3BY3", "struct_m_a_t_r_i_x3_b_y3.html", "struct_m_a_t_r_i_x3_b_y3" ],
     [ "Moby", "struct_moby.html", "struct_moby" ],
-    [ "NOPHexCode", "struct_n_o_p_hex_code.html", "struct_n_o_p_hex_code" ],
     [ "OpaqueShape", "struct_opaque_shape.html", "struct_opaque_shape" ],
     [ "Particle", "struct_particle.html", "struct_particle" ],
     [ "Poly3F", "struct_poly3_f.html", "struct_poly3_f" ],

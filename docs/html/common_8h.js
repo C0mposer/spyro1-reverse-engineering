@@ -4,7 +4,6 @@ var common_8h =
     [ "RGBA_u8", "struct_r_g_b_a__u8.html", "struct_r_g_b_a__u8" ],
     [ "RGB_u8", "struct_r_g_b__u8.html", "struct_r_g_b__u8" ],
     [ "BGR_u8", "struct_b_g_r__u8.html", "struct_b_g_r__u8" ],
-    [ "NOPHexCode", "struct_n_o_p_hex_code.html", "struct_n_o_p_hex_code" ],
     [ "_ptr_levelMobyData", "common_8h.html#a00c7b7e45f182db8dca31e67c7e0eae0", null ],
     [ "FPS", "common_8h.html#ac92ca5ab87034a348decad7ee8d4bd1b", null ],
     [ "GAME_UNIT", "common_8h.html#a6548660c090611bef8ec6f50844b5531", null ],

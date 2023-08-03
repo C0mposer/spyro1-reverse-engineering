@@ -8,6 +8,6 @@ var searchData=
   ['speedrelated_5',['speedRelated',['../struct_moby.html#ac9fa184997c359906263984c367757be',1,'Moby']]],
   ['state_6',['state',['../struct_moby.html#acb7c778d18745308f13eeaec5403f8fe',1,'Moby::state'],['../struct_spyro.html#a447a2c251e0c1bf8d4bc7db1714ec213',1,'Spyro::state']]],
   ['substate_7',['subState',['../struct_moby.html#a97cbca38a09a2efae46b8d75a2810fec',1,'Moby::subState'],['../struct_spyro.html#a22e4b806a9b3d70029893e717e1d74e0',1,'Spyro::subState']]],
-  ['subtype_8',['subType',['../struct_moby.html#adf7235f499f2c5c6efe161958a2658d7',1,'Moby']]],
-  ['subtype_9',['subtype',['../struct_particle.html#a219fbbce8cac769d2499622bdcc087ac',1,'Particle']]]
+  ['subtype_8',['subtype',['../struct_particle.html#a219fbbce8cac769d2499622bdcc087ac',1,'Particle']]],
+  ['subtype_9',['subType',['../struct_moby.html#adf7235f499f2c5c6efe161958a2658d7',1,'Moby']]]
 ];
