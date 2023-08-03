@@ -1,15 +1,17 @@
 #include <common.h>
 #include <custom_types.h>
 
-//**********************************
-// ** Function: CalculateCompletionPercentage
-// ** Original Address: 0x8002BB20
-// ** Hook File: calculate_completion_percentage.s 
-// ** Prototype: misc_game.h
-//**********************************
-/*
- * Returns the current completion percentage based on your gems, dragons, and eggs. (Except for when you are above 12000 gems.)
+/**
+ * @brief Returns the current completion percentage.
+ * @details Returns the current completion percentage based on your gems, dragons, and eggs. (Except for when you are above 12000 gems.)
+ 
  * @return int - The current completion percentage.
+
+ * @note Function: CalculateCompletionPercentage \n
+ * Original Address: 0x8002BB20 \n
+ * Hook File: calculate_completion_percentage.s \n 
+ * Prototype: misc_game.h \n
+ * Amount of instructions: Same Amount (https://decomp.me/scratch/8Lz9x) \n 
 */
 int CalculateCompletionPercentage(void)
 {

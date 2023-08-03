@@ -26,18 +26,19 @@ NTSC, exe, 0x80xxxxxx, 0x0, asm/xxx.s
 7. Create function prototype in relavent .h file
 
 8. Document Function in .c file using this syntax:
-//**********************************
-// ** Function: <Function Name>
-// ** Original Address: 0x80xxxxxx
-// ** Hook File: xxx.asm 
-// ** Prototype: xxx.h
-// ** Amount of instructions: Same/Less/More/Untested (decomp.me link) 
-//**********************************
-/*
- * Description of the Function.
- * @param int arg0 - Description of arg0.
- * @param short* arg1 - Description of arg1.
- * @return int - Description of the return value.
+/**
+ * @brief Brief explaination of function
+ * @details More detailed explaination of function.
+
+ * @param char* arg1 - first parameter
+ * @param int* arg2 - second parameter.
+ * @param int arg3 - third parameter.
+ * @return int ret - return value.
+
+ * @note Function: FunctionName \n
+ * Original Address: 0x80xxxxxx \n
+ * Hook File: hool_file.s \n
+ * Prototype: header.h \n
 */
 
 9. Test insertion of function & hook for any obvious issues in redux

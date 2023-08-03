@@ -1,16 +1,17 @@
 #include <custom_types.h>
 
-//**********************************
-// ** Function: Vec3Add
-// ** Original Address: 0x80017758
-// ** Hook File: vec3_add.s 
-// ** Prototype: vector.h
-//**********************************
-/*
- * Adds Vector 'a' and Vector 'b' together, and stores the resulting vector in 'result'
+/**
+ * @brief Adds vector 'a' and vector 'b' together, and stores the resulting vector in 'result'
+
  * @param int* result - The resulting vector.
  * @param int* a - The first vector to add.
  * @param int* b - The second vector to add.
+ 
+ * @note Function: Vec3Add \n
+ * Original Address: 0x80017758 \n
+ * Hook File: vec3_add.s \n
+ * Prototype: vector.h \n
+ * Amount of instructions: Same Amount (https://decomp.me/scratch/8OigK) \n
 */
 void Vec3Add(int* result, int* a, int* b)
 {
@@ -27,16 +28,17 @@ void Vec3Add(int* result, int* a, int* b)
 }
 
 
-//**********************************
-// ** Function: Vec3Copy
-// ** Original Address: 0x80017700
-// ** Hook File: vec3_copy.s
-// ** Prototype: vector.h
-//**********************************
-/*
- * Copies the 'src' Vector to the 'dst' Vector.
+/**
+ * @brief Copies the 'src' Vector to the 'dst' Vector.
+
  * @param int* src - The source vector.
  * @param int* dst - The destination vector.
+ 
+ * @note Function: Vec3Copy \n
+ * Original Address: 0x80017700 \n
+ * Hook File: vec3_copy.s \n
+ * Prototype: vector.h \n
+ * Amount of instructions: Same Amount (https://decomp.me/scratch/ycHxN) \n
 */
 void Vec3Copy(int* dst, int* src)
 {
@@ -50,18 +52,16 @@ void Vec3Copy(int* dst, int* src)
   return;
 }
 
-//**********************************
-// ** Function: MatrixTranspose
-// ** Original Address: 0x80016fd0
-// ** Hook File: matrix_tranpose_hook.s 
-// ** Prototype: n/a
-//**********************************
-/*
- * 
- * @param 
- * @param 
-*/
-void MatrixTranspose(unsigned int *outputMatrix, unsigned int *inputMatrix)
+/**
+ * @brief 
+ * @details
+ 
+ * @param uint* outputMatrix 
+ * @param uint* inputMatrix 
+  
+ * @note
+ */
+void MatrixTranspose(uint* outputMatrix, uint* inputMatrix)
 
 {
   uint A12;

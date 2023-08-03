@@ -1,22 +1,21 @@
 #include <common.h>
 #include <moby.h>
 
-//**********************************
-// ** Function: DrawTextCapitals
-// ** Original Address: 0x80017fe4
-// ** Hook File: draw_text_capitals_hook.s 
-// ** Prototype: n/a
-//**********************************
-/*
- * Draws capital text string to the screen (technically fills out the moby structs from arguments)
+/**
+ * @brief Draws a text string to the screen (Only capital characters allowed) 
+ * @details Fills out a moby struct in the hud mobys array, using arguments for Capital ASCII text
+ 
  * @param char* text - text to be drawn.
  * @param int* textInfo - pointer to the desired location and size of the text.
  * @param int spacing - how much space between characters.
  * @param char color - color.
+ * @note Function: DrawTextCapitals \n
+   Original Address: 0x80017fe4 \n
+   Hook File: draw_text_capitals_hook.s \n
+   Prototype: n/a \n
+ * @see DrawTextAll()
 */
-
 char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
-
 {
   unsigned int currentCharacter;                                                //? Needs to be unsigned lmao?
 
@@ -68,9 +67,22 @@ char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color)
   return _ptr_hudMobys;
 }
 
-
-int DrawTextAll(char *text,int *CapitalTextInfo,int *LowercaseTextInfo,int spacing,char color)
-
+/**
+ * @brief Draws a text string to the screen (Capital & Lowercase allowed)
+ * @details Fills out a moby struct in the hud mobys array, using arguments for ASCII text
+ 
+ * @param char* text - text to be drawn.
+ * @param int* capitalTextInfo - pointer to the desired location and size of the text.
+ * @param int* lowercaseextInfo - pointer to the desired spacing and size of lowercase text.
+ * @param int spacing - how much space between characters.
+ * @param char color - color.
+ * @note Function: DrawTextAll \n
+   Original Address: 0x800181AC \n
+   Hook File: draw_text_all_hook.s \n
+   Prototype: n/a \n
+  * @see DrawTextCapitals()
+*/
+int DrawTextAll(char *text,int *capitalTextInfo,int *lowercaseTextInfo,int spacing,char color)
 {
   unsigned int currentCharacter;
   bool isCapital;
@@ -80,23 +92,23 @@ int DrawTextAll(char *text,int *CapitalTextInfo,int *LowercaseTextInfo,int spaci
   currentCharacter = *text;
   while (currentCharacter != 0) {                                               // While not a NULL terminator
     if (currentCharacter == 0x20) {                                             // If a space
-      spaceSize = *LowercaseTextInfo * 3;                                       
+      spaceSize = *lowercaseTextInfo * 3;                                       
       isCapital = TRUE;                                                         // Character is uppercase
       if (spaceSize < 0) {                                                      //? Weird Failsafe?   
         spaceSize = spaceSize + 3;
       }
-      CapitalTextInfo[0] += (spaceSize / 4);                                    // Updates X position using spaceSize
+      capitalTextInfo[0] += (spaceSize / 4);                                    // Updates X position using spaceSize
     }
     else {
       _ptr_hudMobys -= MOBY_SIZE;                                               // Shifts the moby pointer to a new empty slot
       memset(_ptr_hudMobys, '\0', MOBY_SIZE);
-      Vec3Copy((int *)(_ptr_hudMobys + 0xc),CapitalTextInfo);
+      Vec3Copy((int *)(_ptr_hudMobys + 0xc),capitalTextInfo);
       if ((*text == '!') || (*text == '?')) {                                   // If ! or ? then make capital
         isCapital = TRUE;
       }
       if (!isCapital) {
-        *(int *)(_ptr_hudMobys + 0x10) += LowercaseTextInfo[1];                 // Increases the Y position by the "y offset" for lowercase letters
-        *(int *)(_ptr_hudMobys + 0x14) = LowercaseTextInfo[2];                  // sets the size to be the lowercase size
+        *(int *)(_ptr_hudMobys + 0x10) += lowercaseTextInfo[1];                 // Increases the Y position by the "y offset" for lowercase letters
+        *(int *)(_ptr_hudMobys + 0x14) = lowercaseTextInfo[2];                  // sets the size to be the lowercase size
       }
       currentCharacter = *text;
       if (currentCharacter - '0' < 10) {                                        // If character is 0-9
@@ -119,16 +131,16 @@ int DrawTextAll(char *text,int *CapitalTextInfo,int *LowercaseTextInfo,int spaci
       }
       else {                                                                    // Default Case (apostrophe but it's really a comma up in the air lol)
         *(short *)(_ptr_hudMobys + 0x36) = 0x4c;
-        *(int *)(_ptr_hudMobys + 0x10) -= (*LowercaseTextInfo * 2) / 3;      // Decreases y position (makes it go up) so the comma looks like an apostrophe
+        *(int *)(_ptr_hudMobys + 0x10) -= (*lowercaseTextInfo * 2) / 3;      // Decreases y position (makes it go up) so the comma looks like an apostrophe
       }
       _ptr_hudMobys[0x47] = '\x7f';
       _ptr_hudMobys[0x4f] = color;
       _ptr_hudMobys[0x50] = 0xff;
       if (isCapital) {
-        *CapitalTextInfo += spacing;                                            // If capital increase X position using default spacing
+        *capitalTextInfo += spacing;                                            // If capital increase X position using default spacing
       }
       else {
-        *CapitalTextInfo += *LowercaseTextInfo;                                 // If not capital increase X position using lowercase spacing
+        *capitalTextInfo += *lowercaseTextInfo;                                 // If not capital increase X position using lowercase spacing
       }
       isCapital = (unsigned int)(*text - 0x30) < 10;                            // Sets isCapitral to false when the character is not a number
     }
