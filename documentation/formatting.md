@@ -8,9 +8,9 @@
 [Click here to download our Ghidra project](ghidra_project.html)
 
 ## Overview
-At a high level, this is the way this reverse engineering project is set up currently: 
+At a high level, this is the way our reverse engineering project is set up currently: 
 
-We are attempting to recompile assembly functions from spyro the dragon using C. The recompiled functions should be **functionally equivalent** and the **same amount or less** assembly opcodes. We are using a modern mips compiler. We are **not** aiming for byte for byte matches; instead **functionally equivalent matches** with an emphasis on *readability*, and ensuring the same or less amount of assembly opcodes from our compiled functions. 
+We are attempting to recompile assembly functions from spyro the dragon using C. The recompiled functions should be **functionally equivalent** to the original, and the **same amount or less** assembly opcodes. We are **not** aiming for byte for byte matches; instead **functionally equivalent matches** with an emphasis on *readability*, and ensuring the same or less amount of assembly opcodes from our compiled functions. We are using a modern mips compiler.
 
 We are currently placing our re-created functions in extra 8mb developer ram that *most ps1's do not have*, then replacing the first assembly instruction of the original function with a simple jump to our re-created function in the extra ram area. This current approach does not rebuild 
 the game, but allows us to test our compiled code very easily. This is because everytime the game tries to run the original function, it simply jumps to our re-created version that is in the extra ram area instead. 
