@@ -3,6 +3,7 @@
 #include <shapes.h>
 #include <moby.h>
 #include <vector.h>
+#include <spyro.h>
 
 
 
@@ -31,16 +32,16 @@ void GemHomeIn()
     {
         Vec3Subtract(&gemToSpyroDistanceVec, &_spyro.position, (Vec3*)s1);                                  // Subtract spyro's position from gem origin to get distance vec
         Vec3ScaleDownByPowerOfTwo(&gemToSpyroDistanceVec, 5);                                               // Scale down result by 32
-        const int FLAG_3D 1
+        const int FLAG_3D = 1;
         gemOriginToSpyroLength = Vec3CalculateLengthE(&gemToSpyroDistanceVec, FLAG_3D);                     // Calculate length of distance vector
         
-        const int MINIMUM_DISTANCE_FROM_GEM 0x1e1
+        const int MINIMUM_DISTANCE_FROM_GEM = 0x1e1;
 
         if (gemOriginToSpyroLength < MINIMUM_DISTANCE_FROM_GEM) 
         {                                                             
         Vec3Scale(&gemToSpyroDistanceVec,&gemToSpyroDistanceVec, *((char*)s1 + 0xf));
         Vec3Add(&((Moby*)s3)->position, s1, &gemToSpyroDistanceVec);                                        // Add origin to distance vec to get new location from 0,0,0
-        const int SINE_WAVE_SPEED 4                                                                           // 4 is the speed required to get 1 half circle (128 steps through the 256 array)
+        const int SINE_WAVE_SPEED = 4   ;                                                                        // 4 is the speed required to get 1 half circle (128 steps through the 256 array)
         ((Moby*)s3)->position.z = ((Moby*)s3)->position.z + (_sinArray[*((char*)s1 + 0xf) * SINE_WAVE_SPEED] / 12);
         }
 

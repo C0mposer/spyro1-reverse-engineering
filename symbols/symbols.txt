@@ -1,5 +1,5 @@
-_currentButton = 0x80077380;
-_currentButtonOneFrame = 0x80077378;
+_currentButtonsHeld = 0x80077380;
+_currentButtonsPressed = 0x80077378;
 _secondController = 0x80078E50;
 _leftAnalogStick = 0x800773D2;
 _rightAnalogStick = 0x800773D0;
@@ -42,7 +42,8 @@ _LockCameraToSpyroPTR = 0x80035fb4;
 _effect_ScreenFadeIn = 0x80075918;
 _effect_ScreenLetterBox = 0x800756C0;
 
-_selectMenuOption = 0x80075744;
+_inventoryMenuScreen = 0x80075744;
+
 _startMenuSelection = 0x80075720;
 _isInsideOptionsMenu = 0x800757C8;
 
@@ -75,7 +76,8 @@ _collectablesStateFlags = 0x80077900;
 _ptr_levelMobys = 0x80075828;
 _ptr_dynamicLevelMobys = 0x8007573C;
 _ptr_endDynamicMobys = 0x80075930;
-_ptr_levelMobyData = 0x80075930;
+
+_ptr_levelMobySpecialData = 0x80075930;
 
 _ptr_particleLinkedList = 0x80075738;
 

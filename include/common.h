@@ -13,7 +13,7 @@
 #define SCREEN_TOP_EDGE 0x0
 #define SCREEN_BOTTOM_EDGE 0xE8
 
-#define SECONDS 30
+#define FPS 30
 
 #define WORLD_UNIT 4096
 #define GAME_UNIT 64
@@ -24,7 +24,7 @@ typedef enum Direction
     RIGHT
 }Direction;
 
-enum Buttons
+typedef enum Buttons
 {
     X_BUTTON = 0x0040,
     SQUARE_BUTTON = 0x0080,
@@ -46,9 +46,9 @@ enum Buttons
 
     L3_BUTTON = 0x0200,
     R3_BUTTON = 0x0400
-};
+}Buttons;
 
-enum GameState
+typedef enum GameState
 {
     GAMESTATE_GAMEPLAY = 0,
     GAMESTATE_LOADING = 0x1,
@@ -66,17 +66,17 @@ enum GameState
     GAMESTATE_TITLE_SCREEN = 0xD,
     GAMESTATE_CUTSCENE = 0xE,
     GAMESTATE_CREDITS = 0xF
-};
+}GameState;
 
-enum MovementSubStates
+typedef enum MovementSubStates
 {
     MOVEMENT_SUBSTATE_LOADING = 0x8,
     MOVEMENT_SUBSTATE_EXIT_PORTAL = 0x9,
     MOVEMENT_SUBSTATE_FLY_IN_LOOP = 0xA,
     MOVEMENT_SUBSTATE_FLY_IN_CAMERA_180 = 0xA
-};
+}MovementSubStates;
 
-enum BalloonistStates
+typedef enum BalloonistStates
 {
     BALLOONIST_STATE_NEVER_TALKED_TO_BALLOONIST = 0x0,
     BALLOONIST_STATE_TEXTBOX = 0x1,
@@ -87,17 +87,17 @@ enum BalloonistStates
     BALLOONIST_STATE_BALLOON_LOWERING = 0x6,
     BALLOONIST_STATE_JUMPING_OUT_OF_BALLOON = 0x7
 
-};
+}BalloonistStates;
 
-enum SpyroHealthStates
+typedef enum SpyroHealthStates
 {
     YELLOW_SPARX = 3,
     BLUE_SPARX = 2,
     GREEN_SPARX = 1,
     NO_SPARX = 0
-};
+}SpyroHealthStates;
 
-enum LevelIDS
+typedef enum LevelIDS
 {
     ARTISANS_ID = 0xA,
     STONE_HILL_ID = 0xB,
@@ -139,19 +139,19 @@ enum LevelIDS
     TWILIGHT_HARBOR_ID = 0x3E,
     GNASTY_GNORC_ID = 0x3F,
     GNASTYS_LOOT_ID = 0x40
-};
+}LevelIDS;
 
-enum LevelFlyInAnimations
+typedef enum LevelFlyInAnimations
 {
     FACING_LEFT = 0xCA6C,
     FACING_RIGHT = 0xCA3C,
     FACING_FORWARD = 0xCA24,
     FACING_BACKWARDS = 0xCA84,
-    FACING_DIAGONAL = 0xCA9C, // wizard peak
+    FACING_DIAGONAL = 0xCA9C,   // wizard peak specific
     RETURNING_HOME = 0xCA54
-};
+}LevelFlyInAnimations;
 
-enum InventoryMenuSelections
+typedef enum InventoryMenuSelections
 {
     ARTISANS_MENU = 0,
     PEACE_KEEPERS_MENU = 1,
@@ -159,9 +159,9 @@ enum InventoryMenuSelections
     BEAST_MAKERS_MENU = 3,
     DREAM_WEAVERS_MENU = 4,
     GNASTYS_WORLD_MENU = 5
-};
+}InventoryMenuSelections;
 
-enum StartMenuSelections
+typedef enum StartMenuSelections
 {
     STARTMENU_CONTINUE = 0,
     STARTMENU_OPTIONS = 1,
@@ -169,7 +169,7 @@ enum StartMenuSelections
     STARTMENU_EXIT_LEVEL = 3,
     STARTMENU_QUIT_GAME = 3
 
-};
+}StartMenuSelections;
 
 //~~~~~~~
 //Structs
@@ -214,8 +214,6 @@ typedef struct NOPHexCode
 //*Custom Functions 
 //*~~~~~~~~~~~~~~~~
 
-#include "spyro.h" //? Including here because spyro.h needs acess to the structs above here, lol...
-
 
 //*~~~~~~~~~~~~~~~~~~~~~~~~
 //*        SYMBOLS
@@ -237,9 +235,6 @@ void srand(int seed);
 
 void ArrayCopy(int *outputArray,int *inputArray,int arrayLength);                                       //? This function copies one array to another
 
-//Drawing Functions
-int DrawTextCapitals_(char* text, void* TextInfo, int spacing, char color);                              //? This function draws text with all capitcal letters.
-int DrawTextAll_(char *text, int *CapitalTextInfo, int *LowercaseTextInfo, int spacing, char colour);    //? This function draws text with 1 capital letter at the beginning of each word.
 void DrawLine(int point1X, int point1Y, int point2X, int point2Y);                                      //? This function draws a yellow line.
 void FillScreenColor(int colorSpace, char r, char g, char b);                                           //? Fills the screen with a specific color.
 
@@ -280,75 +275,265 @@ void Maybe_ResetHudTimers(void);
 //*In Game Variables
 //*~~~~~~~~~~~~~~~~~
 
-//Booleans
-extern bool _isPastTitleScreen; //0x8007566c                 //? 1 If has started new game/continue game. Basically after you leave the title screen this is always 1.
-extern bool _isLoading; //0x800756B0                         //? 1 If is in loading screen.
-extern bool _isInsideOptionsMenu; //0x800757C8               //? 1 If inside options menu in start menu.
-extern bool _canFlyIn; //0x800756D0                          //? 1 If can fly in to level. If set to 0, will just fade in instead of flying in. I assume this is a leftover from prototypes?
+//! Booleans
+/**
+ * @brief If has started new game/continue game, then is 1 for true. Basically after you leave the title screen this is always 1.
+ * @note Address: 0x8007566c  
+ */
+extern bool _isPastTitleScreen;  
 
-//Timers
-extern int _globalTimer; //0x800749e0                        //? This is the global timer. It is running at all times from game boot up past BIOS.                
-extern int _pausedTimer; //0x800758B8                        //? This is the pause/inventory menu timer. It is only running in those menus.
+/**
+ * @brief true/1 if is in loading screen.
+ * @note Address: 0x800756B0
+ */              
+extern bool _isLoading;  
+
+/**
+ * @brief true/1 If inside options menu in start menu.
+ * @note Address: 0x800757C8 
+ */                                   
+extern bool _isInsideOptionsMenu;
+
+/**
+ * @brief true/1 If can fly in to level. If set to 0, will just fade in instead of flying in. I assume this is a leftover from prototypes?
+ * @note Address: 0x800756D0  
+ */         
+extern bool _canFlyIn; 
+
+//! Timers
+
+/**
+ * @brief This is the global timer. It is running at all times from game boot up past BIOS.                
+ * @note Address: 0x800749e0
+ */         
+extern int _globalTimer;
+
+/**
+ * @brief This is the pause/inventory menu timer. It is only running in those menus.              
+ * @note Address: 0x800758B8
+ */         
+extern int _pausedTimer;   
+
+/**
+ * @brief This is the pause/inventory menu timer. It is only running in those menus.              
+ * @note Address: 0x8007588c
+ */  
 extern int _loadingTimer;
-extern int _levelTimerWhenActive; //0x8007572C               //? This is a level specific timer. This timer is running when when you are able to control spyro, and doesn't reset until you enter a new level.
-extern int _levelTimer_60fps; //0x800758C8                   //? This is a level specific timer that runs at 60fps. This timer is running at all times, and doesn't reset until you enter a new level.
-extern int _vSyncTimer_60fps; //0x800749E0                   //? This is a global timer at 60fps. It is running at all times, and controls the vSync. If frozen, video freezes. Can be unfrozen.
-extern int _wobbleAndOpacityTimer; //0x800770f4              //? This is a timer that is often used for changing the opacity of things like lines, the shimmer of text, etc.
 
-//Important Stuff
-extern int _gameState; //0x800757D8                         //? Main gamestate. Gamestate values are stored in the GameState enums.
-extern unsigned short _currentButton; //0x80077380           //? Value coorsponding the the current button being pressed.
-extern unsigned short _currentButtonOneFrame; //0x80077378   //? Value coorsponding the the current button being pressed, then goes back to 0 after 1 frame.
-extern int _secondController; //0x80078E50                   //! STILL RESEARCHING
+/**
+ * @brief This is a level specific timer. This timer is running when when you are able to control spyro, and doesn't reset until you enter a new level.             
+ * @note Address: 0x8007572C 
+ */ 
+extern int _levelTimerWhenActive;   
+
+/**
+ * @brief This is a level specific timer that runs at 60fps. This timer is running at all times, and doesn't reset until you enter a new level.
+ * @note Address: 0x800758C8
+ */ 
+extern int _levelTimer_60fps; 
+
+/**
+ * @brief This is a global timer at 60fps. It is running at all times, and controls the vSync. If frozen, video freezes. Can be unfrozen.
+ * @note Address: 0x800749E0 
+ */ 
+extern int _vSyncTimer_60fps;
+
+/**
+ * @brief This is a timer that is often used for changing the opacity of things like lines, the shimmer of text, etc.
+ * @note Address: 0x800770f4 
+ */ 
+extern int _wobbleAndOpacityTimer;
+
+
+//! Important Stuff
+
+/**
+ * @brief Main gamestate. Gamestate values are stored in the GameState enums.
+ * @note Address: 0x800757D8   
+ * @see GameState
+ */ 
+extern int _gameState;
+
+/**
+ * @brief Value coorsponding the the current button(s) being held.
+ * @note Address: 0x80077380 
+ * @see Buttons
+ */ 
+extern unsigned short _currentButtonsHeld;
+
+/**
+ * @brief Value coorsponding the the current button(s) that were pressed for 1 frame. Goes back to 0 after 1 frame
+ * @note Address: 0x80077378
+ * @see Buttons
+ */ 
+extern unsigned short _currentButtonsPressed;
+
+/**
+ * @brief STILL RESEARCHING
+ * @note Address: 0x80078E50
+ * @warning Need to research more
+ */ 
+extern int _secondController; 
 //Analog Sticks in analog_sticks.h
 
-extern Spyro _spyro; //0x80078A58                            //? Start of the Spyro Struct
+/**
+ * @brief Research this more. 0xA is the loop for example.
+ * @note Address: 0x80078AD4
+ * @warning Need to research more
+ */ 
 extern int _movementSubState; //0x80078AD4                   //! Research this more. 0xA is the loop for example.
-extern int _isInPortal; //0x80078C70                         //? 0x5 for in portal, 0xF for loading afterwards. Stays on 0xF until next portal.
-                                                             //! MIGHT BE PART OF SPYTO STRUCT. RESEARCH PLZ
 
-extern short _globalGemCount; //0x80075860;                 //? Total amount of global gems
-extern int _globalDragonCount; // 0x80075750
-extern int _globalEggCount; // 0x80075810
+/**
+ * @brief 0x5 for in portal, 0xF for loading afterwards. Stays on 0xF until next portal.
+ * @note Address: 0x80078C70
+ * @warning Need to research more. Might be part of spyro struct
+ */ 
+extern int _isInPortal; 
+                                                          
+/**
+ * @brief Total amount of global gems
+ * @note Address: 0x80075860
+ */ 
+extern short _globalGemCount;
 
-extern int _levelID; //0x800758B4                           //? Level ID according to the LevelIDs enum. This LevelID is used to determine which level will be loaded when in a loading screen, amung other things.
-extern char _portalToExitFromInHW; //0x800758AC              //? Same as the Level Id for the level.
+/**
+ * @brief Total amount of global dragons
+ * @note Address: 0x80075750
+ */ 
+extern int _globalDragonCount; 
 
-extern short _flyInAnimation; //0x80076EA8                   //? This is what determines the fly in animation for the level, determined by the LevelFlyInAnimations enum's.
+/**
+ * @brief Total amount of global eggs
+ * @note Address: 0x80075810
+ */ 
+extern int _globalEggCount;
 
-extern Vec3 _cameraPosition; //0x80076DF8                    //? Start of Camera Position Vector
-extern CameraAngle _cameraAngle; //0x80076E1C                //? Start of Camera Angle Vector
+
+/**
+ * @brief Current Level ID according to the LevelIDS enum. 
+ * @details This LevelID is used to determine which level will be loaded when in a loading screen, amung other things.
+ * @note Address: 0x800758B4
+ * @see LevelIDS
+ */ 
+extern int _levelID;
+
+/**
+ * @brief Level ID for which portal to exit from in Homeworld. Uses same LevelIDS enum
+ * @details This LevelID is used to determine which level portal you will come out of when you exit a level back to the homeworld.
+ * @note Address: 0x800758AC 
+ * @see LevelIDS
+ */ 
+extern char _portalToExitFromInHW;   
+
+/**
+ * @brief This is what determines the fly in animation during the loading screen of a level
+ * @note Address: 0x80076EA8
+ * @see LevelFlyInAnimations
+ */ 
+extern short _flyInAnimation;                 
+
+/**
+ * @brief Camera Position
+ * @note Address: 0x80076DF8 
+ * @see Vec3
+ */ 
+extern Vec3 _cameraPosition;
+
+/**
+ * @brief Camera Angle (yaw, pitch, roll)
+ * @note Address: 0x80076E1C
+ * @see CameraAngle
+ */ 
+extern CameraAngle _cameraAngle;
 
 extern short _cameraRotationMatrix[3][3];
 extern short _cameraPureRotationMatrix[3][3];
 
+/**
+ * @brief A scaled up sin lookup table
+ * @note Address: 0x8006cbf8
+ * @see SinScaled()
+ */ 
 extern short _sinArray[256];
 
-extern int _shouldCameraFollowSpyro; //0x80033b4c            //? This is actually just a call to the SpyroCamera Function. So this is why its not simply true or false, it is nopping the call to the function when we set it to 0.
-#define DONT_FOLLOW_SPYRO 0                                  //? This is the hex representation of nopping the call to LockCameraToSpyro in MIPS. When we set it to this, we are nopping the function call.
-#define FOLLOW_SPYRO 0x0C00DEF5                              //? This is the hex representation of the call to LockCameraToSpyro in MIPS. When we set it to this, we are un-nopping the function call.
+/**
+ * @brief This is the current state of the main menu. Should make an enum for this
+ * @note Address: 0x80078D88
+ */ 
+extern char _mainMenuState;
 
-extern char _mainMenuState; //0x80078D88                     //? This is the current state of the main menu. Should make an enum for this
-extern int _ballonistState; //0x800777e8                     //? The Sub State for the balloonist. Should make an enum for this.
+/**
+ * @brief The State for the balloonist. Should make an enum for this.
+ * @note Address: 0x800777e8
+ */ 
+extern int _ballonistState;
 
-extern int _startMenuSelection; //0x80075720                 //? This is the current option selected in the main start menu, according to the StartMenuSelections enum's.
-extern int _selectMenuOption; //0x80075744                   //? This is the current homeworld menu in the inventory menu according to the InventoryMenuSelections enum's.
+/**
+ * @brief This is the current option selected in the main start menu, according to the StartMenuSelections enum.
+ * @note Address: 0x80075720
+ * @see StartMenuSelections
+ */ 
+extern int _startMenuSelection;
 
-extern char _whichCutscene; //0x80078D94                     //? Which cutscene is currently being played
+/**
+ * @brief This is the current homeworld menu in the inventory menu according to the InventoryMenuSelections enum's.
+ * @note Address: 0x80075744
+ * @see InventoryMenuSelections
+ */ 
+extern int _inventoryMenuScreen;
 
-extern char _effect_ScreenFadeIn; //0x80075918               //? This is what determines how much to fill the screen with a black fade in effect. Will automatically decrement the fade back to 0 unless set every frame.
-extern char _effect_ScreenLetterBox; //0x800756C0            //? This is what determines how much to fill the screen with the top and bottom letterbox effect. Will automatically decrement the letterbox to 0 unless set every frame.
+/**
+ * @brief Which cutscene is currently being played
+ * @note Address: 0x80078D94
+ */ 
+extern char _whichCutscene;
 
-extern char _collectablesStateFlags[1231]; //0x80077900      //? The array for what collectables you have collected. This is what the game references for loading gems/dragons into a level or not. When you load a game from a save file, this is immediately where the data gets stored.
+/**
+ * @brief This is what determines how much to fill the screen with a black fade in effect. 
+ * @details Will automatically decrement the fade back to 0 by 1 every frame until 0
+ * @note Address: 0x80075918 
+ */ 
+extern char _effect_ScreenFadeIn;
 
-extern int* _ptr_levelMobys; //0x80075828                    //? This is a pointer to the start of the level moby's array.
-extern int* _ptr_dynamicLevelMobys; //0x8007573C             //? This is a pointer to the start of the dynamic level moby's array.
+/**
+ * @brief This is what determines how much to fill the screen with the top and bottom letterbox effect.
+ * @details Will automatically decrement the letterbox effect by 1 every frame until 0
+ * @note Address: 0x800756C0
+ */ 
+extern char _effect_ScreenLetterBox;
 
-extern int* _ptr_levelMobyData; //0x80075930                 //? This is a pointer to the start of the level moby's data array.
-#define _ptr_levelMobyData _ptr_endDynamicMobys //0x80075930 //? Just giving it another name, since it also could be used to indicate the end of dynamic mobys, instead of just being used to indicate the start of levelMobyData.
+/**
+ * @brief The array for what collectables you have collected globally so far.
+ * @details This is what the game references for loading gems/dragons into a level or not when you load into it/respawn. This is also the memory location for when you load a game from a save file. This is immediately where the data gets stored.
+ * @note Address: 0x80077900
+ */ 
+extern char _collectablesStateFlags[1231];
+
+/**
+ * @brief This is a pointer to the start of the level moby's array of stucts.
+ * @note Address: 0x80075828 
+ */ 
+extern int* _ptr_levelMobys;
+
+/**
+ * @brief  This is a pointer to the start of the dynamic level moby's array.
+ * @details Dynamic level moby's are the ones that don't spawn immediatly, but spawn from gameplay. Gems from chests/enemies, lives, etc.
+ * @note Address: 0x8007573C 
+ */ 
+extern int* _ptr_dynamicLevelMobys;
+
+/**
+ * @brief  This is a pointer to the start of the level moby's special data array of structs.
+ * @details The special data is any data that is unique to that particular moby. The special data pointer is always the first element of any moby struct.
+ * @note Address: 0x80075930
+ */ 
+extern int* _ptr_levelMobySpecialData;
+
+#define _ptr_levelMobyData _ptr_endDynamicMobys //0x80075930        //? Just giving it another name, since it also could be used to indicate the end of dynamic mobys, instead of just being used to indicate the start of levelMobyData.
+
 
 extern int* _ptr_primitivesArray; //0x800757b0                //? Not too sure.
-extern int* _ptr_arrayGraphicsRelatedPointers; //0x8007581c                //? Ptr the the array of primitives structs to be drawn every frame
+extern int* _ptr_arrayGraphicsRelatedPointers; //0x8007581c   //? Ptr the the array of primitives structs to be drawn every frame
 extern int _ptrTextUnk; //0x800720f4                          //? Not too sure.
 extern char* _ptr_hudMobys; //0x80075710                      //? A pointer to a dynamic downwards growing array of moby structs to render that gets rendered to the hud every frame.
 
@@ -367,6 +552,8 @@ extern char* _localSoundEffects; //0x800761D4
 extern int _musicLevelTrack;  //0x0x800774b0
 
 extern int* _maybe_ptr_levelTextureRelated; //0x800785f0
+
+extern byte _cdStatus; //0x80074e44
 
 extern char _freeSpace[0xE5F]; //0x80073990                 //? This is almost 1kb of free space in the game
 

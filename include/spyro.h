@@ -47,10 +47,10 @@ enum SpyroStates
     SUPERCHARGE = 0x2C
 };
 
-//*~~~~~~~
-//*Structs
-//*~~~~~~~
-
+/**
+ * @brief  This is the main Spyro struct.
+ * @details This is what Spyro uses for most of his data: position, velocity, animations, color filter, angle, etc.
+ */ 
 typedef struct Spyro
 {
 
@@ -265,5 +265,15 @@ int pitchMomentum;                                          //? Spyro's pitch mo
 
 
 }Spyro;
+
+//*~~~~~~~~~~~~~~~~~
+//*In Game Variables
+//*~~~~~~~~~~~~~~~~~
+
+/**
+ * @brief  This is where spyro is in ram. This is the 1 instance of the spyro struct
+ * @note Address: 0x80078A58
+ */ 
+extern Spyro _spyro;
 
 #endif //SPYRO_H

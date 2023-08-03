@@ -1,5 +1,6 @@
-#include <common.h>
-#include <custom_types.h>
+#ifndef MISC_GAME_H
+#define MISC_GAME_H
+
 
 /**
  * @brief Returns the current completion percentage.
@@ -13,17 +14,7 @@
  * Prototype: misc_game.h \n
  * Amount of instructions: Same Amount (https://decomp.me/scratch/8Lz9x) \n 
 */
-int CalculateCompletionPercentage(void)
-{
-  int percentage;
-  
-  percentage = ((_globalGemCount * 50) + (_globalDragonCount * 6000) + (_globalEggCount * 10000)) / 12000;
-  if (_globalGemCount > 12000) {
-    percentage = (_globalGemCount - 12000) / 100 + 100;
-  }
-  return percentage;
-}
-
+int CalculateCompletionPercentage(void);
 
 /**
  * @brief 
@@ -37,18 +28,7 @@ int CalculateCompletionPercentage(void)
  * Hook File: sin_scaled.s \n 
  * Prototype: misc_game.h \n
  * Amount of instructions: Same Amount (https://decomp.me/scratch/qiaz2) \n 
- 
- * @see _sinArray
 */
-int SinScaled(uint param_1)
-{
-  uint uVar1;
-  
-  uVar1 = (param_1 & 0xfff) >> 4;
-  if ((param_1 & 0xf) != 0) {
-    return ((int)((param_1 & 0xf) * ((int)_sinArray[uVar1 + 1] - (int)_sinArray[uVar1])) >>
-           4) + (int)_sinArray[uVar1];
-  }
-  return (int)_sinArray[uVar1];
-}
+int SinScaled(uint param_1);
 
+#endif /* MISC_GAME_H */

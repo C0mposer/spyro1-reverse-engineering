@@ -1,5 +1,5 @@
 #include <custom_types.h>
-#include <cd.h>
+#include <common.h>
 
 /**
  * @brief Returns the status of the CD Drive.

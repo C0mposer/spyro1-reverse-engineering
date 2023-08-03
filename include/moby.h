@@ -143,7 +143,10 @@ typedef struct HudMobyInfo
 
 // ~~~ FULL MOBY STRUCT ~~~
 
-//Struct for all Moby's
+/**
+ * @brief  This is the main moby/object struct.
+ * @details This is what most objects use for position, type, color, animation, scale, etc
+ */ 
 typedef struct Moby
 {
     void* ptr_mobySpecificData;
