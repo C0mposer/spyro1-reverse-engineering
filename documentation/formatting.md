@@ -2,7 +2,7 @@
 <span style="font-size:18px;">
 
 ##Symbol Map
-[Click here to see the symbols we have found](symbol_map.html)
+[Click here to see the in-game varialbes & functions we have labeled](symbol_map.html)
 
 ##Overview
 At a high level, this is the way this reverse engineering project is set up currently: 
