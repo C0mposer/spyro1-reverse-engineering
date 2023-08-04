@@ -1,6 +1,7 @@
 #include <common.h>
 #include <custom_types.h>
 #include <moby.h>
+#include <shapes.h>
 
 
 /**
@@ -89,25 +90,28 @@ void DrawArrow(HudMobyInfo* hudMobyInfo, uint timer, int leftOrRightArrow)
 */
 void DrawTextbox(int xBound1,int xBound2,int yBound1,int yBound2)
 {
-  void* ptr_prim = (void*)_ptr_primitivesArray;                         
-  PrimitiveAlphaHack(_ptr_primitivesArray,1,0,0x40,0);               // Trasparent black background hack
+  Poly4FPadded* ptr_prim = (Poly4FPadded*)_ptr_primitivesArray;          
+
+  PrimitiveAlphaHack(_ptr_primitivesArray,1,0,0x40,0);      // Trasparent black background hack
   DrawPrimitive(ptr_prim);
-  *(int *)(ptr_prim + 0xc) = 0x5000000;
-  *(char *)(ptr_prim + 0x13) = 0x2a;
-  *(short *)(ptr_prim + 0x14) = (short)xBound1;
-  *(short *)(ptr_prim + 0x18) = (short)xBound2;
-  *(short *)(ptr_prim + 0x1c) = (short)xBound1;
-  *(short *)(ptr_prim + 0x20) = (short)xBound2;
-  *(short *)(ptr_prim + 0x16) = (short)yBound1;
-  *(short *)(ptr_prim + 0x1a) = (short)yBound1;
-  *(short *)(ptr_prim + 0x1e) = (short)yBound2;
-  *(short *)(ptr_prim + 0x22) = (short)yBound2;
-  *(char *)(ptr_prim + 0x10) = 0x70;
-  *(char *)(ptr_prim + 0x11) = 0x70;
-  *(char *)(ptr_prim + 0x12) = 0x70;
-  DrawPrimitive(ptr_prim + 0xc);
-  _ptr_primitivesArray = (byte*)ptr_prim + 0x24;                  // Make space in the array of primitives for the next call
-  DrawLine(xBound1,yBound1,xBound2,yBound1);                      // Box outline 
+  ptr_prim->tag = 0x5000000;
+  ptr_prim->code = POLY4F_TRANSPARENT;
+  ptr_prim->point1Pos.x = xBound1;
+  ptr_prim->point2Pos.x = xBound2;
+  ptr_prim->point3Pos.x = xBound1;
+  ptr_prim->point4Pos.x = xBound2;
+  ptr_prim->point1Pos.y = yBound1;
+  ptr_prim->point2Pos.y = yBound1;
+  ptr_prim->point3Pos.y = yBound2;
+  ptr_prim->point4Pos.y = yBound2;
+  ptr_prim->color.R = 0x70;
+  ptr_prim->color.G = 0x70;
+  ptr_prim->color.B = 0x70;
+  DrawPrimitive((byte*)ptr_prim + 0xC);
+  _ptr_primitivesArray = (byte*)ptr_prim + 0x24;            // Make space in the array of primitives for the next one
+
+  // Outline of textbox
+  DrawLine(xBound1,yBound1,xBound2,yBound1);
   DrawLine(xBound2,yBound1,xBound2,yBound2);
   DrawLine(xBound2,yBound2,xBound1,yBound2);
   DrawLine(xBound1,yBound2,xBound1,yBound1);

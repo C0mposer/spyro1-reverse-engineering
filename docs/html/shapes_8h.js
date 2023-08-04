@@ -9,7 +9,7 @@ var shapes_8h =
     [ "Line", "struct_line.html", "struct_line" ],
     [ "ShadedLine", "struct_shaded_line.html", "struct_shaded_line" ],
     [ "Poly4F_Vec3", "struct_poly4_f___vec3.html", "struct_poly4_f___vec3" ],
-    [ "OpaqueShape", "struct_opaque_shape.html", "struct_opaque_shape" ],
+    [ "Poly4FPadded", "struct_poly4_f_padded.html", "struct_poly4_f_padded" ],
     [ "ColorModes", "shapes_8h.html#ad1ac5dca17348466485931868b06213b", [
       [ "COLORMODE_4BIT", "shapes_8h.html#ad1ac5dca17348466485931868b06213ba35c5a457486ed1b65cd65efba37ddf0d", null ],
       [ "COLORMODE_8BIT", "shapes_8h.html#ad1ac5dca17348466485931868b06213ba621082d5342d573693c524b15517633c", null ],

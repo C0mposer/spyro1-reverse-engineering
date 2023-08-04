@@ -65,7 +65,7 @@ var NAVTREEINDEX =
 "gem__home__in_8c.html#a21dda4062c8e74ad6571e52a973cbbd3",
 "moby_8h.html#abe6d772470bfedcad5f3611c3e1bd13caebeec2b34be78d884594e446fab84a93",
 "struct_moby.html#a12aaad84c8bcc3a74c0bb6fa0b412f1f",
-"struct_spyro.html#a8b9ac5a116e445af3b801d6858279e59"
+"struct_spyro.html#a9153b3f76615975392a40f2f01c6b7a4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

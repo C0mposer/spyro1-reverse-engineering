@@ -220,7 +220,7 @@ typedef struct Poly4F_Vec3
 } Poly4F_Vec3;
 
 
-typedef struct OpaqueShape      //! LEGACY
+typedef struct Poly4FPadded      //! FOR IN GAME
 {
     int PADDING1;
     int PADDING2;
@@ -228,10 +228,7 @@ typedef struct OpaqueShape      //! LEGACY
     
     int tag;
 
-    char red;
-    char green;
-    char blue;
-
+    RGB_u8 color;
     char code;
 
     struct Vec2_u16 point1Pos;
@@ -239,6 +236,6 @@ typedef struct OpaqueShape      //! LEGACY
     struct Vec2_u16 point3Pos;
     struct Vec2_u16 point4Pos;
 
-} OpaqueShape;
+} Poly4FPadded;
 
 #endif //FILTERS_H

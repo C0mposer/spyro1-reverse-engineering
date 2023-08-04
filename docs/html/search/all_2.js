@@ -16,11 +16,10 @@ var searchData=
   ['bgr_5fu8_13',['BGR_u8',['../struct_b_g_r__u8.html',1,'']]],
   ['binary_14',['BINARY',['../custom__types_8h.html#acc166508d5cfbf4100f8622ce97f4985',1,'custom_types.h']]],
   ['blowhard_5fid_15',['BLOWHARD_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba66b09cec8d174b71236602f7f19936da',1,'common.h']]],
-  ['blue_16',['blue',['../struct_opaque_shape.html#a5d006e943379572cf2cec42de3c228ad',1,'OpaqueShape']]],
-  ['blue_5fsparx_17',['BLUE_SPARX',['../common_8h.html#aee1db6cb51324eb1827db0dd3ecebda1aafb34f3eaad0d4bb6b2a1a4edeeeb9e9',1,'common.h']]],
-  ['bonk_18',['BONK',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579a64bfa538e46e24acf8123fe7f7dff0b6',1,'spyro.h']]],
-  ['bool_19',['bool',['../custom__types_8h.html#a1062901a7428fdd9c7f180f5e01ea056',1,'custom_types.h']]],
-  ['butterfly_5fheld_5fid_20',['BUTTERFLY_HELD_ID',['../moby_8h.html#a0954ce21587d5f086b93016903a08f62ad97e10f1d967218245768582139f3b31',1,'moby.h']]],
-  ['buttons_21',['Buttons',['../common_8h.html#a2200c9a3564da59c1160338587ecb034',1,'common.h']]],
-  ['byte_22',['byte',['../custom__types_8h.html#a0c8186d9b9b7880309c27230bbb5e69d',1,'custom_types.h']]]
+  ['blue_5fsparx_16',['BLUE_SPARX',['../common_8h.html#aee1db6cb51324eb1827db0dd3ecebda1aafb34f3eaad0d4bb6b2a1a4edeeeb9e9',1,'common.h']]],
+  ['bonk_17',['BONK',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579a64bfa538e46e24acf8123fe7f7dff0b6',1,'spyro.h']]],
+  ['bool_18',['bool',['../custom__types_8h.html#a1062901a7428fdd9c7f180f5e01ea056',1,'custom_types.h']]],
+  ['butterfly_5fheld_5fid_19',['BUTTERFLY_HELD_ID',['../moby_8h.html#a0954ce21587d5f086b93016903a08f62ad97e10f1d967218245768582139f3b31',1,'moby.h']]],
+  ['buttons_20',['Buttons',['../common_8h.html#a2200c9a3564da59c1160338587ecb034',1,'common.h']]],
+  ['byte_21',['byte',['../custom__types_8h.html#a0c8186d9b9b7880309c27230bbb5e69d',1,'custom_types.h']]]
 ];
