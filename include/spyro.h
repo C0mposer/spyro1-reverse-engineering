@@ -283,9 +283,10 @@ int pitchMomentum;                                          //? Spyro's pitch mo
 extern Spyro _spyro;
 
 
-//! All of these below can be accessed through the spyro struct above, but I figuerd it be helpful to have all these addresses labled for the documentation
+// All of these below can be accessed through the spyro struct above, but I figuerd it be helpful to have all these addresses labled for the documentation
+
 /**
- * @brief  Spyro's X Position Coordinate \n Address: 0x80078A58
+ * @brief Spyro's X Position Coordinate \n Address: 0x80078A58
  * @see Spyro
  */ 
 extern int _spyroXPosition;
