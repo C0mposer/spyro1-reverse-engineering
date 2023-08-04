@@ -1,5 +1,5 @@
 @page ghidra_project Ghidra Project
-@tableofcontents
+
 <span style="font-size:18px;">
 
 @section ghidra_download Ghidra

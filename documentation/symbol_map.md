@@ -1,5 +1,5 @@
 @page symbol_map Symbol Map
-@tableofcontents
+
 
 @section in_game_variables In Game Global Variables
 <span style="font-size:25px;"> [Click here to view the in game global variables we have labeled](group__labeled__global__variables.html)

@@ -146,7 +146,7 @@ typedef struct HudMobyInfo
 /**
  * @brief  This is the main moby/object struct.
  * @details This is what most objects use for position, type, color, animation, scale, etc
- */ 
+*/ 
 typedef struct Moby
 {
     void* ptr_mobySpecificData;
@@ -205,7 +205,7 @@ typedef struct Moby
 
     struct BGR_u8 RGB;
 
-    char color;                                     // Determines the color of the moby. (01 red, 02 green, etc.) This can be poked outside of its normal range to get some awesome colors.
+    char color;                                     // Determines the color of the shaded moby. (01 red, 02 green, etc.) This can be poked outside of its normal range to get some awesome colors.
 
     short requiredHUD2;
 
@@ -215,7 +215,7 @@ typedef struct Moby
 
     short UNK20;
 
-    short scale;                                    // Determines the scale of the gem. Range from 0x0000 - 0xFFFF. (0 normal sized, 0xFFFF smallest size)
+    short scale;                                    // Determines the scale of the moby. Range from 0x0000 - 0xFFFF. (0 normal sized, 0xFFFF smallest size)
 
 }Moby;
 
