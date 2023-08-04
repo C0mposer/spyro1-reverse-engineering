@@ -1,5 +1,9 @@
 #include <custom_types.h>
 
+/** @ingroup reveresed_functions
+ *  @{
+ */
+
 /**
  * @brief Adds vector 'a' and vector 'b' together, and stores the resulting vector in 'result'
 
@@ -93,8 +97,6 @@ void MatrixTranspose(uint* outputMatrix, uint* inputMatrix)
   return;
 }
 
-
-
 // void MatrixTranspose(unsigned int *outputMatrix, unsigned int *inputMatrix)
 
 // {
@@ -106,3 +108,6 @@ void MatrixTranspose(uint* outputMatrix, uint* inputMatrix)
 //   outputMatrix[4] = inputMatrix[4];
 //   return;
 // }
+
+
+/** @} */ // end of reveresed_functions

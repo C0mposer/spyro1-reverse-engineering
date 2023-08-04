@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['calculatecompletionpercentage_0',['CalculateCompletionPercentage',['../misc__game_8c.html#a9365f0a572e6aa39a13f62ef55d0cf62',1,'misc_game.c']]],
+  ['calculatecompletionpercentage_0',['CalculateCompletionPercentage',['../group__reveresed__functions.html#ga9365f0a572e6aa39a13f62ef55d0cf62',1,'misc_game.c']]],
   ['camera_5fmode_5factive_1',['CAMERA_MODE_ACTIVE',['../options_8h.html#ac6e73fe6ce68e10b0acd6d2312bdbb35a0f1f08c6c494c5c1466137f6bc68c549',1,'options.h']]],
   ['camera_5fmode_5fpassive_2',['CAMERA_MODE_PASSIVE',['../options_8h.html#ac6e73fe6ce68e10b0acd6d2312bdbb35a918fb1815dbe28241296070c7bc258ea',1,'options.h']]],
   ['cameraangle_3',['CameraAngle',['../struct_camera_angle.html',1,'']]],
@@ -41,7 +41,7 @@ var searchData=
   ['cdpostoint_38',['CdPosToInt',['../_p_s_y_q__cd_8h.html#a02d935bc612606a0160987633d483075',1,'PSYQ_cd.h']]],
   ['cdread_39',['CdRead',['../_p_s_y_q__cd_8h.html#ae1736d36b4ec9fc4816afbc099eb8a7f',1,'PSYQ_cd.h']]],
   ['cdreadcallback_40',['CdReadCallback',['../_p_s_y_q__cd_8h.html#abd6691c2068e5e8273d5f40902b1a9f9',1,'PSYQ_cd.h']]],
-  ['cdstatus_41',['CdStatus',['../cd_8c.html#a8f0e9694e79d77fecae20bc0ac7be23d',1,'cd.c']]],
+  ['cdstatus_41',['CdStatus',['../group__reveresed__functions.html#ga8f0e9694e79d77fecae20bc0ac7be23d',1,'cd.c']]],
   ['cdsync_42',['CdSync',['../_p_s_y_q__cd_8h.html#ad220d5bad1b49407dae92dc68d9b203e',1,'PSYQ_cd.h']]],
   ['cdsync_5f_43',['CdSync_',['../_p_s_y_q__cd_8h.html#a5990754dced9b8685fabd80f5b54959f',1,'PSYQ_cd.h']]],
   ['chan_44',['chan',['../struct_cdl_f_i_l_t_e_r.html#a7a8b58c99598ff37d6195de6235151a0',1,'CdlFILTER']]],

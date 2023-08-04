@@ -1,6 +1,11 @@
 #include <custom_types.h>
 #include <common.h>
 
+/** @defgroup reveresed_functions Decompiled Functions
+ *  Functions we have decompiled/reverse engineered to varying degrees.
+ *  @{
+ */
+
 /**
  * @brief Returns the status of the CD Drive.
 
@@ -18,3 +23,6 @@ byte CdStatus(void)
 {
   return _cdStatus;
 }
+
+
+/** @} */ // end of reveresed_functions

@@ -14,7 +14,7 @@ var searchData=
   ['shadedline_11',['ShadedLine',['../struct_shaded_line.html',1,'']]],
   ['shapes_2eh_12',['shapes.h',['../shapes_8h.html',1,'']]],
   ['shemp_5fid_13',['SHEMP_ID',['../common_8h.html#a31a61db791e237dda9149b2f5a496f2ba93e84350f2548e62aadac1312c9c1ee5',1,'common.h']]],
-  ['sinscaled_14',['SinScaled',['../misc__game_8c.html#a7e5c869bc85ac880ab9aec6498d72e57',1,'misc_game.c']]],
+  ['sinscaled_14',['SinScaled',['../group__reveresed__functions.html#ga7e5c869bc85ac880ab9aec6498d72e57',1,'misc_game.c']]],
   ['size_15',['size',['../struct_capital_text_info.html#a0e61689a502175ef6f5f79f22ed154dc',1,'CapitalTextInfo::size'],['../struct_lowercase_text_info.html#a19af0e07f1b58c359e1beb6f4fd56564',1,'LowercaseTextInfo::size']]],
   ['sound_2eh_16',['sound.h',['../sound_8h.html',1,'']]],
   ['sound_5feffect_5fartisans_5fgnorc_5fhit_17',['SOUND_EFFECT_ARTISANS_GNORC_HIT',['../sound_8h.html#ad31275ac98ad80f0b3431b6a5d3ff68aa2805adf371eaff950750144e6a318b29',1,'sound.h']]],

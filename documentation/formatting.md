@@ -4,6 +4,9 @@
 ## Symbol Map
 [Click here to see the in-game variables & functions we have labeled](symbol_map.html)
 
+## Decompiled Functions
+[Click here to see the functions we have decompiled](group__reveresed__functions.html)
+
 ## Ghidra Project
 [Click here to download our Ghidra project](ghidra_project.html)
 

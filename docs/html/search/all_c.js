@@ -4,7 +4,7 @@ var searchData=
   ['magic_5fcrafters_5fmenu_1',['MAGIC_CRAFTERS_MENU',['../common_8h.html#a64037f20140e0a8540063b3359333637ac1d21cc7c583a9072edc9597767268cc',1,'common.h']]],
   ['matrix_2',['matrix',['../struct_m_a_t_r_i_x3_b_y3.html#a619c7594ec0ac9f7936a16ee03d49e8d',1,'MATRIX3BY3']]],
   ['matrix3by3_3',['MATRIX3BY3',['../struct_m_a_t_r_i_x3_b_y3.html',1,'']]],
-  ['matrixtranspose_4',['MatrixTranspose',['../vector_8h.html#aeceaa0bb95241d00bdb77a2898e85b0a',1,'MatrixTranspose(unsigned int *dest, unsigned int *src):&#160;vector.c'],['../vector_8c.html#a47b933d94ca7dfedd3b5af1268add56c',1,'MatrixTranspose(uint *outputMatrix, uint *inputMatrix):&#160;vector.c']]],
+  ['matrixtranspose_4',['MatrixTranspose',['../vector_8h.html#aeceaa0bb95241d00bdb77a2898e85b0a',1,'MatrixTranspose(unsigned int *dest, unsigned int *src):&#160;vector.c'],['../group__reveresed__functions.html#ga47b933d94ca7dfedd3b5af1268add56c',1,'MatrixTranspose(uint *outputMatrix, uint *inputMatrix):&#160;vector.c']]],
   ['maybe_5fanimspeedrelated_5',['maybe_AnimSpeedRelated',['../struct_spyro.html#a2db10ec93f2de06e44607503ad9e744c',1,'Spyro']]],
   ['maybe_5fanimspeedrelateddupe1_6',['maybe_animSpeedRelatedDupe1',['../struct_spyro.html#a2551ec6f3cf0dbcd300439bb11782442',1,'Spyro']]],
   ['maybe_5fanimspeedrelateddupe2_7',['maybe_animSpeedRelatedDupe2',['../struct_spyro.html#a3044c4dca9bcf6c2801b20e25ff06653',1,'Spyro']]],

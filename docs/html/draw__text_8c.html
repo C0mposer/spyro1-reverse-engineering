@@ -97,8 +97,6 @@ $(document).ready(function(){initNavTree('draw__text_8c.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">draw_text.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -109,141 +107,14 @@ $(document).ready(function(){initNavTree('draw__text_8c.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1e2b93075d41ec3c8dde8f931850035e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw__text_8c.html#a1e2b93075d41ec3c8dde8f931850035e">DrawTextCapitals</a> (char *text, int *textInfo, int spacing, char color)</td></tr>
-<tr class="memdesc:a1e2b93075d41ec3c8dde8f931850035e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a text string to the screen (Only capital characters allowed)  <br /></td></tr>
-<tr class="separator:a1e2b93075d41ec3c8dde8f931850035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c7c7b6680b4dea7383eaf81d6210942"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="draw__text_8c.html#a1c7c7b6680b4dea7383eaf81d6210942">DrawTextAll</a> (char *text, int *capitalTextInfo, int *lowercaseTextInfo, int spacing, char color)</td></tr>
-<tr class="memdesc:a1c7c7b6680b4dea7383eaf81d6210942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a text string to the screen (Capital &amp; Lowercase allowed)  <br /></td></tr>
-<tr class="separator:a1c7c7b6680b4dea7383eaf81d6210942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ga1e2b93075d41ec3c8dde8f931850035e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__reveresed__functions.html#ga1e2b93075d41ec3c8dde8f931850035e">DrawTextCapitals</a> (char *text, int *textInfo, int spacing, char color)</td></tr>
+<tr class="memdesc:ga1e2b93075d41ec3c8dde8f931850035e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a text string to the screen (Only capital characters allowed)  <br /></td></tr>
+<tr class="separator:ga1e2b93075d41ec3c8dde8f931850035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c7c7b6680b4dea7383eaf81d6210942"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__reveresed__functions.html#ga1c7c7b6680b4dea7383eaf81d6210942">DrawTextAll</a> (char *text, int *capitalTextInfo, int *lowercaseTextInfo, int spacing, char color)</td></tr>
+<tr class="memdesc:ga1c7c7b6680b4dea7383eaf81d6210942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a text string to the screen (Capital &amp; Lowercase allowed)  <br /></td></tr>
+<tr class="separator:ga1c7c7b6680b4dea7383eaf81d6210942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a1c7c7b6680b4dea7383eaf81d6210942" name="a1c7c7b6680b4dea7383eaf81d6210942"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c7c7b6680b4dea7383eaf81d6210942">&#9670;&#160;</a></span>DrawTextAll()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int DrawTextAll </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>capitalTextInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>lowercaseTextInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>spacing</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>color</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws a text string to the screen (Capital &amp; Lowercase allowed) </p>
-<p>Fills out a moby struct in the hud mobys array, using arguments for ASCII text</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">char*</td><td>text - text to be drawn. </td></tr>
-    <tr><td class="paramname">int*</td><td>capitalTextInfo - pointer to the desired location and size of the text. </td></tr>
-    <tr><td class="paramname">int*</td><td>lowercaseextInfo - pointer to the desired spacing and size of lowercase text. </td></tr>
-    <tr><td class="paramname">int</td><td>spacing - how much space between characters. </td></tr>
-    <tr><td class="paramname">char</td><td>color - color. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Function: DrawTextAll <br  />
-Original Address: 0x800181AC <br  />
-Hook File: draw_text_all_hook.s <br  />
-Prototype: n/a <br  />
- </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="draw__text_8c.html#a1e2b93075d41ec3c8dde8f931850035e" title="Draws a text string to the screen (Only capital characters allowed)">DrawTextCapitals()</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="draw__text_8c_source.html#l00085">85</a> of file <a class="el" href="draw__text_8c_source.html">draw_text.c</a>.</p>
-
-</div>
-</div>
-<a id="a1e2b93075d41ec3c8dde8f931850035e" name="a1e2b93075d41ec3c8dde8f931850035e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e2b93075d41ec3c8dde8f931850035e">&#9670;&#160;</a></span>DrawTextCapitals()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char * DrawTextCapitals </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>textInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>spacing</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>color</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws a text string to the screen (Only capital characters allowed) </p>
-<p>Fills out a moby struct in the hud mobys array, using arguments for Capital ASCII text</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">char*</td><td>text - text to be drawn. </td></tr>
-    <tr><td class="paramname">int*</td><td>textInfo - pointer to the desired location and size of the text. </td></tr>
-    <tr><td class="paramname">int</td><td>spacing - how much space between characters. </td></tr>
-    <tr><td class="paramname">char</td><td>color - color. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Function: DrawTextCapitals <br  />
-Original Address: 0x80017fe4 <br  />
-Hook File: draw_text_capitals_hook.s <br  />
-Prototype: n/a <br  />
-</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="draw__text_8c.html#a1c7c7b6680b4dea7383eaf81d6210942" title="Draws a text string to the screen (Capital &amp; Lowercase allowed)">DrawTextAll()</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="draw__text_8c_source.html#l00018">18</a> of file <a class="el" href="draw__text_8c_source.html">draw_text.c</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

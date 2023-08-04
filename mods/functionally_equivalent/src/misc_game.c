@@ -1,6 +1,10 @@
 #include <common.h>
 #include <custom_types.h>
 
+/** @ingroup reveresed_functions
+ *  @{
+ */
+
 /**
  * @brief Returns the current completion percentage.
  * @details Returns the current completion percentage based on your gems, dragons, and eggs. (Except for when you are above 12000 gems.)
@@ -52,3 +56,5 @@ int SinScaled(uint param_1)
   return (int)_sinArray[uVar1];
 }
 
+
+/** @} */ // end of reveresed_functions

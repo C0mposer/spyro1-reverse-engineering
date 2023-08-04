@@ -3,6 +3,9 @@
 #include <moby.h>
 #include <shapes.h>
 
+/** @ingroup reveresed_functions
+ *  @{
+ */
 
 /**
  * @brief Draws a ps1 primitive to the screen. 
@@ -117,3 +120,6 @@ void DrawTextbox(int xBound1,int xBound2,int yBound1,int yBound2)
   DrawLine(xBound1,yBound2,xBound1,yBound1);
   return;
 }
+
+
+/** @} */ // end of reveresed_functions

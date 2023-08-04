@@ -1,6 +1,10 @@
 #include <common.h>
 #include <moby.h>
 
+/** @ingroup reveresed_functions
+ *  @{
+ */
+
 /**
  * @brief Draws a text string to the screen (Only capital characters allowed) 
  * @details Fills out a moby struct in the hud mobys array, using arguments for Capital ASCII text
@@ -149,3 +153,4 @@ int DrawTextAll(char *text,int *capitalTextInfo,int *lowercaseTextInfo,int spaci
   }
   return _ptr_hudMobys;
 }
+/** @} */ // end of reveresed_functions
