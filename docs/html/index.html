@@ -107,17 +107,21 @@ Symbol Map</h2>
 <p><span style="font-size:18px;"> <a href="symbol_map.html">Click here to see the in-game variables &amp; functions we have labeled</a></span></p>
 <p><span style="font-size:18px;"></span></p>
 <h2><a class="anchor" id="autotoc_md1"></a>
+Decompiled Functions</h2>
+<p><span style="font-size:18px;"> <a href="group__reveresed__functions.html">Click here to see the functions we have decompiled</a></span></p>
+<p><span style="font-size:18px;"></span></p>
+<h2><a class="anchor" id="autotoc_md2"></a>
 Ghidra Project</h2>
 <p><span style="font-size:18px;"> <a href="ghidra_project.html">Click here to download our Ghidra project</a></span></p>
 <p><span style="font-size:18px;"></span></p>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Overview</h2>
 <p><span style="font-size:18px;"> At a high level, this is the way our reverse engineering project is set up currently:</span></p>
 <p><span style="font-size:18px;">We are attempting to recompile assembly functions from spyro the dragon using C. The recompiled functions should be <b>functionally equivalent</b> to the original, and the <b>same amount or less</b> assembly opcodes. We are <b>not</b> aiming for byte for byte matches; instead <b>functionally equivalent matches</b> with an emphasis on <em>readability</em>, and ensuring the same or less amount of assembly opcodes from our compiled functions. We are using a modern mips compiler.</span></p>
 <p><span style="font-size:18px;">We are currently placing our re-created functions in extra 8mb developer ram that <em>most ps1's do not have</em>, then replacing the first assembly instruction of the original function with a simple jump to our re-created function in the extra ram area. This current approach does not rebuild the game, but allows us to test our compiled code very easily. This is because everytime the game tries to run the original function, it simply jumps to our re-created version that is in the extra ram area instead.</span></p>
 <p><span style="font-size:18px;">So long we aim for the same/less assembly opcodes, we should theoretically be able to place these recompiled functions into their correct spots eventually.</span></p>
 <p><span style="font-size:18px;"></span></p>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md4"></a>
 Recommended Tools:</h2>
 <p><span style="font-size:18px;"></p><ol type="1">
 <li>Ghidra: Very useful general reverse engineering/decompilation tool.</li>
@@ -128,7 +132,7 @@ Recommended Tools:</h2>
 <p></span></p>
 <p><span style="font-size:18px;"><a href="https://docs.google.com/document/d/1hX7SrIHD35QESLQdDki3KHT-sHRcJ61hrNL_sEI3oww/edit#heading=h.6rhd60yzzk7r">Here is a guide for setting up some of these tools</a></span></p>
 <p><span style="font-size:18px;"></span></p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Outline of our current workflow</h2>
 <p><span style="font-size:18px;"></p><ol type="1">
 <li>Copy decompiled function from Ghidra into new, or relavent .c file</li>
