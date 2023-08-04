@@ -1,6 +1,5 @@
 var group__labeled__functions =
 [
-    [ "ArrayCopy", "group__labeled__functions.html#ga5d824a3d9cc1ddc871705442e771ec3d", null ],
     [ "CopyHudToShaded", "group__labeled__functions.html#ga0589eb5821063bea3efc5f10a0843000", null ],
     [ "CreateParticle", "group__labeled__functions.html#gafa04dcf27e1fe9f4aafafb42d72a91b0", null ],
     [ "DrawLine", "group__labeled__functions.html#gada9570ed4664ad96d93dccebca0c1427", null ],
@@ -9,6 +8,7 @@ var group__labeled__functions =
     [ "GetNextParticleSlot", "group__labeled__functions.html#gab5c7e7addfef463c7a77d6da3db72989", null ],
     [ "LoadImageOrTexture", "group__labeled__functions.html#gabee604a1a36a936a98d07c93af9dc44a", null ],
     [ "LockCameraToSpyro", "group__labeled__functions.html#ga4725e2274ee17649cbf307b0546a8a10", null ],
+    [ "Maybe_ArrayCopy", "group__labeled__functions.html#ga161f89de97e49e8f95e3c423f5142e30", null ],
     [ "Maybe_ResetHudTimers", "group__labeled__functions.html#gad585c90d364619fd43818038936be0bc", null ],
     [ "PlayIntroCutscenes", "group__labeled__functions.html#gabcd0cab2b1f29626746b1e8a4b2cf105", null ],
     [ "PlayMusicTrack", "group__labeled__functions.html#ga31234e22ba1da05d550fd3b32b76a3e4", null ],

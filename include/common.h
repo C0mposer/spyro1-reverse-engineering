@@ -287,7 +287,16 @@ void UpdateMobyCollision(int param_1, unsigned int param_2);                    
 
 int PlaySoundEffect(int soundEffectID, int ptrToMoby, int playbackMode, char *param_4);
 
-void PlayMusicTrack(int track_number, int flags);                                                       //? param_1 is the track to play. param_2 is the flags/mode. for param_2, 1 is to start at the beginning of the track, 8 is continue where it left off assuming it was saved.
+/**
+ * @brief Plays/Continues a music track \n Address: 0x800567f4
+ * @details param_1 is the track to play. param_2 is the flags/mode. For param_2, 1 is to start at the beginning of the track, 8 is continue where it left off assuming it was saved.
+
+ * @param int point1X - The X position of the first point of the line
+ * @param int point1Y - The Y position of the first point of the line
+ * @param int point2X - The X position of the second point of the line
+ * @param int point2Y - The Y position of the second point of the line
+*/
+void PlayMusicTrack(int track_number, int flags);
 
 int LoadImageOrTexture(RECT *rect, int *p);
 

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sinscaled_0',['SinScaled',['../misc__game_8c.html#a7e5c869bc85ac880ab9aec6498d72e57',1,'misc_game.c']]],
-  ['sprintf_1',['sprintf',['../group__psyq__functions.html#gad9e4ae65dacf4380399c89daa8fa10b9',1,'common.h']]],
-  ['srand_2',['srand',['../group__psyq__functions.html#ga64de1a51001f2be7cbec82ff8a173690',1,'common.h']]]
+  ['theadventurebegins_0',['TheAdventureBegins',['../group__labeled__functions.html#ga9a51230c60e5bc18cc72d40ede8ba57f',1,'common.h']]],
+  ['theadventurecontinues_1',['TheAdventureContinues',['../group__labeled__functions.html#ga2b9c0c9e764abab7b1f4b8748b44e514',1,'common.h']]]
 ];

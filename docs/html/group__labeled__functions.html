@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('group__labeled__functions.html',''); i
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5d824a3d9cc1ddc871705442e771ec3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__labeled__functions.html#ga5d824a3d9cc1ddc871705442e771ec3d">ArrayCopy</a> (int *outputArray, int *inputArray, int arrayLength)</td></tr>
-<tr class="separator:ga5d824a3d9cc1ddc871705442e771ec3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga161f89de97e49e8f95e3c423f5142e30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__labeled__functions.html#ga161f89de97e49e8f95e3c423f5142e30">Maybe_ArrayCopy</a> (int *outputArray, int *inputArray, int arrayLength)</td></tr>
+<tr class="separator:ga161f89de97e49e8f95e3c423f5142e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9193eede6cc8642072b3cf19aff3d31c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__labeled__functions.html#ga9193eede6cc8642072b3cf19aff3d31c">RenderShadedMobys</a> ()</td></tr>
 <tr class="memdesc:ga9193eede6cc8642072b3cf19aff3d31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders shaded moby objects in the world. (Gems, HUD Elements, etc.) <br  />
  Address: 0x80022a2c.  <br /></td></tr>
@@ -150,6 +150,8 @@ Functions</h2></td></tr>
 <tr class="memitem:gaec4db48bb2bf8c55cf470502c8dc49df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__labeled__functions.html#gaec4db48bb2bf8c55cf470502c8dc49df">PlaySoundEffect</a> (int soundEffectID, int ptrToMoby, int playbackMode, char *param_4)</td></tr>
 <tr class="separator:gaec4db48bb2bf8c55cf470502c8dc49df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga31234e22ba1da05d550fd3b32b76a3e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__labeled__functions.html#ga31234e22ba1da05d550fd3b32b76a3e4">PlayMusicTrack</a> (int track_number, int flags)</td></tr>
+<tr class="memdesc:ga31234e22ba1da05d550fd3b32b76a3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays/Continues a music track <br  />
+ Address: 0x800567f4.  <br /></td></tr>
 <tr class="separator:ga31234e22ba1da05d550fd3b32b76a3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabee604a1a36a936a98d07c93af9dc44a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__labeled__functions.html#gabee604a1a36a936a98d07c93af9dc44a">LoadImageOrTexture</a> (<a class="el" href="struct_r_e_c_t.html">RECT</a> *rect, int *p)</td></tr>
 <tr class="separator:gabee604a1a36a936a98d07c93af9dc44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,40 +163,6 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions we have labeled but not yet re-implemented </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga5d824a3d9cc1ddc871705442e771ec3d" name="ga5d824a3d9cc1ddc871705442e771ec3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5d824a3d9cc1ddc871705442e771ec3d">&#9670;&#160;</a></span>ArrayCopy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ArrayCopy </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>outputArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>inputArray</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>arrayLength</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ga0589eb5821063bea3efc5f10a0843000" name="ga0589eb5821063bea3efc5f10a0843000"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0589eb5821063bea3efc5f10a0843000">&#9670;&#160;</a></span>CopyHudToShaded()</h2>
 
@@ -427,6 +395,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga161f89de97e49e8f95e3c423f5142e30" name="ga161f89de97e49e8f95e3c423f5142e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga161f89de97e49e8f95e3c423f5142e30">&#9670;&#160;</a></span>Maybe_ArrayCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maybe_ArrayCopy </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>outputArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>inputArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arrayLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gad585c90d364619fd43818038936be0bc" name="gad585c90d364619fd43818038936be0bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad585c90d364619fd43818038936be0bc">&#9670;&#160;</a></span>Maybe_ResetHudTimers()</h2>
 
@@ -487,6 +489,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Plays/Continues a music track <br  />
+ Address: 0x800567f4. </p>
+<p>param_1 is the track to play. param_2 is the flags/mode. For param_2, 1 is to start at the beginning of the track, 8 is continue where it left off assuming it was saved.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>point1X - The X position of the first point of the line </td></tr>
+    <tr><td class="paramname">int</td><td>point1Y - The Y position of the first point of the line </td></tr>
+    <tr><td class="paramname">int</td><td>point2X - The X position of the second point of the line </td></tr>
+    <tr><td class="paramname">int</td><td>point2Y - The Y position of the second point of the line </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

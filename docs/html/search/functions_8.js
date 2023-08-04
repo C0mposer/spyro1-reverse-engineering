@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['playintrocutscenes_0',['PlayIntroCutscenes',['../group__labeled__functions.html#gabcd0cab2b1f29626746b1e8a4b2cf105',1,'common.h']]],
-  ['playmusictrack_1',['PlayMusicTrack',['../group__labeled__functions.html#ga31234e22ba1da05d550fd3b32b76a3e4',1,'common.h']]],
-  ['playsoundeffect_2',['PlaySoundEffect',['../group__labeled__functions.html#gaec4db48bb2bf8c55cf470502c8dc49df',1,'common.h']]],
-  ['primitivealphahack_3',['PrimitiveAlphaHack',['../group__labeled__functions.html#ga35d76263f45bd1784ef73c34fb0bde75',1,'common.h']]],
-  ['printf_4',['printf',['../group__psyq__functions.html#ga98631211a4a8aee62f572375d5b637be',1,'common.h']]]
+  ['rand_0',['rand',['../group__psyq__functions.html#ga20e50ab9d6b10af0e2940d9419448f42',1,'common.h']]],
+  ['read_5fcb_1',['read_cb',['../_p_s_y_q__cd_8h.html#a75afe0018a3a5980d76fdd666f147836',1,'PSYQ_cd.h']]],
+  ['renderallobjects_2',['RenderAllObjects',['../group__labeled__functions.html#ga8c78decebf308550e3814c3fc409ced4',1,'common.h']]],
+  ['rendernormalmobys_3',['RenderNormalMobys',['../group__labeled__functions.html#ga09d24ed23cad144dab20a5114bb3e7a0',1,'common.h']]],
+  ['rendershadedmobys_4',['RenderShadedMobys',['../group__labeled__functions.html#ga9193eede6cc8642072b3cf19aff3d31c',1,'common.h']]]
 ];
