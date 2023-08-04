@@ -12,6 +12,6 @@ var searchData=
   ['cdstatus_9',['CdStatus',['../cd_8c.html#a8f0e9694e79d77fecae20bc0ac7be23d',1,'cd.c']]],
   ['cdsync_10',['CdSync',['../_p_s_y_q__cd_8h.html#ad220d5bad1b49407dae92dc68d9b203e',1,'PSYQ_cd.h']]],
   ['cdsync_5f_11',['CdSync_',['../_p_s_y_q__cd_8h.html#a5990754dced9b8685fabd80f5b54959f',1,'PSYQ_cd.h']]],
-  ['copyhudtoshaded_12',['CopyHudToShaded',['../common_8h.html#a0589eb5821063bea3efc5f10a0843000',1,'common.h']]],
-  ['createparticle_13',['CreateParticle',['../common_8h.html#afa04dcf27e1fe9f4aafafb42d72a91b0',1,'common.h']]]
+  ['copyhudtoshaded_12',['CopyHudToShaded',['../group__labeled__functions.html#ga0589eb5821063bea3efc5f10a0843000',1,'common.h']]],
+  ['createparticle_13',['CreateParticle',['../group__labeled__functions.html#gafa04dcf27e1fe9f4aafafb42d72a91b0',1,'common.h']]]
 ];

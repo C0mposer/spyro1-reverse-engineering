@@ -29,7 +29,7 @@ int CalculateCompletionPercentage(void)
  * @brief 
  * @details 
  
- * @param 
+ * @param uint - 
  * @return
 
  * @note Function: SinScaled \n

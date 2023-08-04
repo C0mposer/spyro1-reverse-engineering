@@ -35,6 +35,7 @@ var NAVTREE =
       [ "In Game Global Variables", "symbol_map.html#in_game_variables", null ],
       [ "In Game Functions", "symbol_map.html#in_game_functions", null ]
     ] ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -61,10 +62,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_p_s_y_q__cd_8h.html",
-"custom__types_8h.html#a151f780fb455885061d3b77ec1c90c03",
-"options_8h.html#aa4e772a7349027e646a609759807f8c3a12fd54e36b96acda3a38dbe2b477b12f",
-"struct_moby.html#a52b1fe4265f8649778dec6ccc8a1b2b5",
-"struct_spyro.html#aa213d1802a1a7ede7f1097480c2574d7"
+"gem__home__in_8c.html#a21dda4062c8e74ad6571e52a973cbbd3",
+"moby_8h.html#abe6d772470bfedcad5f3611c3e1bd13caebeec2b34be78d884594e446fab84a93",
+"struct_moby.html#a12aaad84c8bcc3a74c0bb6fa0b412f1f",
+"struct_spyro.html#a8b9ac5a116e445af3b801d6858279e59"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

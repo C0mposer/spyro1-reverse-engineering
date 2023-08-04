@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['binary_0',['BINARY',['../custom__types_8h.html#acc166508d5cfbf4100f8622ce97f4985',1,'custom_types.h']]]
+  ['decimal_0',['DECIMAL',['../custom__types_8h.html#a7c2d2b121faf048e9623df797612378c',1,'custom_types.h']]]
 ];

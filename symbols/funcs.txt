@@ -4,7 +4,7 @@ memset = 0x80016914;
 rand = 0x8006272c;
 srand = 0x8006275c;
 
-ArrayCopy = 0x80016958;
+Maybe_ArrayCopy = 0x80016958;
 
 DrawTextCapitals_ = 0x80017FE4;
 DrawTextAll_ = 0x800181AC;

@@ -4,7 +4,7 @@ var searchData=
   ['vec3applyrotationmatrix_1',['Vec3ApplyRotationMatrix',['../vector_8h.html#ae95d236cfbf64b096d9eedb1613abaa0',1,'vector.h']]],
   ['vec3calculatelengthe_2',['Vec3CalculateLengthE',['../vector_8h.html#af87833eda9af3ef0b919edff4817def7',1,'vector.h']]],
   ['vec3copy_3',['Vec3Copy',['../vector_8c.html#a8c15dc8499e8f762f11d1db4692f327c',1,'vector.c']]],
-  ['vec3inttoshortdiv4_4',['Vec3IntToShortDiv4',['../common_8h.html#adac660813e10f54e0eb00721f40f519c',1,'common.h']]],
+  ['vec3inttoshortdiv4_4',['Vec3IntToShortDiv4',['../group__labeled__functions.html#gadac660813e10f54e0eb00721f40f519c',1,'common.h']]],
   ['vec3scale_5',['Vec3Scale',['../vector_8h.html#a882790ddb6c850f588712fd827956741',1,'vector.h']]],
   ['vec3scalebyfraction_6',['Vec3ScaleByFraction',['../vector_8h.html#a9b1a0b35f082a95d23452c0011f4105e',1,'vector.h']]],
   ['vec3scalebyfractionpoweroftwo_7',['Vec3ScaleByFractionPowerOfTwo',['../vector_8h.html#a4cd160d8c785f77dcbd61f948857699c',1,'vector.h']]],

@@ -8,8 +8,9 @@ var indexSectionsWithContent =
   5: "bcisu",
   6: "bcdfghilmps",
   7: "abcdefghijlmnoprstuwxy",
-  8: "_abdfghmnstw",
-  9: "gos"
+  8: "abdfghmnstw",
+  9: "lp",
+  10: "gos"
 };
 
 var indexSectionNames =
@@ -23,7 +24,8 @@ var indexSectionNames =
   6: "enums",
   7: "enumvalues",
   8: "defines",
-  9: "pages"
+  9: "groups",
+  10: "pages"
 };
 
 var indexSectionLabels =
@@ -37,6 +39,7 @@ var indexSectionLabels =
   6: "Enumerations",
   7: "Enumerator",
   8: "Macros",
-  9: "Pages"
+  9: "Modules",
+  10: "Pages"
 };
 

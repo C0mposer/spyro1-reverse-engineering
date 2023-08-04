@@ -94,6 +94,6 @@ var searchData=
   ['unkown_5fportalrelated3_91',['unkown_portalRelated3',['../struct_spyro.html#ac3201f0f6e82d0229fb2adac375c8794',1,'Spyro']]],
   ['unkownoops_92',['unkownOops',['../struct_spyro.html#a6d9d170cc422eeda2eb9f2f542d731ec',1,'Spyro']]],
   ['up_5fbutton_93',['UP_BUTTON',['../common_8h.html#a2200c9a3564da59c1160338587ecb034a308e2dec294b93e1c691bacd5cd45266',1,'common.h']]],
-  ['updatemobycollision_94',['UpdateMobyCollision',['../common_8h.html#a1b6ca019d3cea5051dffd367e81a1eb0',1,'common.h']]],
+  ['updatemobycollision_94',['UpdateMobyCollision',['../group__labeled__functions.html#ga1b6ca019d3cea5051dffd367e81a1eb0',1,'common.h']]],
   ['uphill_5fwalk_95',['UPHILL_WALK',['../spyro_8h.html#aa2de79fdccfb5675aaecead602c22579a86cb3a147cca601e4215cadd3c3505d2',1,'spyro.h']]]
 ];
