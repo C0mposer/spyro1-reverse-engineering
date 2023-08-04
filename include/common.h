@@ -4,9 +4,9 @@
 #include "custom_types.h"
 #include "vector.h"
 
-//~~~~~~~~~
-//Constants
-//~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~
+//Constants/Magic Numbers
+//~~~~~~~~~~~~~~~~~~~~~~~~
 
 #define SCREEN_LEFT_EDGE 0x0
 #define SCREEN_RIGHT_EDGE 0x200
@@ -68,27 +68,6 @@ typedef enum GameState
     GAMESTATE_CREDITS = 0xF
 }GameState;
 
-typedef enum MovementSubStates
-{
-    MOVEMENT_SUBSTATE_LOADING = 0x8,
-    MOVEMENT_SUBSTATE_EXIT_PORTAL = 0x9,
-    MOVEMENT_SUBSTATE_FLY_IN_LOOP = 0xA,
-    MOVEMENT_SUBSTATE_FLY_IN_CAMERA_180 = 0xA
-}MovementSubStates;
-
-typedef enum BalloonistStates
-{
-    BALLOONIST_STATE_NEVER_TALKED_TO_BALLOONIST = 0x0,
-    BALLOONIST_STATE_TEXTBOX = 0x1,
-    BALLOONIST_STATE_JUMPING_ONTO_BALLOON = 0x2,
-    BALLOONIST_STATE_BALLOON_RISING = 0x3,
-    BALLOONIST_STATE_BALLOON_LOADING_PART_1 = 0x4,
-    BALLOONIST_STATE_BALLOON_LOADING_PART_2 = 0x5,
-    BALLOONIST_STATE_BALLOON_LOWERING = 0x6,
-    BALLOONIST_STATE_JUMPING_OUT_OF_BALLOON = 0x7
-
-}BalloonistStates;
-
 typedef enum SpyroHealthStates
 {
     YELLOW_SPARX = 3,
@@ -141,16 +120,6 @@ typedef enum LevelIDS
     GNASTYS_LOOT_ID = 0x40
 }LevelIDS;
 
-typedef enum LevelFlyInAnimations
-{
-    FACING_LEFT = 0xCA6C,
-    FACING_RIGHT = 0xCA3C,
-    FACING_FORWARD = 0xCA24,
-    FACING_BACKWARDS = 0xCA84,
-    FACING_DIAGONAL = 0xCA9C,   // wizard peak specific
-    RETURNING_HOME = 0xCA54
-}LevelFlyInAnimations;
-
 typedef enum InventoryMenuSelections
 {
     ARTISANS_MENU = 0,
@@ -170,6 +139,39 @@ typedef enum StartMenuSelections
     STARTMENU_QUIT_GAME = 3
 
 }StartMenuSelections;
+
+typedef enum MovementSubStates
+{
+    MOVEMENT_SUBSTATE_LOADING = 0x8,
+    MOVEMENT_SUBSTATE_EXIT_PORTAL = 0x9,
+    MOVEMENT_SUBSTATE_FLY_IN_LOOP = 0xA,
+    MOVEMENT_SUBSTATE_FLY_IN_CAMERA_180 = 0xA
+}MovementSubStates;
+
+typedef enum BalloonistStates
+{
+    BALLOONIST_STATE_NEVER_TALKED_TO_BALLOONIST = 0x0,
+    BALLOONIST_STATE_TEXTBOX = 0x1,
+    BALLOONIST_STATE_JUMPING_ONTO_BALLOON = 0x2,
+    BALLOONIST_STATE_BALLOON_RISING = 0x3,
+    BALLOONIST_STATE_BALLOON_LOADING_PART_1 = 0x4,
+    BALLOONIST_STATE_BALLOON_LOADING_PART_2 = 0x5,
+    BALLOONIST_STATE_BALLOON_LOWERING = 0x6,
+    BALLOONIST_STATE_JUMPING_OUT_OF_BALLOON = 0x7
+
+}BalloonistStates;
+
+
+typedef enum LevelFlyInAnimations
+{
+    FACING_LEFT = 0xCA6C,
+    FACING_RIGHT = 0xCA3C,
+    FACING_FORWARD = 0xCA24,
+    FACING_BACKWARDS = 0xCA84,
+    FACING_DIAGONAL = 0xCA9C,   // wizard peak specific
+    RETURNING_HOME = 0xCA54
+}LevelFlyInAnimations;
+
 
 //~~~~~~~
 //Structs
@@ -203,8 +205,6 @@ typedef struct BGR_u8
 }BGR_u8;
 
 
-
-
 //*~~~~~~~~~~~~~~~~~~~~~~~~
 //*        SYMBOLS
 //*~~~~~~~~~~~~~~~~~~~~~~~~
@@ -232,8 +232,6 @@ void srand(int seed);
  *  @{
  */
 void Maybe_ArrayCopy(int *outputArray,int *inputArray,int arrayLength);                                       //? This function copies one array to another
-
-//Pre-Reqs for other functions
 
 /**
  * @brief Renders shaded moby objects in the world. (Gems, HUD Elements, etc.) \n Address: 0x80022a2c
@@ -268,6 +266,7 @@ void CopyHudToShaded();
  * @param int point2Y - The Y position of the second point of the line
 */
 void DrawLine(int point1X, int point1Y, int point2X, int point2Y);                                      //? This function draws a yellow line.
+
 void FillScreenColor(int colorSpace, char r, char g, char b);                                           //? Fills the screen with a specific color.
 
 void PlayIntroCutscenes();                                                                              //? This function is related to the intro cutscenes.

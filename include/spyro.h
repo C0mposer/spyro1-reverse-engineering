@@ -270,9 +270,14 @@ int pitchMomentum;                                          //? Spyro's pitch mo
 //*In Game Variables
 //*~~~~~~~~~~~~~~~~~
 
+/** @ingroup labeled_global_variables
+ *  Functions we have labeled but not yet re-implemented
+ *  @{
+ */
+
 /**
- * @brief  This is where spyro is in ram. This is the 1 instance of the spyro struct
- * @note Address: 0x80078A58
+ * @brief  This is where the 1 instance of the spyro struct is. \n Address: 0x80078A58
+ * @details Most of spyros data lives here. I have also defined many variables from spyros struct globally for convienence sake, but all of those variables are actually part of the struct that starts here.
  * @see Spyro
  */ 
 extern Spyro _spyro;
@@ -280,170 +285,148 @@ extern Spyro _spyro;
 
 //! All of these below can be accessed through the spyro struct above, but I figuerd it be helpful to have all these addresses labled for the documentation
 /**
- * @brief  Spyro's X Position Coordinate
- * @note Address: 0x80078A58
+ * @brief  Spyro's X Position Coordinate \n Address: 0x80078A58
  * @see Spyro
  */ 
 extern int _spyroXPosition;
 
 /**
- * @brief  Spyro's Y Position Coordinate
- * @note Address: 0x80078A5C
+ * @brief  Spyro's Y Position Coordinate \n Address: 0x80078A5C
  * @see Spyro
  */ 
 extern int _spyroYPosition;
 
 /**
- * @brief  Spyro's Z Position Coordinate
- * @note Address: 0x80078A60
+ * @brief  Spyro's Z Position Coordinate \n 0x80078A60
  * @see Spyro
  */ 
 extern int _spyroZPosition;
 
 /**
- * @brief  Spyro's Yaw Rotation Angle
- * @note Address: 0x80078b74
+ * @brief  Spyro's Yaw Rotation Angle \n Address: 0x80078b74
  * @see Spyro
  */ 
 extern int _spyroAngleYaw;
 
 /**
- * @brief  Spyro's Pitch Rotation Angle
- * @note Address: 0x80078b78
+ * @brief  Spyro's Pitch Rotation Angle \n Address: 0x80078b78
  * @see Spyro
  */ 
 extern int _spyroAnglePitch;
 
 /**
- * @brief  Spyro's Roll Rotation Angle
- * @note Address: 0x80078b7C
+ * @brief  Spyro's Roll Rotation Angle \n Address: 0x80078b7C
  * @see Spyro
  */ 
 extern int _spyroAngleRoll;
 
 /**
- * @brief  This is the color filter applied on top of spyro in RGBA format
+ * @brief  This is the color filter applied on top of spyro in RGBA format \n Address: 0x80078a80
  * @details  This is what gets applied to spyro during superflame.
- * @note Address: 0x80078a80
  * @see Spyro RGBA_u8
  */ 
 extern RGBA_u8 _spyroColorFilter;
 
 /**
- * @brief  This is spyro's current active state.
+ * @brief  This is spyro's current active state. \n Address: 0x80078ad0s
  * @details  Full list of states in the SpyroStates enum. (Walking, Gliding, Charging, etc.)
- * @note Address: 0x80078ad0
  * @see Spyro SpyroStates
  */ 
 extern int _spyroState;
 
 /**
- * @brief  This is spyro's current active sub-state.
+ * @brief  This is spyro's current active sub-state. \n Address: 0x80078ad4
  * @details  Need to research sub-state more.
- * @note Address: 0x80078ad4
  * @see Spyro SpyroStates
  */ 
 extern int _spyroSubState;
 
 /**
- * @brief  The amount of time in frames spent in the current state. Used for calculations for jumping, boking, damage, time sensitive states, etc
- * @details  Need to research sub-state more.
- * @note Address: 0x80078ad8
+ * @brief  The amount of time in frames spent in the current state. \n Address: 0x80078ad8
+ * @details  Need to research sub-state more. Used for calculations for jumping, boking, damage, time sensitive states, etc
  * @see Spyro
  */ 
 extern int _spyroFramesInCurrentState;
 
 /**
- * @brief  Spyros grouded charging momentum vector.
- * @note Address: 0x80078b28
+ * @brief  Spyros grouded charging momentum vector. \n Address: 0x80078b28
  * @see Spyro
  */ 
 extern Vec3 _spyroGroundedChargeMomentum;
 
 /**
- * @brief  Spyros walking momentum vector.
- * @note Address: 0x80078b34
+ * @brief  Spyros walking momentum vector. \n Address: 0x80078b34
  * @see Spyro
  */ 
 extern Vec3 _spyroWalkingChargeMomentum;
 
 /**
- * @brief  Spyros air momentum vector.
- * @note Address: 0x80078b4c
+ * @brief  Spyros air momentum vector. \n Address: 0x80078b4c
  * @see Spyro
  */ 
 extern Vec3 _spyroAirMomentum;
 
 /**
- * @brief  Spyros absolute momentum as a scalar.
- * @note Address: 0x80078b70
+ * @brief  Spyros absolute momentum as a scalar. \n Address: 0x80078b70
  * @see Spyro
  */ 
 extern int _spyroAbsoluteMomentum;
 
 /**
- * @brief bool for if Spyro has used his glide or not yet.
+ * @brief bool for if Spyro has used his glide or not yet. \n Address: 0x80078ba8
  * @details This is used to only let you glide out of a charge once. 
- * @note Address: 0x80078ba8
  * @see Spyro
  */ 
 extern int _spyroHasUsedGlide;
 
 /**
- * @brief bool for if Spyro is currently gliding or not.
- * @note Address: 0x80078bac
+ * @brief bool for if Spyro is currently gliding or not. \n Address: 0x80078bac
  * @see Spyro
  */ 
 extern int _spyroIsGliding;
 
 /**
- * @brief bool for if Spyro is currently grounded or not.
- * @note Address: 0x80078bb4
+ * @brief bool for if Spyro is currently grounded or not. \n Address: 0x80078bb4
  * @see Spyro
  */ 
 extern int _spyroIsGrounded;
 
 /**
- * @brief Timer for how many more frames spyro should have invulnerability. 
+ * @brief Timer for how many more frames spyro should have invulnerability. \n Address: 0x80078bb8
  * @details Automatically decrements by 1 every frame until 0. Spyro will have invulnerability if it is any number above 0.
- * @note Address: 0x80078bb8
  * @see Spyro
  */ 
 extern int _spyroIFramesTimer;
 
 /**
- * @brief Spyros current health 
+ * @brief Spyros current health \n Address: 0x80078bbc
  * @details This value is tied to sparx's color also. If spyro health reaches 0, sparx will disapear.
- * @note Address: 0x80078bbc
  * @see Spyro
  */ 
 extern int _spyroHealth;
 
 /**
- * @brief A timer that stops the player from being able to move spyro.
+ * @brief A timer that stops the player from being able to move spyro. \n Address: 0x80078c48
  * @details This timer decrements by 1 every frame until it reaches 0. Once it reaches 0 the player can input again.
- * @note Address: 0x80078c48
  * @see Spyro
  */ 
 extern int _spyroIsMovementLocked;
 
 /**
  * 
- * @brief A bool for if spyro can superfly currently.
+ * @brief A bool for if spyro can superfly currently. \n Address: 0x80078ca4
  * @details This can be set to true in any level
- * @note Address: 0x80078ca4
  * @see Spyro
  */ 
 extern int _spyroCanSuperFly;
 
 /**
  * 
- * @brief A bool for if spyro is currently on supercharge ground.
+ * @brief A bool for if spyro is currently on supercharge ground. \n Address: 0x80078ca8
  * @details This doesn't give spyro supercharge state, but gives him the weird properties of being on a supercharge ground, like the extra charge in air height.
- * @note Address: 0x80078ca8
  * @see Spyro
  */ 
 extern int _spyroIsOnSuperchargeGround;
-
+/** @} */ // end of labeled_global_variables
 
 #endif //SPYRO_H
