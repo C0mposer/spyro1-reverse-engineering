@@ -254,6 +254,9 @@ void RenderAllObjects();
 */
 void PrimitiveAlphaHack(void* param_1, int param_2, int param_3, short colorSpace, int param_5);
 
+/**
+ * @brief Appends generated text objects to the list of HUD mobys. \n Address: 0x80018880
+*/
 void CopyHudToShaded();
 
 /**
@@ -538,6 +541,7 @@ extern int* _ptr_primitivesArray; //0x800757b0                //? Not too sure.
 extern int* _ptr_arrayGraphicsRelatedPointers; //0x8007581c   //? Ptr the the array of primitives structs to be drawn every frame
 extern int _ptrTextUnk; //0x800720f4                          //? Not too sure.
 extern char* _ptr_hudMobys; //0x80075710                      //? A pointer to a dynamic downwards growing array of moby structs to render that gets rendered to the hud every frame.
+extern char* _ptr_hudMobysQueue; //0x800756fc                 //? A pointer to a what seems to be a global queue of moby structs to process. _ptr_hudMobys are added to this.
 
 extern char* _ptr_particleLinkedList; //0x80075738           //? This is a pointer to the next available particle slot.
 
