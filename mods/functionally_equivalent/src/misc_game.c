@@ -64,7 +64,7 @@ int SinScaled(uint param_1)
  * @note Function: CopyHudToShaded \n
    Original Address: 0x80018880 \n
    Hook File: copy_hud_to_shaded.s \n
-   Prototype: n/a \n
+   Prototype: misc_game.h \n
    Amount of instructions: Same Amount (https://decomp.me/scratch/rbY0g) \n
   * @see CopyHudToShaded()
 */
