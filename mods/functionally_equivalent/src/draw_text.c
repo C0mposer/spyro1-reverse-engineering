@@ -153,4 +153,4 @@ int DrawTextAll(char *text,int *capitalTextInfo,int *lowercaseTextInfo,int spaci
   }
   return _ptr_hudMobys;
 }
-/** @} */ // end of reversed_functions
+/** @} */ // end of reveresed_functions
