@@ -255,11 +255,6 @@ void RenderAllObjects();
 void PrimitiveAlphaHack(void* param_1, int param_2, int param_3, short colorSpace, int param_5);
 
 /**
- * @brief Appends generated text objects to the list of HUD mobys. \n Address: 0x80018880
-*/
-void CopyHudToShaded();
-
-/**
  * @brief Draws a golden line to the screen \n Address: 0x8001844c
  * @details Fills out a moby struct with the provided coordinate information, and puts it into the _ptr_primitivesArray. Automatically fills out color data, and has it shimmer by using the wobble timer.
 

@@ -31,4 +31,15 @@ int CalculateCompletionPercentage(void);
 */
 int SinScaled(uint param_1);
 
+/**
+ * @brief Appends generated text objects to the list of HUD mobys.
+ * @details
+ * @note Function: CopyHudToShaded \n
+ * Original Address: 0x80018880 \n
+ * Hook File: copy_hud_to_shaded.s \n 
+ * Prototype: misc_game.h \n
+ * Amount of instructions: Same Amount (https://decomp.me/scratch/rbY0g) \n 
+*/
+void CopyHudToShaded();
+
 #endif /* MISC_GAME_H */
