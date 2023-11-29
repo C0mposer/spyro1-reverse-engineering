@@ -20,7 +20,7 @@ RenderAllObjects = 0x80019698;
 RenderNormalMobys = 0x8001f798;
 RenderShadedMobys = 0x80022a2c;
 
-CopyHudToShaded = 0x80018880;
+CopyHudToShaded_ = 0x80018880;
 
 Vec3Subtract = 0x8001778c;
 Vec3Scale = 0x800177c0;
