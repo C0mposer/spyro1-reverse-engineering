@@ -83,6 +83,7 @@ _ptr_particleLinkedList = 0x80075738;
 
 _ptr_hudMobys = 0x80075710;
 _ptr_hudMobysQueue = 0x800756fc;
+_ptr_hudMobysHead = 0x800720f8;
 
 _ptr_primitivesArray = 0x800757b0;
 _ptr_arrayGraphicsRelatedPointers = 0x8007581c;

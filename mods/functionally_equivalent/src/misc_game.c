@@ -57,31 +57,4 @@ int SinScaled(uint param_1)
   return (int)_sinArray[uVar1];
 }
 
-/**
- * @brief Copies generated moby structs to the end of a global list.
- * @details Appears to be something that is called often when working with text.
- 
- * @note Function: CopyHudToShaded \n
-   Original Address: 0x80018880 \n
-   Hook File: copy_hud_to_shaded.s \n
-   Prototype: misc_game.h \n
-   Amount of instructions: Same Amount (https://decomp.me/scratch/rbY0g) \n
-  * @see CopyHudToShaded()
-*/
-void CopyHudToShaded() {
-  char** ref = &_ptr_hudMobys;
-
-  while (*ref != 0) {                                                           // iterate to get to the end of the list.
-    ref += sizeof(MOBY_SIZE);
-  }
-
-  while (_ptr_hudMobys != _ptr_hudMobysQueue) {                                   // append all of the new mobys
-    *ref = _ptr_hudMobys;
-    _ptr_hudMobys += sizeof(MOBY_SIZE);
-    ref += sizeof(MOBY_SIZE);
-  }
-
-  *ref = 0;                                                                     // make sure to set the end of the list to zero for iteration to work on the next call to this function. 
-}
-
 /** @} */ // end of reveresed_functions

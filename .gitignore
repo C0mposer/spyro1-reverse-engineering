@@ -58,6 +58,7 @@ mods/functionally_equivalent/output/asmvec3_copys.bin
 mods/functionally_equivalent/output/mod_code.bin
 visualizations/inserting into middle of function.drawio
 plugins/__pycache__/plugin.cpython-311.pyc
+plugins/__pycache__/plugin.cpython-310.pyc
 mods/Multi/buildList.txt
 mods/Multi/crash.log
 mods/Multi/Makefile
