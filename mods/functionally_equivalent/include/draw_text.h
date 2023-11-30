@@ -36,4 +36,16 @@ char* DrawTextCapitals(char *text,int *textInfo, int spacing, char color);
 */
 int DrawTextAll(char *text,int *capitalTextInfo,int *lowercaseTextInfo,int spacing,char color);
 
+/**
+ * @brief Draws the demo text on the screen.
+ * @details Creates HUD mobys for displaying the text "Demo Mode" with varying size text.
+
+ * @note Function: DrawDemoText \n
+ * Original Address: 0x80018908 \n
+ * Hook File: draw_demo_text.s \n
+ * Prototype: draw_text.h \n
+ * Amount of instructions: MORE IN MODERN GCC (https://decomp.me/scratch/vU390) \n
+*/
+void DrawDemoText();
+
 #endif /* DRAW_TEXT_H */

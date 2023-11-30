@@ -138,6 +138,14 @@ enum GemColors
 typedef struct HudMobyInfo
 {
     Vec3 position;                  // Coords in hud act different than in world space. X and Y act like 2D plane. Z is effective size in HUD.
+    Vec3 UNK1;
+    byte UNK2[30];
+    short character;
+    byte UNK3[14];
+    byte rotation;
+    byte UNK4[8];
+    byte color;
+    byte UNK5[8];
 }HudMobyInfo;
 
 
@@ -220,6 +228,5 @@ typedef struct Moby
 }Moby;
 
 //* ~~~ Functions ~~~
-
 
 #endif /* MOBY_H */

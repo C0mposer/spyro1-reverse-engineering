@@ -1,5 +1,7 @@
 #include <common.h>
 #include <moby.h>
+#include <vector.h>
+#include <custom_types.h>
 
 /** @ingroup reveresed_functions
  *  @{
@@ -152,5 +154,38 @@ int DrawTextAll(char *text,int *capitalTextInfo,int *lowercaseTextInfo,int spaci
     currentCharacter = *text;
   }
   return _ptr_hudMobys;
+}
+
+/**
+ * @brief Draws the demo text on the screen.
+ * @details Creates HUD mobys for displaying the text "Demo Mode" with varying size text.
+ 
+ * @note Function: DrawDemoText \n
+   Original Address: 0x80018908 \n
+   Hook File: draw_demo_text.s \n
+   Prototype: draw_text.h \n
+   Amount of instructions: MORE IN MODERN GCC (https://decomp.me/scratch/vU390) \n
+  * @see DrawDemoText()
+*/
+void DrawDemoText() {
+  const Vec3 capitalTextInfo = { .x = 199, .y = 200, .z = 4352 };
+  const Vec3 lowercaseTextInfo = { .x = 16, .y = 1, .z = 5120 };
+  const byte spacing = 18;
+  const char color = 2;
+  const int sinArrayIncrement = 12;
+
+  HudMobyInfo* mobyPtr = (HudMobyInfo*)_ptr_hudMobys;
+  unsigned int sinArrayIndex = 0;
+  
+  DrawTextAll("DEMO MODE", &capitalTextInfo, &lowercaseTextInfo, spacing, color);
+  mobyPtr--;
+  
+  while (_ptr_hudMobys <= mobyPtr) {
+    mobyPtr->rotation = (byte)(_sinArray[_levelTimer_60fps * 4 + sinArrayIndex & 0xFF] >> 7);
+    mobyPtr--;
+    sinArrayIndex += sinArrayIncrement;
+  }
+
+  CopyHudToShaded();
 }
 /** @} */ // end of reveresed_functions
