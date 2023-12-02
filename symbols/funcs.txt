@@ -54,7 +54,7 @@ maybe_CalculateAngle = 0x800169ac;
 
 Maybe_ResetHudTimers = 0x80058c7c;
 
-
+ApplyImageFading_ = 0x80017f24;
 
 
 CdRead = 0x8006606C;

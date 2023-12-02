@@ -42,4 +42,19 @@ int SinScaled(uint param_1);
 */
 void CopyHudToShaded();
 
+/**
+ * @brief Alters the pixels in an image to produce a fade in effect.
+ * @details Decompresses an image and reduces each RGBA pixel's contrast according to a specified value.
+ * @param uint* source - pointer to a compressed image.
+ * @param uint* destination - pointer to the desired destination memory to write the decompressed image.
+ * @param int contrast - strength of dimming to apply to each pixel.
+ * @note Function: ApplyImageFading \n
+   Original Address: 0x80010AA8 \n
+   Hook File: apply_image_fading.s \n
+   Prototype: misc_game.h \n
+   Amount of instructions: Less (https://decomp.me/scratch/S3aIo) \n
+  * @see ApplyImageFading()
+*/
+void ApplyImageFading(uint *source, uint *destination, int contrast);
+
 #endif /* MISC_GAME_H */
