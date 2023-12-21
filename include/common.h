@@ -250,9 +250,9 @@ void RenderNormalMobys();
 void RenderAllObjects();
 
 /**
- * @brief This is a weird hack that seems to be related to transparency for primitaves? \n Address: 0x80060670
+ * @brief Initializes a DR_MODE primitive to change the drawing environment in the middle of drawing. \n Address: 0x80060670
 */
-void PrimitiveAlphaHack(void* param_1, int param_2, int param_3, short colorSpace, int param_5);
+void SetDrawMode(void* p, int dfe, int dtd, int tpage, RECT* tw);
 
 /**
  * @brief Draws a golden line to the screen \n Address: 0x8001844c
