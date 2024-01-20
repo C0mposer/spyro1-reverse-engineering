@@ -12,7 +12,7 @@ DrawLine = 0x8001844c;
 DrawPrimitive_ = 0x800168dc;
 DrawDemoText_ = 0x80018908;
 FillScreenColor = 0x800190d4;
-PrimitiveAlphaHack = 0x80060670;
+SetDrawMode = 0x80060670;
 
 PlaySoundEffect = 0x80055a78;
 PlayMusicTrack = 0x800567f4;
