@@ -1,6 +1,5 @@
 NTSC, header, 0x80200000, 0x0, src/misc_game.c src/vector.c src/cd.c src/gem_home_in.c src/draw_text.c src/draw_stuff.c src/menus.c, mod_code.bin
 
-
 NTSC, exe, 0x80017758, 0x0, asm/vec3_add.s
 NTSC, exe, 0x80017700, 0x0, asm/vec3_copy.s
 NTSC, exe, 0x80016fd0, 0x0, asm/matrix_transpose_hook.s
@@ -14,6 +13,6 @@ NTSC, exe, 0x8001860C, 0x0, asm/draw_textbox.s
 NTSC, exe, 0x800168DC, 0x0, asm/draw_primitive.s
 NTSC, exe, 0x8002c7bc, 0x0, asm/exit_inventory_menu.s
 NTSC, exe, 0x80018880, 0x0, asm/copy_hud_to_shaded.s
-
+NTSC, exe, 0x80018908, 0x0, asm/draw_demo_text.s
+NTSC, exe, 0x80017f24, 0x0, asm/apply_image_fading.s
 NTSC, exe, 0x8008013c, 0x0, asm/gem_home_in_hook.s
-

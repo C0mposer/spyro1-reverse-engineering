@@ -58,6 +58,7 @@ mods/functionally_equivalent/output/asmvec3_copys.bin
 mods/functionally_equivalent/output/mod_code.bin
 visualizations/inserting into middle of function.drawio
 plugins/__pycache__/plugin.cpython-311.pyc
+plugins/__pycache__/plugin.cpython-310.pyc
 mods/Multi/buildList.txt
 mods/Multi/crash.log
 mods/Multi/Makefile
@@ -113,7 +114,6 @@ mods/functionally_equivalent/src/draw_stuff.c
 mods/functionally_equivalent/debug/dep/draw_primitive.dep
 mods/functionally_equivalent/debug/obj/draw_primitive.o
 mods/functionally_equivalent/output/asmdraw_primitives.bin
-mods/functionally_equivalent/src/menus.c
 mods/functionally_equivalent/debug/dep/exit_inventory_menu.dep
 mods/functionally_equivalent/debug/dep/menus.dep
 mods/functionally_equivalent/output/asmexit_inventory_menus.bin

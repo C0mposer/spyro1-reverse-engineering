@@ -10,6 +10,7 @@ DrawTextCapitals_ = 0x80017FE4;
 DrawTextAll_ = 0x800181AC;
 DrawLine = 0x8001844c;
 DrawPrimitive_ = 0x800168dc;
+DrawDemoText_ = 0x80018908;
 FillScreenColor = 0x800190d4;
 PrimitiveAlphaHack = 0x80060670;
 
@@ -53,7 +54,7 @@ maybe_CalculateAngle = 0x800169ac;
 
 Maybe_ResetHudTimers = 0x80058c7c;
 
-
+ApplyImageFading_ = 0x80017f24;
 
 
 CdRead = 0x8006606C;
