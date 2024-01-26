@@ -36,7 +36,7 @@ _shouldCameraFollowSpyro = 0x80033b4c;
 _LockCameraToSpyroPTR = 0x80035fb4;
 
 
-
+_AngleArray = 0x8006d908;
 
 
 _effect_ScreenFadeIn = 0x80075918;

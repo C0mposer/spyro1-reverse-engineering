@@ -50,7 +50,6 @@ DrawSync = 0x8005f764;
 
 
 maybe_Calculate8BitDifference = 0x80017908;
-maybe_CalculateAngle = 0x800169ac;
 
 Maybe_ResetHudTimers = 0x80058c7c;
 
