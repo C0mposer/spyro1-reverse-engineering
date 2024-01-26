@@ -132,7 +132,7 @@ int GetAngle(const int x, const int y)
         ? ((y < 0) ? 2 : 1)
         : ((y < 0) ? 3 : 0);
 
-    // Determine the result from the glimmer array needs to be inverted.
+    // Determine the result from the angle array needs to be inverted.
     bool invert = absX < absY;
 
     // Handle a specific case when only one of either X and Y values are negative.
