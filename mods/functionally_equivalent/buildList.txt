@@ -1,4 +1,4 @@
-NTSC, header, 0x80200000, 0x0, src/misc_game.c src/vector.c src/cd.c src/gem_home_in.c src/draw_text.c src/draw_stuff.c src/menus.c, mod_code.bin
+NTSC, header, 0x80200000, 0x0, src/misc_game.c src/vector.c src/cd.c src/gem_home_in.c src/draw_text.c src/draw_stuff.c src/draw_skybox.c src/menus.c, mod_code.bin
 
 NTSC, exe, 0x80017758, 0x0, asm/vec3_add.s
 NTSC, exe, 0x80017700, 0x0, asm/vec3_copy.s
@@ -16,3 +16,4 @@ NTSC, exe, 0x80018880, 0x0, asm/copy_hud_to_shaded.s
 NTSC, exe, 0x80018908, 0x0, asm/draw_demo_text.s
 NTSC, exe, 0x80017f24, 0x0, asm/apply_image_fading.s
 NTSC, exe, 0x8008013c, 0x0, asm/gem_home_in_hook.s
+NTSC, exe, 0x8004eba8, 0x0, asm/draw_skybox.s

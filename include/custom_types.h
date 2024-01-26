@@ -17,6 +17,7 @@ typedef int                     bool;
 typedef unsigned int            uint;
 
 typedef unsigned char           byte;
+typedef unsigned char           u_char;
 
 typedef signed char             s8;
 typedef unsigned char           u8;
@@ -33,6 +34,8 @@ typedef unsigned int            uint32;
 typedef signed char             int8;
 typedef signed short            int16;
 typedef signed int              int32;
+
+typedef	unsigned long           u_long;
 
 
 #endif /* CUSTOM_TYPES_H */

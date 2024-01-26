@@ -95,7 +95,7 @@ void DrawTextbox(int xBound1,int xBound2,int yBound1,int yBound2)
 {
   Poly4FPadded* ptr_prim = (Poly4FPadded*)_ptr_primitivesArray;          
 
-  PrimitiveAlphaHack(_ptr_primitivesArray,1,0,0x40,0);      // Trasparent black background hack
+  SetDrawMode(_ptr_primitivesArray,1,0,0x40,0);      // Trasparent black background hack
   DrawPrimitive(ptr_prim);
   ptr_prim->tag = 0x5000000;
   ptr_prim->code = POLY4F_TRANSPARENT;

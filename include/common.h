@@ -204,6 +204,24 @@ typedef struct BGR_u8
     unsigned char R;
 }BGR_u8;
 
+/// @brief Structure that is sometimes used to store registers when a large function needs to use them.
+typedef struct
+{
+    int S0;
+    int S1;
+    int S2;
+    int S3;
+    int S4;
+    int S5;
+    int S6;
+    int S7;
+    int GP;
+    int SP;
+    int FP;
+    int RA;
+} RegisterStorage;
+_Static_assert(sizeof(RegisterStorage) == 48);
+
 
 //*~~~~~~~~~~~~~~~~~~~~~~~~
 //*        SYMBOLS
@@ -556,6 +574,19 @@ extern int _musicLevelTrack;  //0x0x800774b0
 extern int* _maybe_ptr_levelTextureRelated; //0x800785f0
 
 extern byte _cdStatus; //0x80074e44
+
+extern void* _PrimitiveList; // 0x800757b0
+
+extern int _DrawSkyboxU4; // 0x80075780
+
+extern int _DrawSkyboxU3; // 0x800758b0
+
+/**
+ * @brief Storage area for MIPS registers
+ * @note Address: 0x80077dd8
+*/
+extern RegisterStorage _RegisterStorage;
+
 /** @} */ // end of labeled_global_variables
 
 #endif /* COMMON_H */
