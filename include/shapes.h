@@ -2,6 +2,7 @@
 #define FILTERS_H
 
 #include <common.h>
+#include <PSYQ_gpu.h>
 
 //~~~~~~~~~
 //Constants
@@ -237,5 +238,12 @@ typedef struct Poly4FPadded      //! FOR IN GAME
     struct Vec2_u16 point4Pos;
 
 } Poly4FPadded;
+
+/// @brief Structure defining the beginning of a list of primitives and where it ends.
+typedef struct PrimitiveLinkedList
+{
+    P_TAG *Tail;
+    P_TAG *Head;
+} PrimitiveLinkedList;
 
 #endif //FILTERS_H

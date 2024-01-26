@@ -48,6 +48,12 @@ typedef struct Vec2_u16
     unsigned short y;
 }Vec2_u16;
 
+typedef struct Vec2_s16
+{
+    short x;
+    short y;
+}Vec2_s16;
+
 typedef struct Vec2_u8
 {
     unsigned char x;
@@ -100,6 +106,17 @@ typedef struct MATRIX3BY3
     short matrix[3][3];
 
 }MATRIX3BY3;
+
+/// @brief Matrix where each value in the structure may hold two coefficients.
+/// @details The bits 0-15 align to one value, and 16-31 the other.
+typedef struct 
+{
+    int R11R12;
+    int R13R21;
+    int R22R23;
+    int R31R32;
+    int R33;
+} RotationMatrix;
 
 
 //~~~~~~~~~

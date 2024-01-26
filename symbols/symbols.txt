@@ -110,3 +110,18 @@ _hudChestKeyframe = 0x80077FAD;
 _localSoundEffects = 0x800761D4;
 _unk_spinRelated = 0x8006cc78;
 _freeSpace = 0x80073990;
+
+_ScratchpadDrawSkybox = 0x1f800000;
+_DrawSkyboxU3 = 0x800758b0;
+_DrawSkyboxU4 = 0x80075780;
+_SkyboxModelsToRender = 0x8006fcf4;
+_SkyboxWadModels = 0x80078a44;
+_SkyboxWadModelCount = 0x80078a40;
+_SkyboxWadModelPointers = 0x80078a4c;
+
+_PrimitiveLinkedList = 0x8007581c;
+_PrimitiveStagingStart = 0x80075820;
+_PrimitiveList = 0x800757b0;
+
+_RegisterStorage = 0x80077dd8;
+
