@@ -467,6 +467,12 @@ extern short _cameraPureRotationMatrix[3][3];
 extern short _sinArray[256];
 
 /**
+ * @brief Array of values used to represent an angle. \n Address: 0x8006d908
+ * @details Values seem to be normalized based on 0-256.
+*/
+extern byte _AngleArray[68];
+
+/**
  * @brief This is the current state of the main menu. Should make an enum for this \n Address: 0x80078D88
  */ 
 extern char _mainMenuState;
